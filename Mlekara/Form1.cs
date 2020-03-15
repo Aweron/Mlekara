@@ -13,11 +13,16 @@ namespace Mlekara
 {
     public partial class Form1 : Form
     {
+        public byte[] SendData { get; set; }
+        public byte[] ReceivedData { get; set; }
+
         public Form1()
         {
             InitializeComponent();
 
-            // Open port at startup
+            ReceivedData = new byte[21];
+
+            // Open port at startup ( TODO: Take values from file or db instead of hard coded )
             try
             {
                 serialPort1.PortName = "COM14";
@@ -47,8 +52,6 @@ namespace Mlekara
                     onOffToolStripMenuItem.Checked = true;
                 }
             }
-
-
 
         }
 
@@ -83,8 +86,90 @@ namespace Mlekara
             int minutes = DateTime.Now.Minute;
             int seconds = DateTime.Now.Second;
             lblTime.Text = hours + ":" + minutes + ":" + seconds;
-            
-            // TODO: Refresh temps
+
+            // Sending a Request for Data
+            if (serialPort1.IsOpen)
+            {
+                SendData = StringToByteArray("010300000008440C");
+                serialPort1.Write(SendData, 0, 8);
+            }
         }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            
+            serialPort1.Read(ReceivedData, 0, 21);
+            this.Invoke(new EventHandler(ShowData));
+            
+        }
+
+        private void ShowData(object sender, EventArgs e)
+        {
+            byte[] data = ReceivedData;
+
+            float higherValue;
+            float lowerValue;
+            float value;
+            string text;
+
+            for (int i = 3; i < 19; i += 2) 
+            {
+                higherValue = Convert.ToInt32(data[i]) * 25.5f; // Higher byte of temp value
+                lowerValue = Convert.ToSingle(data[i+1]) / 10f; // Lower byte of temp value
+                value = higherValue + lowerValue;
+                text = value.ToString();
+                if (value % 1 == 0)
+                    text += ".0";
+
+                switch (i) // Displaying temperature for each sensor
+                {
+                    case 3:
+                        textBox1.Text = text;
+                        break;
+                    case 5:
+                        textBox2.Text = text;
+                        break;
+                    case 7:
+                        textBox3.Text = text;
+                        break;
+                    case 9:
+                        textBox4.Text = text;
+                        break;
+                    case 11:
+                        textBox5.Text = text;
+                        break;
+                    case 13:
+                        textBox6.Text = text;
+                        break;
+                    case 15:
+                        textBox7.Text = text;
+                        break;
+                    case 17:
+                        textBox8.Text = text;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        public static byte[] StringToByteArray(String hex)
+        {
+            int NumberChars = hex.Length;
+            byte[] bytes = new byte[NumberChars / 2];
+            for (int i = 0; i < NumberChars; i += 2)
+                bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
+            return bytes;
+        }
+
+        // Unused so far.
+        public static string ByteArrayToString(byte[] array)
+        {
+            StringBuilder hex = new StringBuilder(array.Length * 2);
+            foreach (byte b in array)
+                hex.AppendFormat("{0:x2}", b);
+            return hex.ToString();
+        }
+
     }
 }
