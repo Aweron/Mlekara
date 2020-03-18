@@ -22,7 +22,7 @@ namespace Mlekara
 
             ReceivedData = new byte[21];
 
-            // Open port at startup ( TODO: Take values from file or db instead of hard coded )
+            // Open port at startup (TODO: Take values from file or db instead of hardcoded)
             try
             {
                 serialPort1.PortName = "COM14";
@@ -171,5 +171,10 @@ namespace Mlekara
             return hex.ToString();
         }
 
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AdminSettings settings = new AdminSettings();
+            settings.ShowDialog();
+        }
     }
 }
