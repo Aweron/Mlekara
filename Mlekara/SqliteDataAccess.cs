@@ -18,6 +18,26 @@ namespace Mlekara
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
+        public static PortSettingsModel LoadPortSettings()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<PortSettingsModel>("select * from PortSettings", new DynamicParameters());
+                if (output.Count() == 0)
+                    return null;
+                else
+                    return output.First();
+            }
+        }
+
+        public static void SavePortSettings(PortSettingsModel portSettings)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert or replace into PortSettings (Id, Port, BaudRate, DataBits, StopBits, ParityBits) values (@Id, @Port, @BaudRate, @DataBits, @StopBits, @ParityBits)", portSettings);
+            }
+        }
+
         #region Company
 
         public static string LoadCompanyName()

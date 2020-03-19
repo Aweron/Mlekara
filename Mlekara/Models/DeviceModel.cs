@@ -18,11 +18,11 @@ namespace Mlekara.Models
             probes = new List<ProbeModel>();
         }
 
-        public DeviceModel(int i, string n, bool a)
+        public DeviceModel(int id, string name, bool active)
         {
-            Id = i;
-            Name = n;
-            Active = a;
+            Id = id;
+            Name = name;
+            Active = active;
             probes = new List<ProbeModel>();
         }
 

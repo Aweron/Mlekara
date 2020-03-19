@@ -15,10 +15,10 @@ namespace Mlekara.Models
         {
         }
 
-        public CompanyModel(int i, string n)
+        public CompanyModel(int id, string name)
         {
-            Id = i;
-            Name = n;
+            Id = id;
+            Name = name;
         }
     }
 }

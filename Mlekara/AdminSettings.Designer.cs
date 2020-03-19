@@ -32,40 +32,42 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCompany = new System.Windows.Forms.Button();
             this.btnProbe = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.chkActive = new System.Windows.Forms.CheckBox();
+            this.txtDeviceName = new System.Windows.Forms.TextBox();
+            this.chkDeviceActive = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbDeviceId = new System.Windows.Forms.ComboBox();
+            this.btnDevice = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnDevice = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbProbeDeviceId = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbProbeId = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkProbeActive = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtProbeName = new System.Windows.Forms.TextBox();
+            this.numMarker = new System.Windows.Forms.NumericUpDown();
+            this.numMax = new System.Windows.Forms.NumericUpDown();
+            this.numMin = new System.Windows.Forms.NumericUpDown();
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMarker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMin)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCompany
             // 
-            this.txtCompany.Location = new System.Drawing.Point(47, 18);
+            this.txtCompany.Location = new System.Drawing.Point(6, 37);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(130, 20);
+            this.txtCompany.Size = new System.Drawing.Size(206, 20);
             this.txtCompany.TabIndex = 0;
             // 
             // label1
@@ -79,7 +81,8 @@
             // 
             // btnCompany
             // 
-            this.btnCompany.Location = new System.Drawing.Point(183, 16);
+            this.btnCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCompany.Location = new System.Drawing.Point(137, 63);
             this.btnCompany.Name = "btnCompany";
             this.btnCompany.Size = new System.Drawing.Size(75, 23);
             this.btnCompany.TabIndex = 2;
@@ -89,149 +92,85 @@
             // 
             // btnProbe
             // 
-            this.btnProbe.Location = new System.Drawing.Point(183, 77);
+            this.btnProbe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProbe.Location = new System.Drawing.Point(137, 111);
             this.btnProbe.Name = "btnProbe";
             this.btnProbe.Size = new System.Drawing.Size(75, 23);
             this.btnProbe.TabIndex = 7;
             this.btnProbe.Text = "Save";
             this.btnProbe.UseVisualStyleBackColor = true;
+            this.btnProbe.Click += new System.EventHandler(this.btnProbe_Click);
             // 
-            // textBox1
+            // txtDeviceName
             // 
-            this.textBox1.Location = new System.Drawing.Point(47, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtDeviceName.Location = new System.Drawing.Point(6, 72);
+            this.txtDeviceName.Name = "txtDeviceName";
+            this.txtDeviceName.Size = new System.Drawing.Size(206, 20);
+            this.txtDeviceName.TabIndex = 5;
             // 
-            // chkActive
+            // chkDeviceActive
             // 
-            this.chkActive.AutoSize = true;
-            this.chkActive.Location = new System.Drawing.Point(192, 34);
-            this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(56, 17);
-            this.chkActive.TabIndex = 8;
-            this.chkActive.Text = "Active";
-            this.chkActive.UseVisualStyleBackColor = true;
+            this.chkDeviceActive.AutoSize = true;
+            this.chkDeviceActive.Location = new System.Drawing.Point(6, 98);
+            this.chkDeviceActive.Name = "chkDeviceActive";
+            this.chkDeviceActive.Size = new System.Drawing.Size(56, 17);
+            this.chkDeviceActive.TabIndex = 8;
+            this.chkDeviceActive.Text = "Active";
+            this.chkDeviceActive.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCompany);
             this.groupBox1.Controls.Add(this.btnCompany);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 49);
+            this.groupBox1.Size = new System.Drawing.Size(218, 92);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Firma";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.cmbDeviceId);
             this.groupBox2.Controls.Add(this.btnDevice);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.chkActive);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 67);
+            this.groupBox2.Controls.Add(this.chkDeviceActive);
+            this.groupBox2.Controls.Add(this.txtDeviceName);
+            this.groupBox2.Location = new System.Drawing.Point(12, 110);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(264, 87);
+            this.groupBox2.Size = new System.Drawing.Size(218, 136);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Device";
             // 
-            // label2
+            // cmbDeviceId
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Naziv:";
+            this.cmbDeviceId.FormattingEnabled = true;
+            this.cmbDeviceId.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbDeviceId.Location = new System.Drawing.Point(6, 32);
+            this.cmbDeviceId.Name = "cmbDeviceId";
+            this.cmbDeviceId.Size = new System.Drawing.Size(35, 21);
+            this.cmbDeviceId.TabIndex = 13;
             // 
-            // groupBox4
+            // btnDevice
             // 
-            this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.checkBox2);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.numericUpDown3);
-            this.groupBox4.Controls.Add(this.btnProbe);
-            this.groupBox4.Controls.Add(this.numericUpDown2);
-            this.groupBox4.Controls.Add(this.numericUpDown1);
-            this.groupBox4.Location = new System.Drawing.Point(12, 160);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(264, 106);
-            this.groupBox4.TabIndex = 12;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Senzor";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(9, 77);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(70, 77);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown2.TabIndex = 16;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(133, 77);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(35, 20);
-            this.numericUpDown3.TabIndex = 17;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Min:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(70, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Max:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(130, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Marker:";
+            this.btnDevice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDevice.Location = new System.Drawing.Point(137, 107);
+            this.btnDevice.Name = "btnDevice";
+            this.btnDevice.Size = new System.Drawing.Size(75, 23);
+            this.btnDevice.TabIndex = 21;
+            this.btnDevice.Text = "Save";
+            this.btnDevice.UseVisualStyleBackColor = true;
+            this.btnDevice.Click += new System.EventHandler(this.btnDevice_Click);
             // 
             // label7
             // 
@@ -242,38 +181,77 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "ID:";
             // 
-            // btnDevice
+            // label2
             // 
-            this.btnDevice.Location = new System.Drawing.Point(183, 58);
-            this.btnDevice.Name = "btnDevice";
-            this.btnDevice.Size = new System.Drawing.Size(75, 23);
-            this.btnDevice.TabIndex = 21;
-            this.btnDevice.Text = "Save";
-            this.btnDevice.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Naziv:";
             // 
-            // comboBox1
+            // groupBox4
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.cmbProbeDeviceId);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.cmbProbeId);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.chkProbeActive);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.txtProbeName);
+            this.groupBox4.Controls.Add(this.numMarker);
+            this.groupBox4.Controls.Add(this.btnProbe);
+            this.groupBox4.Controls.Add(this.numMax);
+            this.groupBox4.Controls.Add(this.numMin);
+            this.groupBox4.Location = new System.Drawing.Point(12, 252);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(218, 140);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Probe";
+            // 
+            // cmbProbeDeviceId
+            // 
+            this.cmbProbeDeviceId.FormattingEnabled = true;
+            this.cmbProbeDeviceId.Items.AddRange(new object[] {
             "1",
             "2",
             "3"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(35, 21);
-            this.comboBox1.TabIndex = 13;
+            this.cmbProbeDeviceId.Location = new System.Drawing.Point(77, 32);
+            this.cmbProbeDeviceId.Name = "cmbProbeDeviceId";
+            this.cmbProbeDeviceId.Size = new System.Drawing.Size(35, 21);
+            this.cmbProbeDeviceId.TabIndex = 28;
             // 
-            // comboBox2
+            // label3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(74, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Device:";
+            // 
+            // cmbProbeId
+            // 
+            this.cmbProbeId.FormattingEnabled = true;
+            this.cmbProbeId.Items.AddRange(new object[] {
             "1",
             "2",
-            "3"});
-            this.comboBox2.Location = new System.Drawing.Point(6, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(35, 21);
-            this.comboBox2.TabIndex = 26;
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cmbProbeId.Location = new System.Drawing.Point(6, 32);
+            this.cmbProbeId.Name = "cmbProbeId";
+            this.cmbProbeId.Size = new System.Drawing.Size(35, 21);
+            this.cmbProbeId.TabIndex = 26;
             // 
             // label8
             // 
@@ -284,36 +262,99 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "ID:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(85, 95);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Marker:";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 16);
+            this.label9.Location = new System.Drawing.Point(3, 56);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 13);
             this.label9.TabIndex = 25;
             this.label9.Text = "Naziv:";
             // 
-            // checkBox2
+            // label5
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(192, 34);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(56, 17);
-            this.checkBox2.TabIndex = 24;
-            this.checkBox2.Text = "Active";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(44, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Max:";
             // 
-            // textBox3
+            // chkProbeActive
             // 
-            this.textBox3.Location = new System.Drawing.Point(47, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 23;
+            this.chkProbeActive.AutoSize = true;
+            this.chkProbeActive.Location = new System.Drawing.Point(143, 34);
+            this.chkProbeActive.Name = "chkProbeActive";
+            this.chkProbeActive.Size = new System.Drawing.Size(56, 17);
+            this.chkProbeActive.TabIndex = 24;
+            this.chkProbeActive.Text = "Active";
+            this.chkProbeActive.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Min:";
+            // 
+            // txtProbeName
+            // 
+            this.txtProbeName.Location = new System.Drawing.Point(6, 72);
+            this.txtProbeName.Name = "txtProbeName";
+            this.txtProbeName.Size = new System.Drawing.Size(206, 20);
+            this.txtProbeName.TabIndex = 23;
+            // 
+            // numMarker
+            // 
+            this.numMarker.Location = new System.Drawing.Point(88, 111);
+            this.numMarker.Name = "numMarker";
+            this.numMarker.Size = new System.Drawing.Size(35, 20);
+            this.numMarker.TabIndex = 17;
+            this.numMarker.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numMax
+            // 
+            this.numMax.Location = new System.Drawing.Point(47, 111);
+            this.numMax.Name = "numMax";
+            this.numMax.Size = new System.Drawing.Size(35, 20);
+            this.numMax.TabIndex = 16;
+            this.numMax.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numMin
+            // 
+            this.numMin.Location = new System.Drawing.Point(6, 111);
+            this.numMin.Name = "numMin";
+            this.numMin.Size = new System.Drawing.Size(35, 20);
+            this.numMin.TabIndex = 12;
+            this.numMin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(201, 272);
+            this.btnOK.Location = new System.Drawing.Point(155, 399);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 13;
@@ -324,22 +365,26 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 307);
+            this.ClientSize = new System.Drawing.Size(242, 434);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminSettings";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Admin Settings";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMarker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,26 +395,28 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCompany;
         private System.Windows.Forms.Button btnProbe;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox chkActive;
+        private System.Windows.Forms.TextBox txtDeviceName;
+        private System.Windows.Forms.CheckBox chkDeviceActive;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDeviceId;
         private System.Windows.Forms.Button btnDevice;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbProbeId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox chkProbeActive;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox txtProbeName;
+        private System.Windows.Forms.NumericUpDown numMarker;
+        private System.Windows.Forms.NumericUpDown numMax;
+        private System.Windows.Forms.NumericUpDown numMin;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.ComboBox cmbProbeDeviceId;
+        private System.Windows.Forms.Label label3;
     }
 }

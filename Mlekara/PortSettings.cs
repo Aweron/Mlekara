@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using Mlekara.Models;
 
 namespace Mlekara
 {
@@ -21,6 +22,9 @@ namespace Mlekara
 
             port = serialPort1;
 
+            string[] ports = SerialPort.GetPortNames();
+            cmbPort.Items.AddRange(ports);
+
             if (port.IsOpen)
             {
                 cmbPort.Text = port.PortName;
@@ -29,12 +33,6 @@ namespace Mlekara
                 cmbStopBits.Text = port.StopBits.ToString();
                 cmbParityBits.Text = port.Parity.ToString();
             }
-        }
-
-        private void PortSettings_Load(object sender, EventArgs e)
-        {
-            string[] ports = SerialPort.GetPortNames();
-            cmbPort.Items.AddRange(ports);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +46,9 @@ namespace Mlekara
                 port.Parity = (Parity)Enum.Parse(typeof(Parity), cmbParityBits.Text);
 
                 port.Open();
+
+                PortSettingsModel portSettingsModel = new PortSettingsModel(cmbPort.Text, Convert.ToInt32(cmbBaudRate.Text), Convert.ToInt32(cmbDataBits.Text), cmbStopBits.Text, cmbParityBits.Text);
+                SqliteDataAccess.SavePortSettings(portSettingsModel);
 
                 this.Close();
             }

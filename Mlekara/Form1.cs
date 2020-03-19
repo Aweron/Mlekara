@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using Mlekara.Models;
 
 namespace Mlekara
 {
@@ -22,43 +23,39 @@ namespace Mlekara
 
             ReceivedData = new byte[21];
 
-            // Open port at startup (TODO: Take values from file or db instead of hardcoded)
+            // Open port at startup
             try
             {
-                serialPort1.PortName = "COM14";
-                serialPort1.BaudRate = 9600;
-                serialPort1.DataBits = 8;
-                serialPort1.StopBits = StopBits.One;
-                serialPort1.Parity = Parity.None;
+                PortSettingsModel portSettingsModel = SqliteDataAccess.LoadPortSettings();
+                if (portSettingsModel != null)
+                {
+                    serialPort1.PortName = portSettingsModel.Port;
+                    serialPort1.BaudRate = portSettingsModel.BaudRate;
+                    serialPort1.DataBits = portSettingsModel.DataBits;
+                    serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), portSettingsModel.StopBits); // StopBits.One
+                    serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), portSettingsModel.ParityBits); // Parity.None
 
-                serialPort1.Open();
+                    serialPort1.Open();
+                }
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (!serialPort1.IsOpen)
-                {
-                    lblConnected.Text = "Disconnected";
-                    lblConnected.ForeColor = Color.Red;
-                    onOffToolStripMenuItem.Checked = false;
-                }
-            }
-            finally
-            {
-                if (serialPort1.IsOpen)
-                {
-                    lblConnected.Text = "Connected";
-                    lblConnected.ForeColor = Color.Green;
-                    onOffToolStripMenuItem.Checked = true;
-                }
             }
 
+            if (serialPort1.IsOpen)
+                ShowPortConnected(true);
+            else
+                ShowPortConnected(false);
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PortSettings settings = new PortSettings(serialPort1);
             settings.ShowDialog();
+
+            if (serialPort1.IsOpen)
+                ShowPortConnected(true);
         }
 
         private void onOffToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,16 +63,12 @@ namespace Mlekara
             if (serialPort1.IsOpen)
             {
                 serialPort1.Close();
-                lblConnected.Text = "Disconnected";
-                lblConnected.ForeColor = Color.Red;
-                onOffToolStripMenuItem.Checked = false;
+                ShowPortConnected(false);
             }
             else
             {
                 serialPort1.Open();
-                lblConnected.Text = "Connected";
-                lblConnected.ForeColor = Color.Green;
-                onOffToolStripMenuItem.Checked = true;
+                ShowPortConnected(true);
             }
         }
 
@@ -175,6 +168,22 @@ namespace Mlekara
         {
             AdminSettings settings = new AdminSettings();
             settings.ShowDialog();
+        }
+
+        public void ShowPortConnected(bool isConnected)
+        {
+            if (isConnected)
+            {
+                lblConnected.Text = "Connected";
+                lblConnected.ForeColor = Color.Green;
+                onOffToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                lblConnected.Text = "Disconnected";
+                lblConnected.ForeColor = Color.Red;
+                onOffToolStripMenuItem.Checked = false;
+            }
         }
     }
 }
