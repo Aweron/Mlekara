@@ -185,5 +185,10 @@ namespace Mlekara
                 onOffToolStripMenuItem.Checked = false;
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            serialPort1.Close();
+        }
     }
 }

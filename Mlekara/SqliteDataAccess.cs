@@ -18,6 +18,8 @@ namespace Mlekara
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
+        #region Port Settings
+
         public static PortSettingsModel LoadPortSettings()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -37,6 +39,8 @@ namespace Mlekara
                 cnn.Execute("insert or replace into PortSettings (Id, Port, BaudRate, DataBits, StopBits, ParityBits) values (@Id, @Port, @BaudRate, @DataBits, @StopBits, @ParityBits)", portSettings);
             }
         }
+
+        #endregion
 
         #region Company
 
@@ -74,6 +78,15 @@ namespace Mlekara
             }
         }
 
+        public static DeviceModel LoadDevice(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<DeviceModel>("select * from Device where Id = @id", new { Id = id });
+                return output.ToList().First();
+            }
+        }
+
         public static void SaveDevice(DeviceModel device)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -95,6 +108,27 @@ namespace Mlekara
             }
         }
 
+        public static List<ProbeModel> LoadProbes(int deviceId)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<ProbeModel>("select * from Probe where DeviceId = @DeviceId", new { DeviceId = deviceId });
+                return output.ToList();
+            }
+        }
+
+        public static ProbeModel LoadProbe(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<ProbeModel>("select * from Probe where Id = @id", new { Id = id });
+                if (output == null)
+                    return null;
+                else
+                    return output.ToList().First();
+            }
+        }
+
         public static void SaveProbe(ProbeModel probe)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -105,6 +139,7 @@ namespace Mlekara
 
         #endregion
 
+        #region Measurements
 
         public static List<MeasurementModel> LoadMeasurements()
         {
@@ -122,5 +157,8 @@ namespace Mlekara
                 cnn.Execute("", measurement);
             }
         }
+
+        #endregion
+
     }
 }

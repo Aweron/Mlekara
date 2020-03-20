@@ -93,7 +93,7 @@
     <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\PortSettingsModel.cs" />
     <Compile Include="Models\ProbeModel.cs" />
-    <Compile Include="Models\TemperatureModel.cs" />
+    <Compile Include="Models\MeasurementModel.cs" />
     <Compile Include="PortSettings.cs">
       <SubType>Form</SubType>
     </Compile>

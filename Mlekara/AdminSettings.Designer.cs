@@ -55,12 +55,26 @@
             this.numMax = new System.Windows.Forms.NumericUpDown();
             this.numMin = new System.Windows.Forms.NumericUpDown();
             this.btnOK = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnShowProbes = new System.Windows.Forms.Button();
+            this.btnShowDevices = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnShowProbesByDevice = new System.Windows.Forms.Button();
+            this.cmbShowDeviceId = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMarker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCompany
@@ -75,9 +89,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Naziv:";
+            this.label1.Text = "Name:";
             // 
             // btnCompany
             // 
@@ -93,7 +107,7 @@
             // btnProbe
             // 
             this.btnProbe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProbe.Location = new System.Drawing.Point(137, 111);
+            this.btnProbe.Location = new System.Drawing.Point(137, 113);
             this.btnProbe.Name = "btnProbe";
             this.btnProbe.Size = new System.Drawing.Size(75, 23);
             this.btnProbe.TabIndex = 7;
@@ -111,7 +125,7 @@
             // chkDeviceActive
             // 
             this.chkDeviceActive.AutoSize = true;
-            this.chkDeviceActive.Location = new System.Drawing.Point(6, 98);
+            this.chkDeviceActive.Location = new System.Drawing.Point(62, 34);
             this.chkDeviceActive.Name = "chkDeviceActive";
             this.chkDeviceActive.Size = new System.Drawing.Size(56, 17);
             this.chkDeviceActive.TabIndex = 8;
@@ -120,29 +134,25 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtCompany);
             this.groupBox1.Controls.Add(this.btnCompany);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(218, 92);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Firma";
+            this.groupBox1.Text = "Company";
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.cmbDeviceId);
             this.groupBox2.Controls.Add(this.btnDevice);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.chkDeviceActive);
             this.groupBox2.Controls.Add(this.txtDeviceName);
-            this.groupBox2.Location = new System.Drawing.Point(12, 110);
+            this.groupBox2.Location = new System.Drawing.Point(6, 117);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(218, 136);
             this.groupBox2.TabIndex = 10;
@@ -160,6 +170,7 @@
             this.cmbDeviceId.Name = "cmbDeviceId";
             this.cmbDeviceId.Size = new System.Drawing.Size(35, 21);
             this.cmbDeviceId.TabIndex = 13;
+            this.cmbDeviceId.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceId_SelectedIndexChanged);
             // 
             // btnDevice
             // 
@@ -186,14 +197,12 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Naziv:";
+            this.label2.Text = "Name:";
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.cmbProbeDeviceId);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.cmbProbeId);
@@ -208,9 +217,9 @@
             this.groupBox4.Controls.Add(this.btnProbe);
             this.groupBox4.Controls.Add(this.numMax);
             this.groupBox4.Controls.Add(this.numMin);
-            this.groupBox4.Location = new System.Drawing.Point(12, 252);
+            this.groupBox4.Location = new System.Drawing.Point(6, 259);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(218, 140);
+            this.groupBox4.Size = new System.Drawing.Size(218, 142);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Probe";
@@ -247,11 +256,28 @@
             "5",
             "6",
             "7",
-            "8"});
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"});
             this.cmbProbeId.Location = new System.Drawing.Point(6, 32);
             this.cmbProbeId.Name = "cmbProbeId";
             this.cmbProbeId.Size = new System.Drawing.Size(35, 21);
             this.cmbProbeId.TabIndex = 26;
+            this.cmbProbeId.SelectedIndexChanged += new System.EventHandler(this.cmbProbeId_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -276,9 +302,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 25;
-            this.label9.Text = "Naziv:";
+            this.label9.Text = "Name:";
             // 
             // label5
             // 
@@ -354,28 +380,130 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(155, 399);
+            this.btnOK.Location = new System.Drawing.Point(647, 425);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 13;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 82);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(462, 319);
+            this.dataGridView1.TabIndex = 14;
+            // 
+            // btnShowProbes
+            // 
+            this.btnShowProbes.Location = new System.Drawing.Point(101, 19);
+            this.btnShowProbes.Name = "btnShowProbes";
+            this.btnShowProbes.Size = new System.Drawing.Size(89, 23);
+            this.btnShowProbes.TabIndex = 15;
+            this.btnShowProbes.Text = "Show Probes";
+            this.btnShowProbes.UseVisualStyleBackColor = true;
+            this.btnShowProbes.Click += new System.EventHandler(this.btnShowProbes_Click);
+            // 
+            // btnShowDevices
+            // 
+            this.btnShowDevices.Location = new System.Drawing.Point(6, 19);
+            this.btnShowDevices.Name = "btnShowDevices";
+            this.btnShowDevices.Size = new System.Drawing.Size(89, 23);
+            this.btnShowDevices.TabIndex = 16;
+            this.btnShowDevices.Text = "Show Devices";
+            this.btnShowDevices.UseVisualStyleBackColor = true;
+            this.btnShowDevices.Click += new System.EventHandler(this.btnShowDevices_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cmbShowDeviceId);
+            this.groupBox3.Controls.Add(this.btnShowProbesByDevice);
+            this.groupBox3.Location = new System.Drawing.Point(208, 19);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(140, 48);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Show Probes by Device";
+            // 
+            // btnShowProbesByDevice
+            // 
+            this.btnShowProbesByDevice.Location = new System.Drawing.Point(47, 19);
+            this.btnShowProbesByDevice.Name = "btnShowProbesByDevice";
+            this.btnShowProbesByDevice.Size = new System.Drawing.Size(75, 23);
+            this.btnShowProbesByDevice.TabIndex = 0;
+            this.btnShowProbesByDevice.Text = "Show";
+            this.btnShowProbesByDevice.UseVisualStyleBackColor = true;
+            this.btnShowProbesByDevice.Click += new System.EventHandler(this.btnShowProbesByDevice_Click);
+            // 
+            // cmbShowDeviceId
+            // 
+            this.cmbShowDeviceId.FormattingEnabled = true;
+            this.cmbShowDeviceId.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbShowDeviceId.Location = new System.Drawing.Point(6, 20);
+            this.cmbShowDeviceId.Name = "cmbShowDeviceId";
+            this.cmbShowDeviceId.Size = new System.Drawing.Size(35, 21);
+            this.cmbShowDeviceId.TabIndex = 27;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnShowDevices);
+            this.groupBox5.Controls.Add(this.btnShowProbes);
+            this.groupBox5.Location = new System.Drawing.Point(6, 19);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(196, 48);
+            this.groupBox5.TabIndex = 18;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Show All";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox1);
+            this.groupBox6.Controls.Add(this.groupBox2);
+            this.groupBox6.Controls.Add(this.groupBox4);
+            this.groupBox6.Location = new System.Drawing.Point(12, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(230, 407);
+            this.groupBox6.TabIndex = 19;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Edit Database";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.groupBox5);
+            this.groupBox7.Controls.Add(this.groupBox3);
+            this.groupBox7.Controls.Add(this.dataGridView1);
+            this.groupBox7.Location = new System.Drawing.Point(248, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(474, 407);
+            this.groupBox7.TabIndex = 20;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Show Database";
             // 
             // AdminSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(242, 434);
+            this.ClientSize = new System.Drawing.Size(734, 460);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminSettings";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Admin Settings";
-            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -385,6 +513,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMarker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,5 +551,14 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.ComboBox cmbProbeDeviceId;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnShowProbes;
+        private System.Windows.Forms.Button btnShowDevices;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cmbShowDeviceId;
+        private System.Windows.Forms.Button btnShowProbesByDevice;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
     }
 }

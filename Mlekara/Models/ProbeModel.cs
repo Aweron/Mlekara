@@ -16,6 +16,10 @@ namespace Mlekara.Models
         public int Max { get; set; }
         public int Marker { get; set; }
 
+        public ProbeModel()
+        {
+        }
+
         public ProbeModel(int id, int deviceId, string name, bool active, int min, int max, int marker)
         {
             Id = id;

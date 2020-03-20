@@ -17,7 +17,6 @@ namespace Mlekara.Models
 
         public PortSettingsModel()
         {
-
         }
 
         public PortSettingsModel(string port, int baudRate, int dataBits, string stopBits, string parityBits)
