@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using Mlekara.Models;
+using Code4Bugs.Utils.IO;
 
 namespace Mlekara
 {
     public partial class Form1 : Form
     {
+
+        public ICommStream commStream;
         public byte[] SendData { get; set; }
         public byte[] ReceivedData { get; set; }
 
@@ -36,6 +39,7 @@ namespace Mlekara
                     serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), portSettingsModel.ParityBits); // Parity.None
 
                     serialPort1.Open();
+                    commStream = new SerialStream(serialPort1);
                 }
             }
             catch (Exception err)
@@ -68,6 +72,7 @@ namespace Mlekara
             else
             {
                 serialPort1.Open();
+                commStream = new SerialStream(serialPort1);
                 ShowPortConnected(true);
             }
         }
@@ -75,17 +80,30 @@ namespace Mlekara
         private void timer1_Tick(object sender, EventArgs e)
         {
             // System Time
-            int hours = DateTime.Now.Hour;
-            int minutes = DateTime.Now.Minute;
-            int seconds = DateTime.Now.Second;
+            string hours = DateTime.Now.Hour.ToString();
+            if (DateTime.Now.Hour < 10)
+                hours = "0" + hours;
+
+            string minutes = DateTime.Now.Minute.ToString();
+            if (DateTime.Now.Minute < 10)
+                minutes = "0" + minutes;
+
+            string seconds = DateTime.Now.Second.ToString();
+            if (DateTime.Now.Second < 10)
+                seconds = "0" + seconds;
+
             lblTime.Text = hours + ":" + minutes + ":" + seconds;
 
             // Sending a Request for Data
             if (serialPort1.IsOpen)
             {
                 SendData = StringToByteArray("010300000008440C");
-                serialPort1.Write(SendData, 0, 8);
+                //serialPort1.Write(SendData, 0, 8);
+
+                commStream.Write(SendData, 0, SendData.Length);
             }
+
+            
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -188,7 +206,7 @@ namespace Mlekara
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            serialPort1.Close();
+            commStream.Dispose();
         }
     }
 }
