@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using Mlekara.Models;
 using Code4Bugs.Utils.IO;
+using Code4Bugs.Utils.IO.Modbus;
 
 namespace Mlekara
 {
@@ -17,14 +18,16 @@ namespace Mlekara
     {
 
         public ICommStream commStream;
-        public byte[] SendData { get; set; }
+        //public byte[] SendData { get; set; }
         public byte[] ReceivedData { get; set; }
+        Stack<string> MeasurementBuffer;
 
         public Form1()
         {
             InitializeComponent();
 
             ReceivedData = new byte[21];
+            MeasurementBuffer = new Stack<string>(30);
 
             // Open port at startup
             try
@@ -40,6 +43,7 @@ namespace Mlekara
 
                     serialPort1.Open();
                     commStream = new SerialStream(serialPort1);
+                    commStream.ReadTimeout = 1000;
                 }
             }
             catch (Exception err)
@@ -71,9 +75,17 @@ namespace Mlekara
             }
             else
             {
-                serialPort1.Open();
-                commStream = new SerialStream(serialPort1);
-                ShowPortConnected(true);
+                try
+                {
+                    serialPort1.Open();
+                    commStream = new SerialStream(serialPort1);
+                    commStream.ReadTimeout = 1000;
+                    ShowPortConnected(true);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -97,24 +109,34 @@ namespace Mlekara
             // Sending a Request for Data
             if (serialPort1.IsOpen)
             {
-                SendData = StringToByteArray("010300000008440C");
+                //SendData = StringToByteArray("010300000008440C");
                 //serialPort1.Write(SendData, 0, 8);
-
-                commStream.Write(SendData, 0, SendData.Length);
+                try
+                {
+                    ReceivedData = commStream.RequestFunc3(1, 0, 8);
+                    ShowData();
+                }
+                catch (Exception err)
+                {
+                    timer1.Stop();
+                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             
         }
 
+        /*
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             
-            serialPort1.Read(ReceivedData, 0, 21);
-            this.Invoke(new EventHandler(ShowData));
+            //commStream.Read(ReceivedData, 0, 21);
+            //this.Invoke(new EventHandler(ShowData));
             
         }
+        */
 
-        private void ShowData(object sender, EventArgs e)
+        private void ShowData() //(object sender, EventArgs e)
         {
             byte[] data = ReceivedData;
 
@@ -128,6 +150,7 @@ namespace Mlekara
                 higherValue = Convert.ToInt32(data[i]) * 25.5f; // Higher byte of temp value
                 lowerValue = Convert.ToSingle(data[i+1]) / 10f; // Lower byte of temp value
                 value = higherValue + lowerValue;
+                // TODO: add value to buffer
                 text = value.ToString();
                 if (value % 1 == 0)
                     text += ".0";
@@ -173,7 +196,7 @@ namespace Mlekara
             return bytes;
         }
 
-        // Unused so far.
+        /* Unused so far.
         public static string ByteArrayToString(byte[] array)
         {
             StringBuilder hex = new StringBuilder(array.Length * 2);
@@ -181,6 +204,7 @@ namespace Mlekara
                 hex.AppendFormat("{0:x2}", b);
             return hex.ToString();
         }
+        */
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -204,9 +228,14 @@ namespace Mlekara
             }
         }
 
+        public void AddMeasurementToStack(MeasurementModel measurement)
+        {
+            // TODO: sve
+        }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            commStream.Dispose();
+            commStream?.Dispose();
         }
     }
 }

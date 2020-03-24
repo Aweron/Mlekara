@@ -59,8 +59,8 @@
             this.btnShowProbes = new System.Windows.Forms.Button();
             this.btnShowDevices = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnShowProbesByDevice = new System.Windows.Forms.Button();
             this.cmbShowDeviceId = new System.Windows.Forms.ComboBox();
+            this.btnShowProbesByDevice = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -380,7 +380,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(647, 425);
+            this.btnOK.Location = new System.Drawing.Point(612, 425);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 13;
@@ -398,7 +398,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(427, 319);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnShowProbes
@@ -432,16 +432,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Show Probes by Device";
             // 
-            // btnShowProbesByDevice
-            // 
-            this.btnShowProbesByDevice.Location = new System.Drawing.Point(47, 19);
-            this.btnShowProbesByDevice.Name = "btnShowProbesByDevice";
-            this.btnShowProbesByDevice.Size = new System.Drawing.Size(75, 23);
-            this.btnShowProbesByDevice.TabIndex = 0;
-            this.btnShowProbesByDevice.Text = "Show";
-            this.btnShowProbesByDevice.UseVisualStyleBackColor = true;
-            this.btnShowProbesByDevice.Click += new System.EventHandler(this.btnShowProbesByDevice_Click);
-            // 
             // cmbShowDeviceId
             // 
             this.cmbShowDeviceId.FormattingEnabled = true;
@@ -453,6 +443,16 @@
             this.cmbShowDeviceId.Name = "cmbShowDeviceId";
             this.cmbShowDeviceId.Size = new System.Drawing.Size(35, 21);
             this.cmbShowDeviceId.TabIndex = 27;
+            // 
+            // btnShowProbesByDevice
+            // 
+            this.btnShowProbesByDevice.Location = new System.Drawing.Point(47, 19);
+            this.btnShowProbesByDevice.Name = "btnShowProbesByDevice";
+            this.btnShowProbesByDevice.Size = new System.Drawing.Size(75, 23);
+            this.btnShowProbesByDevice.TabIndex = 0;
+            this.btnShowProbesByDevice.Text = "Show";
+            this.btnShowProbesByDevice.UseVisualStyleBackColor = true;
+            this.btnShowProbesByDevice.Click += new System.EventHandler(this.btnShowProbesByDevice_Click);
             // 
             // groupBox5
             // 
@@ -486,7 +486,7 @@
             this.groupBox7.Controls.Add(this.dataGridView1);
             this.groupBox7.Location = new System.Drawing.Point(248, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(474, 407);
+            this.groupBox7.Size = new System.Drawing.Size(439, 407);
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Show Database";
@@ -495,7 +495,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 460);
+            this.ClientSize = new System.Drawing.Size(699, 460);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnOK);
