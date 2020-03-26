@@ -17,17 +17,46 @@ namespace Mlekara
     public partial class Form1 : Form
     {
 
-        public ICommStream commStream;
-        //public byte[] SendData { get; set; }
+        public ICommStream CommStream { get; set; }
         public byte[] ReceivedData { get; set; }
-        Stack<string> MeasurementBuffer;
+
+        private Stack<MeasurementModel>[] measurementStacks;
+        private int stackSize = 30;
+
+        private List<DeviceModel> devices;
+        private List<ProbeModel> probes;
+
+        // Arrays of Form Controls
+        GroupBox[] groupBoxes;
+        TextBox[] tempDisplays;
+        NumericUpDown[] numMins;
+        NumericUpDown[] numMaxs;
+        NumericUpDown[] numMarkers;
+        DateTimePicker[] dateTimePickers;
+        NumericUpDown[] numStartHours;
+        NumericUpDown[] numHourCounts;
 
         public Form1()
         {
             InitializeComponent();
 
             ReceivedData = new byte[21];
-            MeasurementBuffer = new Stack<string>(30);
+
+            groupBoxes = new GroupBox[] { groupBox1, groupBox2, groupBox3, groupBox4, groupBox5, groupBox6, groupBox7, groupBox8, groupBox9, groupBox10, groupBox11, groupBox12, groupBox13, groupBox14, groupBox15, groupBox16, groupBox17, groupBox18, groupBox19, groupBox20, groupBox21, groupBox22, groupBox23, groupBox24 };
+            tempDisplays = new TextBox[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12, textBox13, textBox14, textBox15, textBox16, textBox17, textBox18, textBox19, textBox20, textBox21, textBox22, textBox23, textBox24 };
+            numMins = new NumericUpDown[] { numMin1, numMin2, numMin3, numMin4, numMin5, numMin6, numMin7, numMin8, numMin9, numMin10, numMin11, numMin12, numMin13, numMin14, numMin15, numMin16, numMin17, numMin18, numMin19, numMin20, numMin21, numMin22, numMin23, numMin24 };
+            numMaxs = new NumericUpDown[] { numMax1, numMax2, numMax3, numMax4, numMax5, numMax6, numMax7, numMax8, numMax9, numMax10, numMax11, numMax12, numMax13, numMax14, numMax15, numMax16, numMax17, numMax18, numMax19, numMax20, numMax21, numMax22, numMax23, numMax24 };
+            numMarkers = new NumericUpDown[] { numMarker1, numMarker2, numMarker3, numMarker4, numMarker5, numMarker6, numMarker7, numMarker8, numMarker9, numMarker10, numMarker11, numMarker12, numMarker13, numMarker14, numMarker15, numMarker16, numMarker17, numMarker18, numMarker19, numMarker20, numMarker21, numMarker22, numMarker23, numMarker24 };
+            dateTimePickers = new DateTimePicker[] { dateTimePicker1, dateTimePicker2, dateTimePicker3, dateTimePicker4, dateTimePicker5, dateTimePicker6, dateTimePicker7, dateTimePicker8, dateTimePicker9, dateTimePicker10, dateTimePicker11, dateTimePicker12, dateTimePicker13, dateTimePicker14, dateTimePicker15, dateTimePicker16, dateTimePicker17, dateTimePicker18, dateTimePicker19, dateTimePicker20, dateTimePicker21, dateTimePicker22, dateTimePicker23, dateTimePicker24 };
+            numStartHours = new NumericUpDown[] { numStartHour1, numStartHour2, numStartHour3, numStartHour4, numStartHour5, numStartHour6, numStartHour7, numStartHour8, numStartHour9, numStartHour10, numStartHour11, numStartHour12, numStartHour13, numStartHour14, numStartHour15, numStartHour16, numStartHour17, numStartHour18, numStartHour19, numStartHour20, numStartHour21, numStartHour22, numStartHour23, numStartHour24 };
+            numHourCounts = new NumericUpDown[] { numHourCount1, numHourCount2, numHourCount3, numHourCount4, numHourCount5, numHourCount6, numHourCount7, numHourCount8, numHourCount9, numHourCount10, numHourCount11, numHourCount12, numHourCount13, numHourCount14, numHourCount15, numHourCount16, numHourCount17, numHourCount18, numHourCount19, numHourCount20, numHourCount21, numHourCount22, numHourCount23, numHourCount24 };
+
+            measurementStacks = new Stack<MeasurementModel>[24];
+
+            devices = SqliteDataAccess.LoadDevices();
+            probes = SqliteDataAccess.LoadProbes();
+            DisplayData();
+            //DisplayGraphs();
 
             // Open port at startup
             try
@@ -42,8 +71,8 @@ namespace Mlekara
                     serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), portSettingsModel.ParityBits); // Parity.None
 
                     serialPort1.Open();
-                    commStream = new SerialStream(serialPort1);
-                    commStream.ReadTimeout = 1000;
+                    CommStream = new SerialStream(serialPort1);
+                    CommStream.ReadTimeout = 500;
                 }
             }
             catch (Exception err)
@@ -55,6 +84,49 @@ namespace Mlekara
                 ShowPortConnected(true);
             else
                 ShowPortConnected(false);
+        }
+
+        public void DisplayData()
+        {
+            lblCompany.Text = SqliteDataAccess.LoadCompanyName();
+
+            for (int i = 0; i < devices.Count; i++)
+            {
+                tabTemperature.TabPages[i].Text = devices[i].Name;
+                tabGraphics.TabPages[i].Text = devices[i].Name;
+            }
+
+            for (int i = 0; i < probes.Count; i++)
+            {
+                groupBoxes[i].Text = probes[i].Name;
+                numMins[i].Value = probes[i].Min;
+                numMaxs[i].Value = probes[i].Max;
+                numMarkers[i].Value = probes[i].Marker;
+
+                if (probes[i].Active)
+                {
+                    measurementStacks[i] = new Stack<MeasurementModel>(30);
+                    groupBoxes[i].Enabled = true;
+                }
+                else
+                    groupBoxes[i].Enabled = false;
+            }
+        }
+
+        public void DisplayGraphs()
+        {
+            foreach (DeviceModel device in devices)
+            {
+                if (device.Active)
+                {
+                    List<ProbeModel> deviceProbes = SqliteDataAccess.LoadProbes(device.Id);
+                    foreach (ProbeModel probe in deviceProbes)
+                    {
+                        // TODO
+                        //chart1.Series.Add()
+                    }
+                }
+            }
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,8 +150,8 @@ namespace Mlekara
                 try
                 {
                     serialPort1.Open();
-                    commStream = new SerialStream(serialPort1);
-                    commStream.ReadTimeout = 1000;
+                    CommStream = new SerialStream(serialPort1);
+                    CommStream.ReadTimeout = 500;
                     ShowPortConnected(true);
                 }
                 catch (Exception err)
@@ -109,40 +181,31 @@ namespace Mlekara
             // Sending a Request for Data
             if (serialPort1.IsOpen)
             {
-                //SendData = StringToByteArray("010300000008440C");
-                //serialPort1.Write(SendData, 0, 8);
                 try
                 {
-                    ReceivedData = commStream.RequestFunc3(1, 0, 8);
-                    ShowData();
+                    for (int i = 0; i < devices.Count; i++)
+                        if (devices[i].Active)
+                        {
+                            ReceivedData = CommStream.RequestFunc3(i + 1, 0, 8);
+                            ShowData(i);
+                        }
                 }
                 catch (Exception err)
                 {
                     timer1.Stop();
+                    btnTimerRestart.Visible = true;
                     MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            
         }
 
-        /*
-        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            
-            //commStream.Read(ReceivedData, 0, 21);
-            //this.Invoke(new EventHandler(ShowData));
-            
-        }
-        */
-
-        private void ShowData() //(object sender, EventArgs e)
+        private void ShowData(int slaveNo)
         {
             byte[] data = ReceivedData;
 
-            float higherValue;
-            float lowerValue;
-            float value;
+            double higherValue;
+            double lowerValue;
+            double value;
             string text;
 
             for (int i = 3; i < 19; i += 2) 
@@ -150,41 +213,56 @@ namespace Mlekara
                 higherValue = Convert.ToInt32(data[i]) * 25.5f; // Higher byte of temp value
                 lowerValue = Convert.ToSingle(data[i+1]) / 10f; // Lower byte of temp value
                 value = higherValue + lowerValue;
-                // TODO: add value to buffer
+
+                int j = (slaveNo * 8) + ((i - 3) / 2); // Probe ID
+
+                MeasurementModel measurement = new MeasurementModel
+                {
+                    ProbeId = j + 1,
+                    Value = value,
+                    Date = DateTime.Now.Date.ToString(),
+                    Hour = DateTime.Now.Hour,
+                    Minute = DateTime.Now.Minute,
+                    Second = DateTime.Now.Second
+                };
+
                 text = value.ToString();
                 if (value % 1 == 0)
                     text += ".0";
 
-                switch (i) // Displaying temperature for each sensor
+                
+                if (probes[j].Active)
                 {
-                    case 3:
-                        textBox1.Text = text;
-                        break;
-                    case 5:
-                        textBox2.Text = text;
-                        break;
-                    case 7:
-                        textBox3.Text = text;
-                        break;
-                    case 9:
-                        textBox4.Text = text;
-                        break;
-                    case 11:
-                        textBox5.Text = text;
-                        break;
-                    case 13:
-                        textBox6.Text = text;
-                        break;
-                    case 15:
-                        textBox7.Text = text;
-                        break;
-                    case 17:
-                        textBox8.Text = text;
-                        break;
-                    default:
-                        break;
+                    tempDisplays[j].Text = text;
+                    measurementStacks[j].Push(measurement);
+
+                    // Check if stacks are full to approximate and save to DB
+                    if (measurementStacks[j].Count == stackSize)
+                        SaveApproximateTemp(j);
                 }
             }
+        }
+
+        private void SaveApproximateTemp(int j)
+        {
+            MeasurementModel measurement = new MeasurementModel
+            {
+                ProbeId = j + 1,
+                Value = 0,
+                Date = DateTime.Now.Date.ToShortDateString(),
+                Hour = DateTime.Now.Hour,
+                Minute = DateTime.Now.Minute,
+                Second = DateTime.Now.Second
+            };
+
+            foreach (MeasurementModel m in measurementStacks[j])
+            {
+                measurement.Value += m.Value;
+            }
+            measurement.Value = Math.Round(measurement.Value / stackSize, 1);
+            SqliteDataAccess.SaveMeasurement(measurement);
+
+            measurementStacks[j].Clear();
         }
 
         public static byte[] StringToByteArray(String hex)
@@ -195,16 +273,6 @@ namespace Mlekara
                 bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             return bytes;
         }
-
-        /* Unused so far.
-        public static string ByteArrayToString(byte[] array)
-        {
-            StringBuilder hex = new StringBuilder(array.Length * 2);
-            foreach (byte b in array)
-                hex.AppendFormat("{0:x2}", b);
-            return hex.ToString();
-        }
-        */
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -228,14 +296,15 @@ namespace Mlekara
             }
         }
 
-        public void AddMeasurementToStack(MeasurementModel measurement)
+        private void btnTimerRestart_Click(object sender, EventArgs e)
         {
-            // TODO: sve
+            timer1.Start();
+            btnTimerRestart.Visible = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            commStream?.Dispose();
+            CommStream?.Dispose();
         }
     }
 }

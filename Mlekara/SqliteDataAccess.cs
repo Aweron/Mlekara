@@ -103,7 +103,7 @@ namespace Mlekara
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<ProbeModel>("select * from Probe", new DynamicParameters());
+                var output = cnn.Query<ProbeModel>("select * from Probe order by Id asc", new DynamicParameters());
                 return output.ToList();
             }
         }
@@ -141,11 +141,11 @@ namespace Mlekara
 
         #region Measurements
 
-        public static List<MeasurementModel> LoadMeasurements()
+        public static List<MeasurementModel> LoadMeasurements(int probeId, string date, int startHour, int hourCount)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<MeasurementModel>("", new DynamicParameters());
+                var output = cnn.Query<MeasurementModel>("select * from Measurement where ProbeId = @probeId and Date = @date and (Hour between @startHour and @endHour)", new { ProbeId = probeId, Date = date, StartHour = startHour, EndHour = startHour + hourCount });
                 return output.ToList();
             }
         }
@@ -154,7 +154,7 @@ namespace Mlekara
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("", measurement);
+                cnn.Execute("insert into Measurement (ProbeId, Value, Date, Hour, Minute, Second) values (@ProbeId, @Value, @Date, @Hour, @Minute, @Second)", measurement);
             }
         }
 
