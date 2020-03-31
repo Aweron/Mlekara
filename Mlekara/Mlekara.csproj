@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\DeviceModel.cs" />
+    <Compile Include="Models\GraphDataModel.cs" />
     <Compile Include="Models\PortSettingsModel.cs" />
     <Compile Include="Models\ProbeModel.cs" />
     <Compile Include="Models\MeasurementModel.cs" />

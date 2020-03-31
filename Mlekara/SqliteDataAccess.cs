@@ -145,7 +145,7 @@ namespace Mlekara
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                var output = cnn.Query<MeasurementModel>("select * from Measurement where ProbeId = @probeId and Date = @date and (Hour between @startHour and @endHour)", new { ProbeId = probeId, Date = date, StartHour = startHour, EndHour = startHour + hourCount });
+                var output = cnn.Query<MeasurementModel>("select * from Measurement where ProbeId = @probeId and Date = @date and (Hour between @startHour and @endHour)", new { ProbeId = probeId, Date = date, StartHour = startHour, EndHour = startHour + hourCount - 1 });
                 return output.ToList();
             }
         }

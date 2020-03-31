@@ -11,6 +11,7 @@ using System.IO.Ports;
 using Mlekara.Models;
 using Code4Bugs.Utils.IO;
 using Code4Bugs.Utils.IO.Modbus;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Mlekara
 {
@@ -35,6 +36,7 @@ namespace Mlekara
         DateTimePicker[] dateTimePickers;
         NumericUpDown[] numStartHours;
         NumericUpDown[] numHourCounts;
+        Chart[] charts;
 
         public Form1()
         {
@@ -50,6 +52,8 @@ namespace Mlekara
             dateTimePickers = new DateTimePicker[] { dateTimePicker1, dateTimePicker2, dateTimePicker3, dateTimePicker4, dateTimePicker5, dateTimePicker6, dateTimePicker7, dateTimePicker8, dateTimePicker9, dateTimePicker10, dateTimePicker11, dateTimePicker12, dateTimePicker13, dateTimePicker14, dateTimePicker15, dateTimePicker16, dateTimePicker17, dateTimePicker18, dateTimePicker19, dateTimePicker20, dateTimePicker21, dateTimePicker22, dateTimePicker23, dateTimePicker24 };
             numStartHours = new NumericUpDown[] { numStartHour1, numStartHour2, numStartHour3, numStartHour4, numStartHour5, numStartHour6, numStartHour7, numStartHour8, numStartHour9, numStartHour10, numStartHour11, numStartHour12, numStartHour13, numStartHour14, numStartHour15, numStartHour16, numStartHour17, numStartHour18, numStartHour19, numStartHour20, numStartHour21, numStartHour22, numStartHour23, numStartHour24 };
             numHourCounts = new NumericUpDown[] { numHourCount1, numHourCount2, numHourCount3, numHourCount4, numHourCount5, numHourCount6, numHourCount7, numHourCount8, numHourCount9, numHourCount10, numHourCount11, numHourCount12, numHourCount13, numHourCount14, numHourCount15, numHourCount16, numHourCount17, numHourCount18, numHourCount19, numHourCount20, numHourCount21, numHourCount22, numHourCount23, numHourCount24 };
+            charts = new Chart[] { chart1, chart2, chart3 };
+
 
             measurementStacks = new Stack<MeasurementModel>[24];
 
@@ -113,6 +117,7 @@ namespace Mlekara
             }
         }
 
+        /*
         public void DisplayGraphs()
         {
             foreach (DeviceModel device in devices)
@@ -124,10 +129,14 @@ namespace Mlekara
                     {
                         // TODO
                         //chart1.Series.Add()
+                        List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probe.Id, DateTime.Now.Date.ToShortDateString(), DateTime.Now.Hour - 2, 2);
+                        for (int i = 0; i < measurements.Count; i++)
+                            charts[i].Series.
                     }
                 }
             }
         }
+        */
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -164,19 +173,7 @@ namespace Mlekara
         private void timer1_Tick(object sender, EventArgs e)
         {
             // System Time
-            string hours = DateTime.Now.Hour.ToString();
-            if (DateTime.Now.Hour < 10)
-                hours = "0" + hours;
-
-            string minutes = DateTime.Now.Minute.ToString();
-            if (DateTime.Now.Minute < 10)
-                minutes = "0" + minutes;
-
-            string seconds = DateTime.Now.Second.ToString();
-            if (DateTime.Now.Second < 10)
-                seconds = "0" + seconds;
-
-            lblTime.Text = hours + ":" + minutes + ":" + seconds;
+            lblTime.Text = DateTime.Now.ToLongTimeString();
 
             // Sending a Request for Data
             if (serialPort1.IsOpen)
@@ -305,6 +302,34 @@ namespace Mlekara
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             CommStream?.Dispose();
+        }
+
+        private void btnShow1_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(1));
+            graph.ShowDialog();
+        }
+
+        private GraphDataModel AssembleGraphDataModel(int i)
+        {
+            ProbeModel probe = new ProbeModel
+            {
+                Id = i,
+                DeviceId = ((i - 1) / 8) + 1,
+                Name = groupBoxes[i - 1].Text,
+                Active = true,
+                Min = Convert.ToInt32(numMins[i - 1].Value),
+                Max = Convert.ToInt32(numMaxs[i - 1].Value),
+                Marker = Convert.ToInt32(numMarkers[i - 1].Value)
+            };
+
+            return new GraphDataModel
+            {
+                Probe = probe,
+                Date = dateTimePickers[i - 1].Value.ToShortDateString(),
+                StartHour = Convert.ToInt32(numStartHours[i - 1].Value),
+                HourCount = Convert.ToInt32(numHourCounts[i - 1].Value)
+            };
         }
     }
 }
