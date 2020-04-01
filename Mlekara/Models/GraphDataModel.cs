@@ -8,6 +8,7 @@ namespace Mlekara.Models
 {
     public class GraphDataModel
     {
+        public string Company { get; set; }
         public ProbeModel Probe { get; set; }
         public string Date { get; set; }
         public int StartHour { get; set; }

@@ -304,13 +304,7 @@ namespace Mlekara
             CommStream?.Dispose();
         }
 
-        private void btnShow1_Click(object sender, EventArgs e)
-        {
-            Graph graph = new Graph(AssembleGraphDataModel(1));
-            graph.ShowDialog();
-        }
-
-        private GraphDataModel AssembleGraphDataModel(int i)
+        public GraphDataModel AssembleGraphDataModel(int i)
         {
             ProbeModel probe = new ProbeModel
             {
@@ -325,11 +319,161 @@ namespace Mlekara
 
             return new GraphDataModel
             {
+                Company = lblCompany.Text,
                 Probe = probe,
                 Date = dateTimePickers[i - 1].Value.ToShortDateString(),
                 StartHour = Convert.ToInt32(numStartHours[i - 1].Value),
                 HourCount = Convert.ToInt32(numHourCounts[i - 1].Value)
             };
         }
+
+        #region Graph Show Button Click Events
+
+        private void btnShow1_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(1));
+            graph.ShowDialog();
+        }
+
+        private void btnShow2_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(2));
+            graph.ShowDialog();
+        }
+
+        private void btnShow3_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(3));
+            graph.ShowDialog();
+        }
+
+        private void btnShow4_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(4));
+            graph.ShowDialog();
+        }
+
+        private void btnShow5_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(5));
+            graph.ShowDialog();
+        }
+
+        private void btnShow6_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(6));
+            graph.ShowDialog();
+        }
+
+        private void btnShow7_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(7));
+            graph.ShowDialog();
+        }
+
+        private void btnShow8_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(8));
+            graph.ShowDialog();
+        }
+
+        private void btnShow9_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(9));
+            graph.ShowDialog();
+        }
+
+        private void btnShow10_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(10));
+            graph.ShowDialog();
+        }
+
+        private void btnShow11_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(11));
+            graph.ShowDialog();
+        }
+
+        private void btnShow12_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(12));
+            graph.ShowDialog();
+        }
+
+        private void btnShow13_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(13));
+            graph.ShowDialog();
+        }
+
+        private void btnShow14_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(14));
+            graph.ShowDialog();
+        }
+
+        private void btnShow15_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(15));
+            graph.ShowDialog();
+        }
+
+        private void btnShow16_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(16));
+            graph.ShowDialog();
+        }
+
+        private void btnShow17_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(17));
+            graph.ShowDialog();
+        }
+
+        private void btnShow18_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(18));
+            graph.ShowDialog();
+        }
+
+        private void btnShow19_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(19));
+            graph.ShowDialog();
+        }
+
+        private void btnShow20_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(20));
+            graph.ShowDialog();
+        }
+
+        private void btnShow21_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(21));
+            graph.ShowDialog();
+        }
+
+        private void btnShow22_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(22));
+            graph.ShowDialog();
+        }
+
+        private void btnShow23_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(23));
+            graph.ShowDialog();
+        }
+
+        private void btnShow24_Click(object sender, EventArgs e)
+        {
+            Graph graph = new Graph(AssembleGraphDataModel(24));
+            graph.ShowDialog();
+        }
+
+        #endregion
+
     }
 }

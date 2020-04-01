@@ -18,6 +18,11 @@ namespace Mlekara
         {
             InitializeComponent();
 
+            chart1.Titles["Naziv"].Text = graphData.Company;
+            lblProbe.Text += graphData.Probe.Name;
+            lblDate.Text += graphData.Date;
+            lblTime.Text += graphData.StartHour + ":00 - " + (graphData.StartHour + graphData.HourCount) + ":00";
+
             List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(graphData.Probe.Id, graphData.Date, graphData.StartHour, graphData.HourCount);
 
             // X axis range
@@ -34,7 +39,7 @@ namespace Mlekara
             chart1.ChartAreas[0].AxisY.Maximum = graphData.Probe.Max;
 
             // Marker line
-            //chart1.Series["Marker"].XValueType = ChartValueType.Time;
+            chart1.Series["Marker"].XValueType = ChartValueType.Time;
 
             chart1.Series["Marker"].Points.AddXY(min, graphData.Probe.Marker);
             chart1.Series["Marker"].Points.AddXY(max, graphData.Probe.Marker);
@@ -46,10 +51,13 @@ namespace Mlekara
             {
                 DateTime time = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
                 chart1.Series["Temps"].Points.AddXY(time, measurement.Value);
-
-                textBox2.Text = time.ToString();
             }
             
+        }
+
+        private void txtNapomena_TextChanged(object sender, EventArgs e)
+        {
+            chart1.Titles["Napomena"].Text = "Napomena: " + txtNapomena.Text;
         }
     }
 }

@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblProbe = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNapomena = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,44 +49,47 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Name = "Marker";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Name = "Temps";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Name = "Marker";
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Name = "Temps";
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(1004, 557);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title1.Name = "titNaziv";
-            title1.Text = "Naziv firme";
-            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title2.Name = "titNapomena";
-            title2.Text = "Napomena:";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Titles.Add(title2);
+            title5.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Naziv";
+            title5.Text = "Naziv firme";
+            title6.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Napomena";
+            title6.Text = "Napomena:";
+            this.chart1.Titles.Add(title5);
+            this.chart1.Titles.Add(title6);
             // 
-            // label2
+            // lblProbe
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(302, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Senzor";
+            this.lblProbe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblProbe.AutoSize = true;
+            this.lblProbe.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblProbe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProbe.Location = new System.Drawing.Point(275, 17);
+            this.lblProbe.Name = "lblProbe";
+            this.lblProbe.Size = new System.Drawing.Size(56, 16);
+            this.lblProbe.TabIndex = 2;
+            this.lblProbe.Text = "Senzor: ";
             // 
             // label3
             // 
@@ -99,78 +101,75 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Napomena:";
             // 
-            // textBox1
+            // txtNapomena
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(80, 566);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(831, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNapomena.Location = new System.Drawing.Point(80, 566);
+            this.txtNapomena.MaxLength = 95;
+            this.txtNapomena.Name = "txtNapomena";
+            this.txtNapomena.Size = new System.Drawing.Size(831, 20);
+            this.txtNapomena.TabIndex = 4;
+            this.txtNapomena.TextChanged += new System.EventHandler(this.txtNapomena_TextChanged);
             // 
-            // button1
+            // btnPrint
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(917, 563);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Štampaj";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Location = new System.Drawing.Point(917, 563);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 5;
+            this.btnPrint.Text = "Štampaj";
+            this.btnPrint.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblDate
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(563, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Datum";
+            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(552, 17);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(53, 16);
+            this.lblDate.TabIndex = 6;
+            this.lblDate.Text = "Datum: ";
             // 
-            // label5
+            // lblTime
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(874, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Vreme";
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(781, 17);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(54, 16);
+            this.lblTime.TabIndex = 7;
+            this.lblTime.Text = "Vreme: ";
             // 
-            // label7
+            // label1
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(799, 526);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Proverio:________________________";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(360, 519);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 20);
-            this.textBox2.TabIndex = 10;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(731, 523);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Proverio: ________________________";
             // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 598);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.txtNapomena);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblProbe);
             this.Controls.Add(this.chart1);
             this.Name = "Graph";
             this.Text = "Graphic";
@@ -183,13 +182,12 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblProbe;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNapomena;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label label1;
     }
 }

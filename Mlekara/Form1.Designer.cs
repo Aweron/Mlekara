@@ -41,6 +41,7 @@
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour5 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount5 = new System.Windows.Forms.NumericUpDown();
             this.label51 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.numMax5 = new System.Windows.Forms.NumericUpDown();
             this.numMin5 = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour4 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount4 = new System.Windows.Forms.NumericUpDown();
             this.label47 = new System.Windows.Forms.Label();
@@ -69,6 +71,7 @@
             this.numMax4 = new System.Windows.Forms.NumericUpDown();
             this.numMin4 = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour6 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount6 = new System.Windows.Forms.NumericUpDown();
             this.label50 = new System.Windows.Forms.Label();
@@ -83,13 +86,14 @@
             this.numMax6 = new System.Windows.Forms.NumericUpDown();
             this.numMin6 = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour3 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount3 = new System.Windows.Forms.NumericUpDown();
             this.label46 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnShow3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -97,6 +101,7 @@
             this.numMax3 = new System.Windows.Forms.NumericUpDown();
             this.numMin3 = new System.Windows.Forms.NumericUpDown();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour7 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount7 = new System.Windows.Forms.NumericUpDown();
             this.label49 = new System.Windows.Forms.Label();
@@ -111,6 +116,7 @@
             this.numMax7 = new System.Windows.Forms.NumericUpDown();
             this.numMin7 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour2 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount2 = new System.Windows.Forms.NumericUpDown();
             this.label45 = new System.Windows.Forms.Label();
@@ -125,6 +131,7 @@
             this.numMax2 = new System.Windows.Forms.NumericUpDown();
             this.numMin2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour8 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount8 = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
@@ -155,6 +162,7 @@
             this.numMin1 = new System.Windows.Forms.NumericUpDown();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker16 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour16 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount16 = new System.Windows.Forms.NumericUpDown();
             this.label92 = new System.Windows.Forms.Label();
@@ -169,6 +177,7 @@
             this.numMax16 = new System.Windows.Forms.NumericUpDown();
             this.numMin16 = new System.Windows.Forms.NumericUpDown();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker15 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour15 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount15 = new System.Windows.Forms.NumericUpDown();
             this.label86 = new System.Windows.Forms.Label();
@@ -183,6 +192,7 @@
             this.numMax15 = new System.Windows.Forms.NumericUpDown();
             this.numMin15 = new System.Windows.Forms.NumericUpDown();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker14 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour14 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount14 = new System.Windows.Forms.NumericUpDown();
             this.label80 = new System.Windows.Forms.Label();
@@ -197,6 +207,7 @@
             this.numMax14 = new System.Windows.Forms.NumericUpDown();
             this.numMin14 = new System.Windows.Forms.NumericUpDown();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker13 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour13 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount13 = new System.Windows.Forms.NumericUpDown();
             this.label74 = new System.Windows.Forms.Label();
@@ -211,6 +222,7 @@
             this.numMax13 = new System.Windows.Forms.NumericUpDown();
             this.numMin13 = new System.Windows.Forms.NumericUpDown();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour12 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount12 = new System.Windows.Forms.NumericUpDown();
             this.label68 = new System.Windows.Forms.Label();
@@ -225,6 +237,7 @@
             this.numMax12 = new System.Windows.Forms.NumericUpDown();
             this.numMin12 = new System.Windows.Forms.NumericUpDown();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour11 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount11 = new System.Windows.Forms.NumericUpDown();
             this.label62 = new System.Windows.Forms.Label();
@@ -239,6 +252,7 @@
             this.numMax11 = new System.Windows.Forms.NumericUpDown();
             this.numMin11 = new System.Windows.Forms.NumericUpDown();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour10 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount10 = new System.Windows.Forms.NumericUpDown();
             this.label56 = new System.Windows.Forms.Label();
@@ -253,6 +267,7 @@
             this.numMax10 = new System.Windows.Forms.NumericUpDown();
             this.numMin10 = new System.Windows.Forms.NumericUpDown();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour9 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount9 = new System.Windows.Forms.NumericUpDown();
             this.label42 = new System.Windows.Forms.Label();
@@ -268,6 +283,7 @@
             this.numMin9 = new System.Windows.Forms.NumericUpDown();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker24 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour24 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount24 = new System.Windows.Forms.NumericUpDown();
             this.label140 = new System.Windows.Forms.Label();
@@ -282,6 +298,7 @@
             this.numMax24 = new System.Windows.Forms.NumericUpDown();
             this.numMin24 = new System.Windows.Forms.NumericUpDown();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker23 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour23 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount23 = new System.Windows.Forms.NumericUpDown();
             this.label134 = new System.Windows.Forms.Label();
@@ -296,6 +313,7 @@
             this.numMax23 = new System.Windows.Forms.NumericUpDown();
             this.numMin23 = new System.Windows.Forms.NumericUpDown();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker22 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour22 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount22 = new System.Windows.Forms.NumericUpDown();
             this.label128 = new System.Windows.Forms.Label();
@@ -310,6 +328,7 @@
             this.numMax22 = new System.Windows.Forms.NumericUpDown();
             this.numMin22 = new System.Windows.Forms.NumericUpDown();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker21 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour21 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount21 = new System.Windows.Forms.NumericUpDown();
             this.label122 = new System.Windows.Forms.Label();
@@ -324,6 +343,7 @@
             this.numMax21 = new System.Windows.Forms.NumericUpDown();
             this.numMin21 = new System.Windows.Forms.NumericUpDown();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker20 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour20 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount20 = new System.Windows.Forms.NumericUpDown();
             this.label116 = new System.Windows.Forms.Label();
@@ -338,6 +358,7 @@
             this.numMax20 = new System.Windows.Forms.NumericUpDown();
             this.numMin20 = new System.Windows.Forms.NumericUpDown();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker19 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour19 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount19 = new System.Windows.Forms.NumericUpDown();
             this.label110 = new System.Windows.Forms.Label();
@@ -352,6 +373,7 @@
             this.numMax19 = new System.Windows.Forms.NumericUpDown();
             this.numMin19 = new System.Windows.Forms.NumericUpDown();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker18 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour18 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount18 = new System.Windows.Forms.NumericUpDown();
             this.label104 = new System.Windows.Forms.Label();
@@ -366,6 +388,7 @@
             this.numMax18 = new System.Windows.Forms.NumericUpDown();
             this.numMin18 = new System.Windows.Forms.NumericUpDown();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker17 = new System.Windows.Forms.DateTimePicker();
             this.numStartHour17 = new System.Windows.Forms.NumericUpDown();
             this.numHourCount17 = new System.Windows.Forms.NumericUpDown();
             this.label98 = new System.Windows.Forms.Label();
@@ -403,29 +426,6 @@
             this.label41 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnTimerRestart = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker12 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker13 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker14 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker15 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker16 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker17 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker18 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker19 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker20 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker21 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker22 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker23 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker24 = new System.Windows.Forms.DateTimePicker();
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -644,6 +644,15 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "-";
             // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker5.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker5.TabIndex = 21;
+            // 
             // numStartHour5
             // 
             this.numStartHour5.Location = new System.Drawing.Point(6, 158);
@@ -728,6 +737,7 @@
             this.btnShow5.TabIndex = 7;
             this.btnShow5.Text = "Prikaz";
             this.btnShow5.UseVisualStyleBackColor = true;
+            this.btnShow5.Click += new System.EventHandler(this.btnShow5_Click);
             // 
             // label22
             // 
@@ -799,6 +809,15 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "-";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker4.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker4.TabIndex = 19;
             // 
             // numStartHour4
             // 
@@ -884,6 +903,7 @@
             this.btnShow4.TabIndex = 7;
             this.btnShow4.Text = "Prikaz";
             this.btnShow4.UseVisualStyleBackColor = true;
+            this.btnShow4.Click += new System.EventHandler(this.btnShow4_Click);
             // 
             // label17
             // 
@@ -955,6 +975,15 @@
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "-";
+            // 
+            // dateTimePicker6
+            // 
+            this.dateTimePicker6.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker6.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker6.Name = "dateTimePicker6";
+            this.dateTimePicker6.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker6.TabIndex = 29;
             // 
             // numStartHour6
             // 
@@ -1040,6 +1069,7 @@
             this.btnShow6.TabIndex = 7;
             this.btnShow6.Text = "Prikaz";
             this.btnShow6.UseVisualStyleBackColor = true;
+            this.btnShow6.Click += new System.EventHandler(this.btnShow6_Click);
             // 
             // label28
             // 
@@ -1098,7 +1128,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.btnShow3);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label14);
@@ -1111,6 +1141,15 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "-";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker3.TabIndex = 17;
             // 
             // numStartHour3
             // 
@@ -1188,14 +1227,15 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Broj sati:";
             // 
-            // button3
+            // btnShow3
             // 
-            this.button3.Location = new System.Drawing.Point(123, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Prikaz";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnShow3.Location = new System.Drawing.Point(123, 155);
+            this.btnShow3.Name = "btnShow3";
+            this.btnShow3.Size = new System.Drawing.Size(75, 23);
+            this.btnShow3.TabIndex = 7;
+            this.btnShow3.Text = "Prikaz";
+            this.btnShow3.UseVisualStyleBackColor = true;
+            this.btnShow3.Click += new System.EventHandler(this.btnShow3_Click);
             // 
             // label11
             // 
@@ -1267,6 +1307,15 @@
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "-";
+            // 
+            // dateTimePicker7
+            // 
+            this.dateTimePicker7.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker7.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker7.Name = "dateTimePicker7";
+            this.dateTimePicker7.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker7.TabIndex = 30;
             // 
             // numStartHour7
             // 
@@ -1352,6 +1401,7 @@
             this.btnShow7.TabIndex = 7;
             this.btnShow7.Text = "Prikaz";
             this.btnShow7.UseVisualStyleBackColor = true;
+            this.btnShow7.Click += new System.EventHandler(this.btnShow7_Click);
             // 
             // label33
             // 
@@ -1423,6 +1473,15 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pasterizator 2";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker2.TabIndex = 15;
             // 
             // numStartHour2
             // 
@@ -1508,6 +1567,7 @@
             this.btnShow2.TabIndex = 7;
             this.btnShow2.Text = "Prikaz";
             this.btnShow2.UseVisualStyleBackColor = true;
+            this.btnShow2.Click += new System.EventHandler(this.btnShow2_Click);
             // 
             // label6
             // 
@@ -1579,6 +1639,15 @@
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "-";
+            // 
+            // dateTimePicker8
+            // 
+            this.dateTimePicker8.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker8.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker8.Name = "dateTimePicker8";
+            this.dateTimePicker8.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker8.TabIndex = 31;
             // 
             // numStartHour8
             // 
@@ -1664,6 +1733,7 @@
             this.btnShow8.TabIndex = 7;
             this.btnShow8.Text = "Prikaz";
             this.btnShow8.UseVisualStyleBackColor = true;
+            this.btnShow8.Click += new System.EventHandler(this.btnShow8_Click);
             // 
             // label38
             // 
@@ -1920,6 +1990,15 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "-";
             // 
+            // dateTimePicker16
+            // 
+            this.dateTimePicker16.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker16.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker16.Name = "dateTimePicker16";
+            this.dateTimePicker16.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker16.TabIndex = 32;
+            // 
             // numStartHour16
             // 
             this.numStartHour16.Location = new System.Drawing.Point(6, 158);
@@ -2004,6 +2083,7 @@
             this.btnShow16.TabIndex = 10;
             this.btnShow16.Text = "Prikaz";
             this.btnShow16.UseVisualStyleBackColor = true;
+            this.btnShow16.Click += new System.EventHandler(this.btnShow16_Click);
             // 
             // label95
             // 
@@ -2075,6 +2155,15 @@
             this.groupBox15.TabIndex = 6;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "-";
+            // 
+            // dateTimePicker15
+            // 
+            this.dateTimePicker15.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker15.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker15.Name = "dateTimePicker15";
+            this.dateTimePicker15.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker15.TabIndex = 31;
             // 
             // numStartHour15
             // 
@@ -2160,6 +2249,7 @@
             this.btnShow15.TabIndex = 10;
             this.btnShow15.Text = "Prikaz";
             this.btnShow15.UseVisualStyleBackColor = true;
+            this.btnShow15.Click += new System.EventHandler(this.btnShow15_Click);
             // 
             // label89
             // 
@@ -2231,6 +2321,15 @@
             this.groupBox14.TabIndex = 5;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "-";
+            // 
+            // dateTimePicker14
+            // 
+            this.dateTimePicker14.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker14.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker14.Name = "dateTimePicker14";
+            this.dateTimePicker14.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker14.TabIndex = 30;
             // 
             // numStartHour14
             // 
@@ -2316,6 +2415,7 @@
             this.btnShow14.TabIndex = 10;
             this.btnShow14.Text = "Prikaz";
             this.btnShow14.UseVisualStyleBackColor = true;
+            this.btnShow14.Click += new System.EventHandler(this.btnShow14_Click);
             // 
             // label83
             // 
@@ -2387,6 +2487,15 @@
             this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "-";
+            // 
+            // dateTimePicker13
+            // 
+            this.dateTimePicker13.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker13.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker13.Name = "dateTimePicker13";
+            this.dateTimePicker13.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker13.TabIndex = 29;
             // 
             // numStartHour13
             // 
@@ -2472,6 +2581,7 @@
             this.btnShow13.TabIndex = 10;
             this.btnShow13.Text = "Prikaz";
             this.btnShow13.UseVisualStyleBackColor = true;
+            this.btnShow13.Click += new System.EventHandler(this.btnShow13_Click);
             // 
             // label77
             // 
@@ -2543,6 +2653,15 @@
             this.groupBox12.TabIndex = 3;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "-";
+            // 
+            // dateTimePicker12
+            // 
+            this.dateTimePicker12.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker12.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker12.Name = "dateTimePicker12";
+            this.dateTimePicker12.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker12.TabIndex = 28;
             // 
             // numStartHour12
             // 
@@ -2628,6 +2747,7 @@
             this.btnShow12.TabIndex = 10;
             this.btnShow12.Text = "Prikaz";
             this.btnShow12.UseVisualStyleBackColor = true;
+            this.btnShow12.Click += new System.EventHandler(this.btnShow12_Click);
             // 
             // label71
             // 
@@ -2699,6 +2819,15 @@
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "-";
+            // 
+            // dateTimePicker11
+            // 
+            this.dateTimePicker11.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker11.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker11.Name = "dateTimePicker11";
+            this.dateTimePicker11.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker11.TabIndex = 27;
             // 
             // numStartHour11
             // 
@@ -2784,6 +2913,7 @@
             this.btnShow11.TabIndex = 10;
             this.btnShow11.Text = "Prikaz";
             this.btnShow11.UseVisualStyleBackColor = true;
+            this.btnShow11.Click += new System.EventHandler(this.btnShow11_Click);
             // 
             // label65
             // 
@@ -2855,6 +2985,15 @@
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "-";
+            // 
+            // dateTimePicker10
+            // 
+            this.dateTimePicker10.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker10.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker10.Name = "dateTimePicker10";
+            this.dateTimePicker10.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker10.TabIndex = 26;
             // 
             // numStartHour10
             // 
@@ -2940,6 +3079,7 @@
             this.btnShow10.TabIndex = 7;
             this.btnShow10.Text = "Prikaz";
             this.btnShow10.UseVisualStyleBackColor = true;
+            this.btnShow10.Click += new System.EventHandler(this.btnShow10_Click);
             // 
             // label59
             // 
@@ -3011,6 +3151,15 @@
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "-";
+            // 
+            // dateTimePicker9
+            // 
+            this.dateTimePicker9.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker9.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker9.Name = "dateTimePicker9";
+            this.dateTimePicker9.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker9.TabIndex = 25;
             // 
             // numStartHour9
             // 
@@ -3096,6 +3245,7 @@
             this.btnShow9.TabIndex = 7;
             this.btnShow9.Text = "Prikaz";
             this.btnShow9.UseVisualStyleBackColor = true;
+            this.btnShow9.Click += new System.EventHandler(this.btnShow9_Click);
             // 
             // label53
             // 
@@ -3186,6 +3336,15 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "-";
             // 
+            // dateTimePicker24
+            // 
+            this.dateTimePicker24.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker24.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker24.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker24.Name = "dateTimePicker24";
+            this.dateTimePicker24.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker24.TabIndex = 32;
+            // 
             // numStartHour24
             // 
             this.numStartHour24.Location = new System.Drawing.Point(6, 158);
@@ -3270,6 +3429,7 @@
             this.btnShow24.TabIndex = 10;
             this.btnShow24.Text = "Prikaz";
             this.btnShow24.UseVisualStyleBackColor = true;
+            this.btnShow24.Click += new System.EventHandler(this.btnShow24_Click);
             // 
             // label143
             // 
@@ -3341,6 +3501,15 @@
             this.groupBox23.TabIndex = 25;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "-";
+            // 
+            // dateTimePicker23
+            // 
+            this.dateTimePicker23.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker23.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker23.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker23.Name = "dateTimePicker23";
+            this.dateTimePicker23.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker23.TabIndex = 31;
             // 
             // numStartHour23
             // 
@@ -3426,6 +3595,7 @@
             this.btnShow23.TabIndex = 10;
             this.btnShow23.Text = "Prikaz";
             this.btnShow23.UseVisualStyleBackColor = true;
+            this.btnShow23.Click += new System.EventHandler(this.btnShow23_Click);
             // 
             // label137
             // 
@@ -3497,6 +3667,15 @@
             this.groupBox22.TabIndex = 25;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "-";
+            // 
+            // dateTimePicker22
+            // 
+            this.dateTimePicker22.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker22.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker22.Name = "dateTimePicker22";
+            this.dateTimePicker22.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker22.TabIndex = 30;
             // 
             // numStartHour22
             // 
@@ -3582,6 +3761,7 @@
             this.btnShow22.TabIndex = 10;
             this.btnShow22.Text = "Prikaz";
             this.btnShow22.UseVisualStyleBackColor = true;
+            this.btnShow22.Click += new System.EventHandler(this.btnShow22_Click);
             // 
             // label131
             // 
@@ -3653,6 +3833,15 @@
             this.groupBox21.TabIndex = 25;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "-";
+            // 
+            // dateTimePicker21
+            // 
+            this.dateTimePicker21.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker21.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker21.Name = "dateTimePicker21";
+            this.dateTimePicker21.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker21.TabIndex = 29;
             // 
             // numStartHour21
             // 
@@ -3738,6 +3927,7 @@
             this.btnShow21.TabIndex = 10;
             this.btnShow21.Text = "Prikaz";
             this.btnShow21.UseVisualStyleBackColor = true;
+            this.btnShow21.Click += new System.EventHandler(this.btnShow21_Click);
             // 
             // label125
             // 
@@ -3809,6 +3999,15 @@
             this.groupBox20.TabIndex = 25;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "-";
+            // 
+            // dateTimePicker20
+            // 
+            this.dateTimePicker20.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker20.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker20.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker20.Name = "dateTimePicker20";
+            this.dateTimePicker20.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker20.TabIndex = 28;
             // 
             // numStartHour20
             // 
@@ -3894,6 +4093,7 @@
             this.btnShow20.TabIndex = 10;
             this.btnShow20.Text = "Prikaz";
             this.btnShow20.UseVisualStyleBackColor = true;
+            this.btnShow20.Click += new System.EventHandler(this.btnShow20_Click);
             // 
             // label119
             // 
@@ -3965,6 +4165,15 @@
             this.groupBox19.TabIndex = 25;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "-";
+            // 
+            // dateTimePicker19
+            // 
+            this.dateTimePicker19.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker19.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker19.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker19.Name = "dateTimePicker19";
+            this.dateTimePicker19.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker19.TabIndex = 27;
             // 
             // numStartHour19
             // 
@@ -4050,6 +4259,7 @@
             this.btnShow19.TabIndex = 10;
             this.btnShow19.Text = "Prikaz";
             this.btnShow19.UseVisualStyleBackColor = true;
+            this.btnShow19.Click += new System.EventHandler(this.btnShow19_Click);
             // 
             // label113
             // 
@@ -4121,6 +4331,15 @@
             this.groupBox18.TabIndex = 25;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "-";
+            // 
+            // dateTimePicker18
+            // 
+            this.dateTimePicker18.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker18.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker18.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker18.Name = "dateTimePicker18";
+            this.dateTimePicker18.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker18.TabIndex = 26;
             // 
             // numStartHour18
             // 
@@ -4206,6 +4425,7 @@
             this.btnShow18.TabIndex = 10;
             this.btnShow18.Text = "Prikaz";
             this.btnShow18.UseVisualStyleBackColor = true;
+            this.btnShow18.Click += new System.EventHandler(this.btnShow18_Click);
             // 
             // label107
             // 
@@ -4277,6 +4497,15 @@
             this.groupBox17.TabIndex = 20;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "-";
+            // 
+            // dateTimePicker17
+            // 
+            this.dateTimePicker17.CustomFormat = "dd.MM.yyyy";
+            this.dateTimePicker17.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker17.Location = new System.Drawing.Point(6, 119);
+            this.dateTimePicker17.Name = "dateTimePicker17";
+            this.dateTimePicker17.Size = new System.Drawing.Size(186, 20);
+            this.dateTimePicker17.TabIndex = 25;
             // 
             // numStartHour17
             // 
@@ -4362,6 +4591,7 @@
             this.btnShow17.TabIndex = 10;
             this.btnShow17.Text = "Prikaz";
             this.btnShow17.UseVisualStyleBackColor = true;
+            this.btnShow17.Click += new System.EventHandler(this.btnShow17_Click);
             // 
             // label101
             // 
@@ -4660,213 +4890,6 @@
             this.btnTimerRestart.Visible = false;
             this.btnTimerRestart.Click += new System.EventHandler(this.btnTimerRestart_Click);
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker2.TabIndex = 15;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker3.TabIndex = 17;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker4.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker4.TabIndex = 19;
-            // 
-            // dateTimePicker5
-            // 
-            this.dateTimePicker5.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker5.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker5.TabIndex = 21;
-            // 
-            // dateTimePicker6
-            // 
-            this.dateTimePicker6.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker6.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker6.TabIndex = 29;
-            // 
-            // dateTimePicker7
-            // 
-            this.dateTimePicker7.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker7.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker7.TabIndex = 30;
-            // 
-            // dateTimePicker8
-            // 
-            this.dateTimePicker8.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker8.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker8.TabIndex = 31;
-            // 
-            // dateTimePicker9
-            // 
-            this.dateTimePicker9.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker9.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker9.Name = "dateTimePicker9";
-            this.dateTimePicker9.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker9.TabIndex = 25;
-            // 
-            // dateTimePicker10
-            // 
-            this.dateTimePicker10.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker10.Location = new System.Drawing.Point(5, 119);
-            this.dateTimePicker10.Name = "dateTimePicker10";
-            this.dateTimePicker10.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker10.TabIndex = 26;
-            // 
-            // dateTimePicker11
-            // 
-            this.dateTimePicker11.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker11.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker11.Name = "dateTimePicker11";
-            this.dateTimePicker11.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker11.TabIndex = 27;
-            // 
-            // dateTimePicker12
-            // 
-            this.dateTimePicker12.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker12.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker12.Name = "dateTimePicker12";
-            this.dateTimePicker12.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker12.TabIndex = 28;
-            // 
-            // dateTimePicker13
-            // 
-            this.dateTimePicker13.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker13.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker13.Name = "dateTimePicker13";
-            this.dateTimePicker13.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker13.TabIndex = 29;
-            // 
-            // dateTimePicker14
-            // 
-            this.dateTimePicker14.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker14.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker14.Name = "dateTimePicker14";
-            this.dateTimePicker14.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker14.TabIndex = 30;
-            // 
-            // dateTimePicker15
-            // 
-            this.dateTimePicker15.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker15.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker15.Name = "dateTimePicker15";
-            this.dateTimePicker15.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker15.TabIndex = 31;
-            // 
-            // dateTimePicker16
-            // 
-            this.dateTimePicker16.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker16.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker16.Name = "dateTimePicker16";
-            this.dateTimePicker16.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker16.TabIndex = 32;
-            // 
-            // dateTimePicker17
-            // 
-            this.dateTimePicker17.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker17.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker17.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker17.Name = "dateTimePicker17";
-            this.dateTimePicker17.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker17.TabIndex = 25;
-            // 
-            // dateTimePicker18
-            // 
-            this.dateTimePicker18.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker18.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker18.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker18.Name = "dateTimePicker18";
-            this.dateTimePicker18.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker18.TabIndex = 26;
-            // 
-            // dateTimePicker19
-            // 
-            this.dateTimePicker19.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker19.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker19.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker19.Name = "dateTimePicker19";
-            this.dateTimePicker19.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker19.TabIndex = 27;
-            // 
-            // dateTimePicker20
-            // 
-            this.dateTimePicker20.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker20.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker20.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker20.Name = "dateTimePicker20";
-            this.dateTimePicker20.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker20.TabIndex = 28;
-            // 
-            // dateTimePicker21
-            // 
-            this.dateTimePicker21.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker21.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker21.Name = "dateTimePicker21";
-            this.dateTimePicker21.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker21.TabIndex = 29;
-            // 
-            // dateTimePicker22
-            // 
-            this.dateTimePicker22.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker22.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker22.Name = "dateTimePicker22";
-            this.dateTimePicker22.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker22.TabIndex = 30;
-            // 
-            // dateTimePicker23
-            // 
-            this.dateTimePicker23.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker23.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker23.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker23.Name = "dateTimePicker23";
-            this.dateTimePicker23.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker23.TabIndex = 31;
-            // 
-            // dateTimePicker24
-            // 
-            this.dateTimePicker24.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker24.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker24.Location = new System.Drawing.Point(6, 119);
-            this.dateTimePicker24.Name = "dateTimePicker24";
-            this.dateTimePicker24.Size = new System.Drawing.Size(186, 20);
-            this.dateTimePicker24.TabIndex = 32;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5117,7 +5140,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnShow3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
