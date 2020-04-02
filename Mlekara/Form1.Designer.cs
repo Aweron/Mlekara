@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -646,8 +646,8 @@
             // 
             // dateTimePicker5
             // 
-            this.dateTimePicker5.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker5.CustomFormat = "";
+            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker5.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker5.Name = "dateTimePicker5";
             this.dateTimePicker5.Size = new System.Drawing.Size(186, 20);
@@ -812,8 +812,8 @@
             // 
             // dateTimePicker4
             // 
-            this.dateTimePicker4.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker4.CustomFormat = "";
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker4.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(186, 20);
@@ -978,8 +978,8 @@
             // 
             // dateTimePicker6
             // 
-            this.dateTimePicker6.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker6.CustomFormat = "";
+            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker6.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(186, 20);
@@ -1144,8 +1144,8 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker3.CustomFormat = "";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(186, 20);
@@ -1310,8 +1310,8 @@
             // 
             // dateTimePicker7
             // 
-            this.dateTimePicker7.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker7.CustomFormat = "";
+            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker7.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker7.Name = "dateTimePicker7";
             this.dateTimePicker7.Size = new System.Drawing.Size(186, 20);
@@ -1476,8 +1476,8 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(186, 20);
@@ -1642,8 +1642,8 @@
             // 
             // dateTimePicker8
             // 
-            this.dateTimePicker8.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker8.CustomFormat = "";
+            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker8.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker8.Name = "dateTimePicker8";
             this.dateTimePicker8.Size = new System.Drawing.Size(186, 20);
@@ -1903,8 +1903,8 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(186, 20);
@@ -1992,8 +1992,8 @@
             // 
             // dateTimePicker16
             // 
-            this.dateTimePicker16.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker16.CustomFormat = "";
+            this.dateTimePicker16.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker16.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker16.Name = "dateTimePicker16";
             this.dateTimePicker16.Size = new System.Drawing.Size(186, 20);
@@ -2158,8 +2158,8 @@
             // 
             // dateTimePicker15
             // 
-            this.dateTimePicker15.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker15.CustomFormat = "";
+            this.dateTimePicker15.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker15.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker15.Name = "dateTimePicker15";
             this.dateTimePicker15.Size = new System.Drawing.Size(186, 20);
@@ -2324,8 +2324,8 @@
             // 
             // dateTimePicker14
             // 
-            this.dateTimePicker14.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker14.CustomFormat = "";
+            this.dateTimePicker14.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker14.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker14.Name = "dateTimePicker14";
             this.dateTimePicker14.Size = new System.Drawing.Size(186, 20);
@@ -2490,8 +2490,8 @@
             // 
             // dateTimePicker13
             // 
-            this.dateTimePicker13.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker13.CustomFormat = "";
+            this.dateTimePicker13.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker13.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker13.Name = "dateTimePicker13";
             this.dateTimePicker13.Size = new System.Drawing.Size(186, 20);
@@ -2656,8 +2656,8 @@
             // 
             // dateTimePicker12
             // 
-            this.dateTimePicker12.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker12.CustomFormat = "";
+            this.dateTimePicker12.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker12.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker12.Name = "dateTimePicker12";
             this.dateTimePicker12.Size = new System.Drawing.Size(186, 20);
@@ -2822,8 +2822,8 @@
             // 
             // dateTimePicker11
             // 
-            this.dateTimePicker11.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker11.CustomFormat = "";
+            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker11.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker11.Name = "dateTimePicker11";
             this.dateTimePicker11.Size = new System.Drawing.Size(186, 20);
@@ -2988,8 +2988,8 @@
             // 
             // dateTimePicker10
             // 
-            this.dateTimePicker10.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker10.CustomFormat = "";
+            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker10.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker10.Name = "dateTimePicker10";
             this.dateTimePicker10.Size = new System.Drawing.Size(186, 20);
@@ -3154,8 +3154,8 @@
             // 
             // dateTimePicker9
             // 
-            this.dateTimePicker9.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker9.CustomFormat = "";
+            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker9.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker9.Name = "dateTimePicker9";
             this.dateTimePicker9.Size = new System.Drawing.Size(186, 20);
@@ -3338,8 +3338,8 @@
             // 
             // dateTimePicker24
             // 
-            this.dateTimePicker24.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker24.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker24.CustomFormat = "";
+            this.dateTimePicker24.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker24.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker24.Name = "dateTimePicker24";
             this.dateTimePicker24.Size = new System.Drawing.Size(186, 20);
@@ -3504,8 +3504,8 @@
             // 
             // dateTimePicker23
             // 
-            this.dateTimePicker23.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker23.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker23.CustomFormat = "";
+            this.dateTimePicker23.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker23.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker23.Name = "dateTimePicker23";
             this.dateTimePicker23.Size = new System.Drawing.Size(186, 20);
@@ -3670,8 +3670,8 @@
             // 
             // dateTimePicker22
             // 
-            this.dateTimePicker22.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker22.CustomFormat = "";
+            this.dateTimePicker22.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker22.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker22.Name = "dateTimePicker22";
             this.dateTimePicker22.Size = new System.Drawing.Size(186, 20);
@@ -3836,8 +3836,8 @@
             // 
             // dateTimePicker21
             // 
-            this.dateTimePicker21.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker21.CustomFormat = "";
+            this.dateTimePicker21.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker21.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker21.Name = "dateTimePicker21";
             this.dateTimePicker21.Size = new System.Drawing.Size(186, 20);
@@ -4002,8 +4002,8 @@
             // 
             // dateTimePicker20
             // 
-            this.dateTimePicker20.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker20.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker20.CustomFormat = "";
+            this.dateTimePicker20.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker20.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker20.Name = "dateTimePicker20";
             this.dateTimePicker20.Size = new System.Drawing.Size(186, 20);
@@ -4168,8 +4168,8 @@
             // 
             // dateTimePicker19
             // 
-            this.dateTimePicker19.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker19.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker19.CustomFormat = "";
+            this.dateTimePicker19.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker19.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker19.Name = "dateTimePicker19";
             this.dateTimePicker19.Size = new System.Drawing.Size(186, 20);
@@ -4334,8 +4334,8 @@
             // 
             // dateTimePicker18
             // 
-            this.dateTimePicker18.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker18.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker18.CustomFormat = "";
+            this.dateTimePicker18.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker18.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker18.Name = "dateTimePicker18";
             this.dateTimePicker18.Size = new System.Drawing.Size(186, 20);
@@ -4500,8 +4500,8 @@
             // 
             // dateTimePicker17
             // 
-            this.dateTimePicker17.CustomFormat = "dd.MM.yyyy";
-            this.dateTimePicker17.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker17.CustomFormat = "";
+            this.dateTimePicker17.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker17.Location = new System.Drawing.Point(6, 119);
             this.dateTimePicker17.Name = "dateTimePicker17";
             this.dateTimePicker17.Size = new System.Drawing.Size(186, 20);
@@ -4703,17 +4703,17 @@
             // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Marker";
-            this.chart1.Series.Add(series7);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Marker";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(836, 378);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -4731,17 +4731,17 @@
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(6, 6);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Marker";
-            this.chart2.Series.Add(series8);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Marker";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(836, 378);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -4759,17 +4759,17 @@
             // 
             // chart3
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart3.Legends.Add(legend9);
+            chartArea3.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(6, 6);
             this.chart3.Name = "chart3";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.Name = "Marker";
-            this.chart3.Series.Add(series9);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Marker";
+            this.chart3.Series.Add(series3);
             this.chart3.Size = new System.Drawing.Size(836, 378);
             this.chart3.TabIndex = 1;
             this.chart3.Text = "chart3";
