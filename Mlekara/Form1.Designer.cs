@@ -32,12 +32,21 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -46,7 +55,7 @@
             this.numHourCount5 = new System.Windows.Forms.NumericUpDown();
             this.label51 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnShow5 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
@@ -76,7 +85,7 @@
             this.numHourCount6 = new System.Windows.Forms.NumericUpDown();
             this.label50 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.btnShow6 = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -106,7 +115,7 @@
             this.numHourCount7 = new System.Windows.Forms.NumericUpDown();
             this.label49 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.btnShow7 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -136,7 +145,7 @@
             this.numHourCount8 = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btnShow8 = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
@@ -405,13 +414,28 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabGraphics = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.lblGraph3 = new System.Windows.Forms.Label();
+            this.btnShowGraphic3 = new System.Windows.Forms.Button();
+            this.lblGraph2 = new System.Windows.Forms.Label();
+            this.btnShowGraphic2 = new System.Windows.Forms.Button();
+            this.lblGraph1 = new System.Windows.Forms.Label();
+            this.btnShowGraphic1 = new System.Windows.Forms.Button();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label159 = new System.Windows.Forms.Label();
+            this.numMaxGraph = new System.Windows.Forms.NumericUpDown();
+            this.numMinGraph = new System.Windows.Forms.NumericUpDown();
+            this.numStartHourGraph = new System.Windows.Forms.NumericUpDown();
+            this.label149 = new System.Windows.Forms.Label();
+            this.numHourCountGraph = new System.Windows.Forms.NumericUpDown();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label148 = new System.Windows.Forms.Label();
+            this.dateTimeGraph = new System.Windows.Forms.DateTimePicker();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.txtNapomena = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblConnected = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.connectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -426,6 +450,8 @@
             this.label41 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnTimerRestart = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -577,13 +603,13 @@
             this.tabMain.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.tabGraphics.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHourCountGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBoxConnection.SuspendLayout();
             this.SuspendLayout();
@@ -599,7 +625,7 @@
             this.tabTemperature.Location = new System.Drawing.Point(6, 6);
             this.tabTemperature.Name = "tabTemperature";
             this.tabTemperature.SelectedIndex = 0;
-            this.tabTemperature.Size = new System.Drawing.Size(854, 412);
+            this.tabTemperature.Size = new System.Drawing.Size(854, 416);
             this.tabTemperature.TabIndex = 0;
             // 
             // tabPage1
@@ -615,7 +641,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(846, 386);
+            this.tabPage1.Size = new System.Drawing.Size(846, 390);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "1-8";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -627,7 +653,7 @@
             this.groupBox5.Controls.Add(this.numHourCount5);
             this.groupBox5.Controls.Add(this.label51);
             this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.btnShow5);
             this.groupBox5.Controls.Add(this.label22);
@@ -708,17 +734,17 @@
             this.label20.TabIndex = 13;
             this.label20.Text = "Početni sat:";
             // 
-            // textBox8
+            // textBox5
             // 
-            this.textBox8.BackColor = System.Drawing.Color.Black;
-            this.textBox8.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Lime;
-            this.textBox8.Location = new System.Drawing.Point(6, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(192, 55);
-            this.textBox8.TabIndex = 0;
-            this.textBox8.Text = "00.0";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.BackColor = System.Drawing.Color.Black;
+            this.textBox5.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.Lime;
+            this.textBox5.Location = new System.Drawing.Point(6, 19);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(192, 55);
+            this.textBox5.TabIndex = 0;
+            this.textBox5.Text = "00.0";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
             // 
@@ -960,7 +986,7 @@
             this.groupBox6.Controls.Add(this.numHourCount6);
             this.groupBox6.Controls.Add(this.label50);
             this.groupBox6.Controls.Add(this.label26);
-            this.groupBox6.Controls.Add(this.textBox7);
+            this.groupBox6.Controls.Add(this.textBox6);
             this.groupBox6.Controls.Add(this.label27);
             this.groupBox6.Controls.Add(this.btnShow6);
             this.groupBox6.Controls.Add(this.label28);
@@ -1040,17 +1066,17 @@
             this.label26.TabIndex = 13;
             this.label26.Text = "Početni sat:";
             // 
-            // textBox7
+            // textBox6
             // 
-            this.textBox7.BackColor = System.Drawing.Color.Black;
-            this.textBox7.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Lime;
-            this.textBox7.Location = new System.Drawing.Point(6, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(192, 55);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.Text = "00.0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.BackColor = System.Drawing.Color.Black;
+            this.textBox6.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.Color.Lime;
+            this.textBox6.Location = new System.Drawing.Point(6, 19);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(192, 55);
+            this.textBox6.TabIndex = 0;
+            this.textBox6.Text = "00.0";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label27
             // 
@@ -1292,7 +1318,7 @@
             this.groupBox7.Controls.Add(this.numHourCount7);
             this.groupBox7.Controls.Add(this.label49);
             this.groupBox7.Controls.Add(this.label31);
-            this.groupBox7.Controls.Add(this.textBox6);
+            this.groupBox7.Controls.Add(this.textBox7);
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.btnShow7);
             this.groupBox7.Controls.Add(this.label33);
@@ -1372,17 +1398,17 @@
             this.label31.TabIndex = 13;
             this.label31.Text = "Početni sat:";
             // 
-            // textBox6
+            // textBox7
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Black;
-            this.textBox6.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Lime;
-            this.textBox6.Location = new System.Drawing.Point(6, 19);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(192, 55);
-            this.textBox6.TabIndex = 0;
-            this.textBox6.Text = "00.0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox7.BackColor = System.Drawing.Color.Black;
+            this.textBox7.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.Color.Lime;
+            this.textBox7.Location = new System.Drawing.Point(6, 19);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(192, 55);
+            this.textBox7.TabIndex = 0;
+            this.textBox7.Text = "00.0";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label32
             // 
@@ -1624,7 +1650,7 @@
             this.groupBox8.Controls.Add(this.numHourCount8);
             this.groupBox8.Controls.Add(this.label48);
             this.groupBox8.Controls.Add(this.label36);
-            this.groupBox8.Controls.Add(this.textBox5);
+            this.groupBox8.Controls.Add(this.textBox8);
             this.groupBox8.Controls.Add(this.label37);
             this.groupBox8.Controls.Add(this.btnShow8);
             this.groupBox8.Controls.Add(this.label38);
@@ -1704,17 +1730,17 @@
             this.label36.TabIndex = 13;
             this.label36.Text = "Početni sat:";
             // 
-            // textBox5
+            // textBox8
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Black;
-            this.textBox5.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Lime;
-            this.textBox5.Location = new System.Drawing.Point(6, 19);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 55);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.Text = "00.0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox8.BackColor = System.Drawing.Color.Black;
+            this.textBox8.Font = new System.Drawing.Font("Digital-7", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.Lime;
+            this.textBox8.Location = new System.Drawing.Point(6, 19);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(192, 55);
+            this.textBox8.TabIndex = 0;
+            this.textBox8.Text = "00.0";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label37
             // 
@@ -1962,7 +1988,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(846, 386);
+            this.tabPage2.Size = new System.Drawing.Size(846, 390);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "9-16";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3308,7 +3334,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(846, 386);
+            this.tabPage3.Size = new System.Drawing.Size(846, 390);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "17-24";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -4667,42 +4693,267 @@
             // 
             // tabPage8
             // 
-            this.tabPage8.Controls.Add(this.tabGraphics);
+            this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage8.Controls.Add(this.groupBox26);
+            this.tabPage8.Controls.Add(this.groupBox25);
+            this.tabPage8.Controls.Add(this.btnPrint);
+            this.tabPage8.Controls.Add(this.txtNapomena);
+            this.tabPage8.Controls.Add(this.label146);
+            this.tabPage8.Controls.Add(this.chart1);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(868, 428);
             this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "Grafici";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage8.Text = "Grafik";
             // 
-            // tabGraphics
+            // groupBox26
             // 
-            this.tabGraphics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox26.Controls.Add(this.lblGraph3);
+            this.groupBox26.Controls.Add(this.btnShowGraphic3);
+            this.groupBox26.Controls.Add(this.lblGraph2);
+            this.groupBox26.Controls.Add(this.btnShowGraphic2);
+            this.groupBox26.Controls.Add(this.lblGraph1);
+            this.groupBox26.Controls.Add(this.btnShowGraphic1);
+            this.groupBox26.Location = new System.Drawing.Point(734, 249);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(128, 145);
+            this.groupBox26.TabIndex = 26;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Devices";
+            // 
+            // lblGraph3
+            // 
+            this.lblGraph3.AutoSize = true;
+            this.lblGraph3.Location = new System.Drawing.Point(6, 100);
+            this.lblGraph3.Name = "lblGraph3";
+            this.lblGraph3.Size = new System.Drawing.Size(47, 13);
+            this.lblGraph3.TabIndex = 25;
+            this.lblGraph3.Text = "Device3";
+            // 
+            // btnShowGraphic3
+            // 
+            this.btnShowGraphic3.Location = new System.Drawing.Point(47, 116);
+            this.btnShowGraphic3.Name = "btnShowGraphic3";
+            this.btnShowGraphic3.Size = new System.Drawing.Size(75, 23);
+            this.btnShowGraphic3.TabIndex = 24;
+            this.btnShowGraphic3.Text = "Prikaži";
+            this.btnShowGraphic3.UseVisualStyleBackColor = true;
+            this.btnShowGraphic3.Click += new System.EventHandler(this.btnShowGraphic3_Click);
+            // 
+            // lblGraph2
+            // 
+            this.lblGraph2.AutoSize = true;
+            this.lblGraph2.Location = new System.Drawing.Point(6, 58);
+            this.lblGraph2.Name = "lblGraph2";
+            this.lblGraph2.Size = new System.Drawing.Size(47, 13);
+            this.lblGraph2.TabIndex = 23;
+            this.lblGraph2.Text = "Device2";
+            // 
+            // btnShowGraphic2
+            // 
+            this.btnShowGraphic2.Location = new System.Drawing.Point(47, 74);
+            this.btnShowGraphic2.Name = "btnShowGraphic2";
+            this.btnShowGraphic2.Size = new System.Drawing.Size(75, 23);
+            this.btnShowGraphic2.TabIndex = 22;
+            this.btnShowGraphic2.Text = "Prikaži";
+            this.btnShowGraphic2.UseVisualStyleBackColor = true;
+            this.btnShowGraphic2.Click += new System.EventHandler(this.btnShowGraphic2_Click);
+            // 
+            // lblGraph1
+            // 
+            this.lblGraph1.AutoSize = true;
+            this.lblGraph1.Location = new System.Drawing.Point(6, 16);
+            this.lblGraph1.Name = "lblGraph1";
+            this.lblGraph1.Size = new System.Drawing.Size(47, 13);
+            this.lblGraph1.TabIndex = 21;
+            this.lblGraph1.Text = "Device1";
+            // 
+            // btnShowGraphic1
+            // 
+            this.btnShowGraphic1.Location = new System.Drawing.Point(47, 32);
+            this.btnShowGraphic1.Name = "btnShowGraphic1";
+            this.btnShowGraphic1.Size = new System.Drawing.Size(75, 23);
+            this.btnShowGraphic1.TabIndex = 20;
+            this.btnShowGraphic1.Text = "Prikaži";
+            this.btnShowGraphic1.UseVisualStyleBackColor = true;
+            this.btnShowGraphic1.Click += new System.EventHandler(this.btnShowGraphic1_Click);
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox25.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox25.Controls.Add(this.label158);
+            this.groupBox25.Controls.Add(this.label159);
+            this.groupBox25.Controls.Add(this.numMaxGraph);
+            this.groupBox25.Controls.Add(this.numMinGraph);
+            this.groupBox25.Controls.Add(this.numStartHourGraph);
+            this.groupBox25.Controls.Add(this.label149);
+            this.groupBox25.Controls.Add(this.numHourCountGraph);
+            this.groupBox25.Controls.Add(this.label147);
+            this.groupBox25.Controls.Add(this.label148);
+            this.groupBox25.Controls.Add(this.dateTimeGraph);
+            this.groupBox25.Location = new System.Drawing.Point(734, 107);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(128, 136);
+            this.groupBox25.TabIndex = 25;
+            this.groupBox25.TabStop = false;
+            // 
+            // label158
+            // 
+            this.label158.AutoSize = true;
+            this.label158.Location = new System.Drawing.Point(6, 16);
+            this.label158.Name = "label158";
+            this.label158.Size = new System.Drawing.Size(24, 13);
+            this.label158.TabIndex = 22;
+            this.label158.Text = "Min";
+            // 
+            // label159
+            // 
+            this.label159.AutoSize = true;
+            this.label159.Location = new System.Drawing.Point(75, 16);
+            this.label159.Name = "label159";
+            this.label159.Size = new System.Drawing.Size(27, 13);
+            this.label159.TabIndex = 24;
+            this.label159.Text = "Max";
+            // 
+            // numMaxGraph
+            // 
+            this.numMaxGraph.Location = new System.Drawing.Point(75, 32);
+            this.numMaxGraph.Name = "numMaxGraph";
+            this.numMaxGraph.Size = new System.Drawing.Size(38, 20);
+            this.numMaxGraph.TabIndex = 23;
+            this.numMaxGraph.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // numMinGraph
+            // 
+            this.numMinGraph.Location = new System.Drawing.Point(9, 32);
+            this.numMinGraph.Name = "numMinGraph";
+            this.numMinGraph.Size = new System.Drawing.Size(38, 20);
+            this.numMinGraph.TabIndex = 21;
+            this.numMinGraph.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // numStartHourGraph
+            // 
+            this.numStartHourGraph.Location = new System.Drawing.Point(9, 110);
+            this.numStartHourGraph.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numStartHourGraph.Name = "numStartHourGraph";
+            this.numStartHourGraph.Size = new System.Drawing.Size(38, 20);
+            this.numStartHourGraph.TabIndex = 16;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.BackColor = System.Drawing.Color.Transparent;
+            this.label149.Location = new System.Drawing.Point(6, 55);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(41, 13);
+            this.label149.TabIndex = 19;
+            this.label149.Text = "Datum:";
+            // 
+            // numHourCountGraph
+            // 
+            this.numHourCountGraph.Location = new System.Drawing.Point(75, 110);
+            this.numHourCountGraph.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.numHourCountGraph.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numHourCountGraph.Name = "numHourCountGraph";
+            this.numHourCountGraph.Size = new System.Drawing.Size(38, 20);
+            this.numHourCountGraph.TabIndex = 15;
+            this.numHourCountGraph.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.BackColor = System.Drawing.Color.Transparent;
+            this.label147.Location = new System.Drawing.Point(6, 94);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(63, 13);
+            this.label147.TabIndex = 18;
+            this.label147.Text = "Početni sat:";
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.BackColor = System.Drawing.Color.Transparent;
+            this.label148.Location = new System.Drawing.Point(75, 94);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(47, 13);
+            this.label148.TabIndex = 17;
+            this.label148.Text = "Broj sati:";
+            // 
+            // dateTimeGraph
+            // 
+            this.dateTimeGraph.CustomFormat = "";
+            this.dateTimeGraph.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeGraph.Location = new System.Drawing.Point(6, 71);
+            this.dateTimeGraph.Name = "dateTimeGraph";
+            this.dateTimeGraph.Size = new System.Drawing.Size(116, 20);
+            this.dateTimeGraph.TabIndex = 14;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Location = new System.Drawing.Point(787, 400);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 24;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // txtNapomena
+            // 
+            this.txtNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabGraphics.Controls.Add(this.tabPage4);
-            this.tabGraphics.Controls.Add(this.tabPage5);
-            this.tabGraphics.Controls.Add(this.tabPage6);
-            this.tabGraphics.Location = new System.Drawing.Point(6, 6);
-            this.tabGraphics.Name = "tabGraphics";
-            this.tabGraphics.SelectedIndex = 0;
-            this.tabGraphics.Size = new System.Drawing.Size(856, 416);
-            this.tabGraphics.TabIndex = 1;
+            this.txtNapomena.Location = new System.Drawing.Point(74, 402);
+            this.txtNapomena.MaxLength = 95;
+            this.txtNapomena.Name = "txtNapomena";
+            this.txtNapomena.Size = new System.Drawing.Size(707, 20);
+            this.txtNapomena.TabIndex = 23;
+            this.txtNapomena.TextChanged += new System.EventHandler(this.txtNapomena_TextChanged);
             // 
-            // tabPage4
+            // label146
             // 
-            this.tabPage4.Controls.Add(this.chart1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(848, 390);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "1-8";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.label146.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(6, 405);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(62, 13);
+            this.label146.TabIndex = 22;
+            this.label146.Text = "Napomena:";
             // 
             // chart1
             // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisY.LabelStyle.Format = "0°C";
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -4710,69 +4961,113 @@
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.IsVisibleInLegend = false;
             series1.Legend = "Legend1";
-            series1.Name = "Marker";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(836, 378);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.chart2);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(848, 390);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "9-16";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // chart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(6, 6);
-            this.chart2.Name = "chart2";
+            series1.Name = "Timestamps";
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Enabled = false;
             series2.Legend = "Legend1";
-            series2.Name = "Marker";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(836, 378);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.chart3);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(848, 390);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "17-24";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // chart3
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(6, 6);
-            this.chart3.Name = "chart3";
+            series2.Name = "Probe1";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Enabled = false;
             series3.Legend = "Legend1";
-            series3.Name = "Marker";
-            this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(836, 378);
-            this.chart3.TabIndex = 1;
-            this.chart3.Text = "chart3";
+            series3.Name = "Probe2";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Enabled = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Probe3";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Enabled = false;
+            series5.Legend = "Legend1";
+            series5.Name = "Probe4";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Enabled = false;
+            series6.Legend = "Legend1";
+            series6.Name = "Probe5";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Enabled = false;
+            series7.Legend = "Legend1";
+            series7.Name = "Probe6";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Enabled = false;
+            series8.Legend = "Legend1";
+            series8.Name = "Probe7";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Enabled = false;
+            series9.Legend = "Legend1";
+            series9.Name = "Probe8";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
+            this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
+            this.chart1.Size = new System.Drawing.Size(722, 390);
+            this.chart1.TabIndex = 21;
+            this.chart1.Text = "chart";
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Naziv";
+            title1.Text = "Naziv firme";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Device";
+            title2.Position.Auto = false;
+            title2.Position.Height = 2.938644F;
+            title2.Position.Width = 94F;
+            title2.Position.X = 3F;
+            title2.Position.Y = 4F;
+            title2.Text = "Device: ";
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Vreme";
+            title3.Position.Auto = false;
+            title3.Position.Height = 2.938644F;
+            title3.Position.Width = 60F;
+            title3.Position.X = 40F;
+            title3.Position.Y = 4F;
+            title3.Text = "Vreme: ";
+            title4.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Datum";
+            title4.Position.Auto = false;
+            title4.Position.Height = 2.938644F;
+            title4.Position.Width = 94F;
+            title4.Position.X = 3F;
+            title4.Position.Y = 4F;
+            title4.Text = "Datum: ";
+            title5.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Napomena";
+            title5.Text = "Napomena:";
+            title6.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Proverio";
+            title6.Position.Auto = false;
+            title6.Position.Height = 2.954587F;
+            title6.Position.Width = 94F;
+            title6.Position.X = 3F;
+            title6.Position.Y = 93F;
+            title6.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title1);
+            this.chart1.Titles.Add(title2);
+            this.chart1.Titles.Add(title3);
+            this.chart1.Titles.Add(title4);
+            this.chart1.Titles.Add(title5);
+            this.chart1.Titles.Add(title6);
             // 
             // lblConnected
             // 
@@ -4808,14 +5103,14 @@
             // onOffToolStripMenuItem
             // 
             this.onOffToolStripMenuItem.Name = "onOffToolStripMenuItem";
-            this.onOffToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.onOffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.onOffToolStripMenuItem.Text = "Port Open/Closed";
             this.onOffToolStripMenuItem.Click += new System.EventHandler(this.onOffToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -4830,7 +5125,7 @@
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem1.Text = "Settings";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
             // 
@@ -4889,6 +5184,20 @@
             this.btnTimerRestart.UseVisualStyleBackColor = true;
             this.btnTimerRestart.Visible = false;
             this.btnTimerRestart.Click += new System.EventHandler(this.btnTimerRestart_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // Form1
             // 
@@ -5082,13 +5391,16 @@
             this.tabMain.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            this.tabGraphics.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numHourCountGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxConnection.ResumeLayout(false);
@@ -5180,30 +5492,25 @@
         private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.TabControl tabGraphics;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label lblConnected;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ToolStripMenuItem connectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem onOffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
@@ -5463,8 +5770,6 @@
         private System.Windows.Forms.NumericUpDown numMax17;
         private System.Windows.Forms.NumericUpDown numMin17;
         private System.Windows.Forms.Button btnTimerRestart;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker6;
@@ -5488,6 +5793,30 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker19;
         private System.Windows.Forms.DateTimePicker dateTimePicker18;
         private System.Windows.Forms.DateTimePicker dateTimePicker17;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.NumericUpDown numMaxGraph;
+        private System.Windows.Forms.NumericUpDown numMinGraph;
+        private System.Windows.Forms.Button btnShowGraphic1;
+        private System.Windows.Forms.NumericUpDown numStartHourGraph;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.NumericUpDown numHourCountGraph;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.DateTimePicker dateTimeGraph;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.TextBox txtNapomena;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.Label lblGraph3;
+        private System.Windows.Forms.Button btnShowGraphic3;
+        private System.Windows.Forms.Label lblGraph2;
+        private System.Windows.Forms.Button btnShowGraphic2;
+        private System.Windows.Forms.Label lblGraph1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 

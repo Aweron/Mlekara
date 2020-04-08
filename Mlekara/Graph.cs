@@ -29,8 +29,8 @@ namespace Mlekara
             // X axis range
             int endHour = graphData.StartHour + graphData.HourCount;
 
-            DateTime min = Convert.ToDateTime(graphData.StartHour + ":00");
-            DateTime max = Convert.ToDateTime(endHour + ":00");
+            DateTime min = Convert.ToDateTime(graphData.Date + " " + graphData.StartHour + ":00");
+            DateTime max = Convert.ToDateTime(graphData.Date + " " + endHour + ":00");
 
             chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
             chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
