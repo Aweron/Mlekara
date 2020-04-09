@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title16 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title17 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title18 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -421,7 +421,7 @@
             this.btnShowGraphic2 = new System.Windows.Forms.Button();
             this.lblGraph1 = new System.Windows.Forms.Label();
             this.btnShowGraphic1 = new System.Windows.Forms.Button();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.grpGraphSettings = new System.Windows.Forms.GroupBox();
             this.label158 = new System.Windows.Forms.Label();
             this.label159 = new System.Windows.Forms.Label();
             this.numMaxGraph = new System.Windows.Forms.NumericUpDown();
@@ -604,7 +604,7 @@
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.groupBox26.SuspendLayout();
-            this.groupBox25.SuspendLayout();
+            this.grpGraphSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).BeginInit();
@@ -690,6 +690,7 @@
             this.numStartHour5.Name = "numStartHour5";
             this.numStartHour5.Size = new System.Drawing.Size(38, 20);
             this.numStartHour5.TabIndex = 5;
+            this.numStartHour5.ValueChanged += new System.EventHandler(this.numStartHour5_ValueChanged);
             // 
             // numHourCount5
             // 
@@ -856,6 +857,7 @@
             this.numStartHour4.Name = "numStartHour4";
             this.numStartHour4.Size = new System.Drawing.Size(38, 20);
             this.numStartHour4.TabIndex = 5;
+            this.numStartHour4.ValueChanged += new System.EventHandler(this.numStartHour4_ValueChanged);
             // 
             // numHourCount4
             // 
@@ -1022,6 +1024,7 @@
             this.numStartHour6.Name = "numStartHour6";
             this.numStartHour6.Size = new System.Drawing.Size(38, 20);
             this.numStartHour6.TabIndex = 5;
+            this.numStartHour6.ValueChanged += new System.EventHandler(this.numStartHour6_ValueChanged);
             // 
             // numHourCount6
             // 
@@ -1188,6 +1191,7 @@
             this.numStartHour3.Name = "numStartHour3";
             this.numStartHour3.Size = new System.Drawing.Size(38, 20);
             this.numStartHour3.TabIndex = 5;
+            this.numStartHour3.ValueChanged += new System.EventHandler(this.numStartHour3_ValueChanged);
             // 
             // numHourCount3
             // 
@@ -1354,6 +1358,7 @@
             this.numStartHour7.Name = "numStartHour7";
             this.numStartHour7.Size = new System.Drawing.Size(38, 20);
             this.numStartHour7.TabIndex = 5;
+            this.numStartHour7.ValueChanged += new System.EventHandler(this.numStartHour7_ValueChanged);
             // 
             // numHourCount7
             // 
@@ -1520,6 +1525,7 @@
             this.numStartHour2.Name = "numStartHour2";
             this.numStartHour2.Size = new System.Drawing.Size(38, 20);
             this.numStartHour2.TabIndex = 5;
+            this.numStartHour2.ValueChanged += new System.EventHandler(this.numStartHour2_ValueChanged);
             // 
             // numHourCount2
             // 
@@ -1686,6 +1692,7 @@
             this.numStartHour8.Name = "numStartHour8";
             this.numStartHour8.Size = new System.Drawing.Size(38, 20);
             this.numStartHour8.TabIndex = 5;
+            this.numStartHour8.ValueChanged += new System.EventHandler(this.numStartHour8_ValueChanged);
             // 
             // numHourCount8
             // 
@@ -1864,6 +1871,7 @@
             this.numStartHour1.Name = "numStartHour1";
             this.numStartHour1.Size = new System.Drawing.Size(38, 20);
             this.numStartHour1.TabIndex = 5;
+            this.numStartHour1.ValueChanged += new System.EventHandler(this.numStartHour1_ValueChanged);
             // 
             // label25
             // 
@@ -2036,6 +2044,7 @@
             this.numStartHour16.Name = "numStartHour16";
             this.numStartHour16.Size = new System.Drawing.Size(38, 20);
             this.numStartHour16.TabIndex = 24;
+            this.numStartHour16.ValueChanged += new System.EventHandler(this.numStartHour16_ValueChanged);
             // 
             // numHourCount16
             // 
@@ -2202,6 +2211,7 @@
             this.numStartHour15.Name = "numStartHour15";
             this.numStartHour15.Size = new System.Drawing.Size(38, 20);
             this.numStartHour15.TabIndex = 24;
+            this.numStartHour15.ValueChanged += new System.EventHandler(this.numStartHour15_ValueChanged);
             // 
             // numHourCount15
             // 
@@ -2368,6 +2378,7 @@
             this.numStartHour14.Name = "numStartHour14";
             this.numStartHour14.Size = new System.Drawing.Size(38, 20);
             this.numStartHour14.TabIndex = 24;
+            this.numStartHour14.ValueChanged += new System.EventHandler(this.numStartHour14_ValueChanged);
             // 
             // numHourCount14
             // 
@@ -2534,6 +2545,7 @@
             this.numStartHour13.Name = "numStartHour13";
             this.numStartHour13.Size = new System.Drawing.Size(38, 20);
             this.numStartHour13.TabIndex = 24;
+            this.numStartHour13.ValueChanged += new System.EventHandler(this.numStartHour13_ValueChanged);
             // 
             // numHourCount13
             // 
@@ -2700,6 +2712,7 @@
             this.numStartHour12.Name = "numStartHour12";
             this.numStartHour12.Size = new System.Drawing.Size(38, 20);
             this.numStartHour12.TabIndex = 24;
+            this.numStartHour12.ValueChanged += new System.EventHandler(this.numStartHour12_ValueChanged);
             // 
             // numHourCount12
             // 
@@ -2866,6 +2879,7 @@
             this.numStartHour11.Name = "numStartHour11";
             this.numStartHour11.Size = new System.Drawing.Size(38, 20);
             this.numStartHour11.TabIndex = 24;
+            this.numStartHour11.ValueChanged += new System.EventHandler(this.numStartHour11_ValueChanged);
             // 
             // numHourCount11
             // 
@@ -3032,6 +3046,7 @@
             this.numStartHour10.Name = "numStartHour10";
             this.numStartHour10.Size = new System.Drawing.Size(38, 20);
             this.numStartHour10.TabIndex = 5;
+            this.numStartHour10.ValueChanged += new System.EventHandler(this.numStartHour10_ValueChanged);
             // 
             // numHourCount10
             // 
@@ -3198,6 +3213,7 @@
             this.numStartHour9.Name = "numStartHour9";
             this.numStartHour9.Size = new System.Drawing.Size(38, 20);
             this.numStartHour9.TabIndex = 5;
+            this.numStartHour9.ValueChanged += new System.EventHandler(this.numStartHour9_ValueChanged);
             // 
             // numHourCount9
             // 
@@ -3382,6 +3398,7 @@
             this.numStartHour24.Name = "numStartHour24";
             this.numStartHour24.Size = new System.Drawing.Size(38, 20);
             this.numStartHour24.TabIndex = 24;
+            this.numStartHour24.ValueChanged += new System.EventHandler(this.numStartHour24_ValueChanged);
             // 
             // numHourCount24
             // 
@@ -3548,6 +3565,7 @@
             this.numStartHour23.Name = "numStartHour23";
             this.numStartHour23.Size = new System.Drawing.Size(38, 20);
             this.numStartHour23.TabIndex = 24;
+            this.numStartHour23.ValueChanged += new System.EventHandler(this.numStartHour23_ValueChanged);
             // 
             // numHourCount23
             // 
@@ -3714,6 +3732,7 @@
             this.numStartHour22.Name = "numStartHour22";
             this.numStartHour22.Size = new System.Drawing.Size(38, 20);
             this.numStartHour22.TabIndex = 24;
+            this.numStartHour22.ValueChanged += new System.EventHandler(this.numStartHour22_ValueChanged);
             // 
             // numHourCount22
             // 
@@ -3880,6 +3899,7 @@
             this.numStartHour21.Name = "numStartHour21";
             this.numStartHour21.Size = new System.Drawing.Size(38, 20);
             this.numStartHour21.TabIndex = 24;
+            this.numStartHour21.ValueChanged += new System.EventHandler(this.numStartHour21_ValueChanged);
             // 
             // numHourCount21
             // 
@@ -4046,6 +4066,7 @@
             this.numStartHour20.Name = "numStartHour20";
             this.numStartHour20.Size = new System.Drawing.Size(38, 20);
             this.numStartHour20.TabIndex = 24;
+            this.numStartHour20.ValueChanged += new System.EventHandler(this.numStartHour20_ValueChanged);
             // 
             // numHourCount20
             // 
@@ -4212,6 +4233,7 @@
             this.numStartHour19.Name = "numStartHour19";
             this.numStartHour19.Size = new System.Drawing.Size(38, 20);
             this.numStartHour19.TabIndex = 24;
+            this.numStartHour19.ValueChanged += new System.EventHandler(this.numStartHour19_ValueChanged);
             // 
             // numHourCount19
             // 
@@ -4378,6 +4400,7 @@
             this.numStartHour18.Name = "numStartHour18";
             this.numStartHour18.Size = new System.Drawing.Size(38, 20);
             this.numStartHour18.TabIndex = 24;
+            this.numStartHour18.ValueChanged += new System.EventHandler(this.numStartHour18_ValueChanged);
             // 
             // numHourCount18
             // 
@@ -4544,6 +4567,7 @@
             this.numStartHour17.Name = "numStartHour17";
             this.numStartHour17.Size = new System.Drawing.Size(38, 20);
             this.numStartHour17.TabIndex = 24;
+            this.numStartHour17.ValueChanged += new System.EventHandler(this.numStartHour17_ValueChanged);
             // 
             // numHourCount17
             // 
@@ -4695,7 +4719,7 @@
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage8.Controls.Add(this.groupBox26);
-            this.tabPage8.Controls.Add(this.groupBox25);
+            this.tabPage8.Controls.Add(this.grpGraphSettings);
             this.tabPage8.Controls.Add(this.btnPrint);
             this.tabPage8.Controls.Add(this.txtNapomena);
             this.tabPage8.Controls.Add(this.label146);
@@ -4721,7 +4745,7 @@
             this.groupBox26.Size = new System.Drawing.Size(128, 145);
             this.groupBox26.TabIndex = 26;
             this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Devices";
+            this.groupBox26.Text = "Modul:";
             // 
             // lblGraph3
             // 
@@ -4780,25 +4804,26 @@
             this.btnShowGraphic1.UseVisualStyleBackColor = true;
             this.btnShowGraphic1.Click += new System.EventHandler(this.btnShowGraphic1_Click);
             // 
-            // groupBox25
+            // grpGraphSettings
             // 
-            this.groupBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox25.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox25.Controls.Add(this.label158);
-            this.groupBox25.Controls.Add(this.label159);
-            this.groupBox25.Controls.Add(this.numMaxGraph);
-            this.groupBox25.Controls.Add(this.numMinGraph);
-            this.groupBox25.Controls.Add(this.numStartHourGraph);
-            this.groupBox25.Controls.Add(this.label149);
-            this.groupBox25.Controls.Add(this.numHourCountGraph);
-            this.groupBox25.Controls.Add(this.label147);
-            this.groupBox25.Controls.Add(this.label148);
-            this.groupBox25.Controls.Add(this.dateTimeGraph);
-            this.groupBox25.Location = new System.Drawing.Point(734, 107);
-            this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(128, 136);
-            this.groupBox25.TabIndex = 25;
-            this.groupBox25.TabStop = false;
+            this.grpGraphSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpGraphSettings.BackColor = System.Drawing.SystemColors.Control;
+            this.grpGraphSettings.Controls.Add(this.label158);
+            this.grpGraphSettings.Controls.Add(this.label159);
+            this.grpGraphSettings.Controls.Add(this.numMaxGraph);
+            this.grpGraphSettings.Controls.Add(this.numMinGraph);
+            this.grpGraphSettings.Controls.Add(this.numStartHourGraph);
+            this.grpGraphSettings.Controls.Add(this.label149);
+            this.grpGraphSettings.Controls.Add(this.numHourCountGraph);
+            this.grpGraphSettings.Controls.Add(this.label147);
+            this.grpGraphSettings.Controls.Add(this.label148);
+            this.grpGraphSettings.Controls.Add(this.dateTimeGraph);
+            this.grpGraphSettings.Location = new System.Drawing.Point(734, 107);
+            this.grpGraphSettings.Name = "grpGraphSettings";
+            this.grpGraphSettings.Size = new System.Drawing.Size(128, 136);
+            this.grpGraphSettings.TabIndex = 25;
+            this.grpGraphSettings.TabStop = false;
+            this.grpGraphSettings.Text = "Opcije:";
             // 
             // label158
             // 
@@ -4853,6 +4878,7 @@
             this.numStartHourGraph.Name = "numStartHourGraph";
             this.numStartHourGraph.Size = new System.Drawing.Size(38, 20);
             this.numStartHourGraph.TabIndex = 16;
+            this.numStartHourGraph.ValueChanged += new System.EventHandler(this.numStartHourGraph_ValueChanged);
             // 
             // label149
             // 
@@ -4931,7 +4957,7 @@
             this.txtNapomena.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNapomena.Location = new System.Drawing.Point(74, 402);
-            this.txtNapomena.MaxLength = 95;
+            this.txtNapomena.MaxLength = 85;
             this.txtNapomena.Name = "txtNapomena";
             this.txtNapomena.Size = new System.Drawing.Size(707, 20);
             this.txtNapomena.TabIndex = 23;
@@ -4952,122 +4978,122 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisY.LabelStyle.Format = "0°C";
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea3.AxisY.LabelStyle.Format = "0°C";
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Timestamps";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Enabled = false;
-            series2.Legend = "Legend1";
-            series2.Name = "Probe1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Enabled = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Probe2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Enabled = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Probe3";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Enabled = false;
-            series5.Legend = "Legend1";
-            series5.Name = "Probe4";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series6.Enabled = false;
-            series6.Legend = "Legend1";
-            series6.Name = "Probe5";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Enabled = false;
-            series7.Legend = "Legend1";
-            series7.Name = "Probe6";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Enabled = false;
-            series8.Legend = "Legend1";
-            series8.Name = "Probe7";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Enabled = false;
-            series9.Legend = "Legend1";
-            series9.Name = "Probe8";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Series.Add(series5);
-            this.chart1.Series.Add(series6);
-            this.chart1.Series.Add(series7);
-            this.chart1.Series.Add(series8);
-            this.chart1.Series.Add(series9);
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series19.IsVisibleInLegend = false;
+            series19.Legend = "Legend1";
+            series19.Name = "Timestamps";
+            series20.BorderWidth = 2;
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series20.Enabled = false;
+            series20.Legend = "Legend1";
+            series20.Name = "Probe1";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series21.Enabled = false;
+            series21.Legend = "Legend1";
+            series21.Name = "Probe2";
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series22.Enabled = false;
+            series22.Legend = "Legend1";
+            series22.Name = "Probe3";
+            series23.ChartArea = "ChartArea1";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series23.Enabled = false;
+            series23.Legend = "Legend1";
+            series23.Name = "Probe4";
+            series24.ChartArea = "ChartArea1";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series24.Enabled = false;
+            series24.Legend = "Legend1";
+            series24.Name = "Probe5";
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series25.Enabled = false;
+            series25.Legend = "Legend1";
+            series25.Name = "Probe6";
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series26.Enabled = false;
+            series26.Legend = "Legend1";
+            series26.Name = "Probe7";
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series27.Enabled = false;
+            series27.Legend = "Legend1";
+            series27.Name = "Probe8";
+            this.chart1.Series.Add(series19);
+            this.chart1.Series.Add(series20);
+            this.chart1.Series.Add(series21);
+            this.chart1.Series.Add(series22);
+            this.chart1.Series.Add(series23);
+            this.chart1.Series.Add(series24);
+            this.chart1.Series.Add(series25);
+            this.chart1.Series.Add(series26);
+            this.chart1.Series.Add(series27);
             this.chart1.Size = new System.Drawing.Size(722, 390);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart";
-            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Naziv";
-            title1.Text = "Naziv firme";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Device";
-            title2.Position.Auto = false;
-            title2.Position.Height = 2.938644F;
-            title2.Position.Width = 94F;
-            title2.Position.X = 3F;
-            title2.Position.Y = 4F;
-            title2.Text = "Device: ";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Vreme";
-            title3.Position.Auto = false;
-            title3.Position.Height = 2.938644F;
-            title3.Position.Width = 60F;
-            title3.Position.X = 40F;
-            title3.Position.Y = 4F;
-            title3.Text = "Vreme: ";
-            title4.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Datum";
-            title4.Position.Auto = false;
-            title4.Position.Height = 2.938644F;
-            title4.Position.Width = 94F;
-            title4.Position.X = 3F;
-            title4.Position.Y = 4F;
-            title4.Text = "Datum: ";
-            title5.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Napomena";
-            title5.Text = "Napomena:";
-            title6.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.Name = "Proverio";
-            title6.Position.Auto = false;
-            title6.Position.Height = 2.954587F;
-            title6.Position.Width = 94F;
-            title6.Position.X = 3F;
-            title6.Position.Y = 93F;
-            title6.Text = "Proverio: _____________________";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Titles.Add(title2);
-            this.chart1.Titles.Add(title3);
-            this.chart1.Titles.Add(title4);
-            this.chart1.Titles.Add(title5);
-            this.chart1.Titles.Add(title6);
+            title13.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title13.Name = "Naziv";
+            title13.Text = "Naziv firme";
+            title14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title14.Name = "Device";
+            title14.Position.Auto = false;
+            title14.Position.Height = 2.938644F;
+            title14.Position.Width = 94F;
+            title14.Position.X = 3F;
+            title14.Position.Y = 4F;
+            title14.Text = "Device: ";
+            title15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title15.Name = "Vreme";
+            title15.Position.Auto = false;
+            title15.Position.Height = 2.938644F;
+            title15.Position.Width = 60F;
+            title15.Position.X = 40F;
+            title15.Position.Y = 4F;
+            title15.Text = "Vreme: ";
+            title16.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title16.Name = "Datum";
+            title16.Position.Auto = false;
+            title16.Position.Height = 2.938644F;
+            title16.Position.Width = 94F;
+            title16.Position.X = 3F;
+            title16.Position.Y = 4F;
+            title16.Text = "Datum: ";
+            title17.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title17.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title17.Name = "Napomena";
+            title17.Text = "Napomena:";
+            title18.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title18.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title18.Name = "Proverio";
+            title18.Position.Auto = false;
+            title18.Position.Height = 2.954587F;
+            title18.Position.Width = 94F;
+            title18.Position.X = 3F;
+            title18.Position.Y = 93F;
+            title18.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title13);
+            this.chart1.Titles.Add(title14);
+            this.chart1.Titles.Add(title15);
+            this.chart1.Titles.Add(title16);
+            this.chart1.Titles.Add(title17);
+            this.chart1.Titles.Add(title18);
             // 
             // lblConnected
             // 
@@ -5103,14 +5129,14 @@
             // onOffToolStripMenuItem
             // 
             this.onOffToolStripMenuItem.Name = "onOffToolStripMenuItem";
-            this.onOffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.onOffToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.onOffToolStripMenuItem.Text = "Port Open/Closed";
             this.onOffToolStripMenuItem.Click += new System.EventHandler(this.onOffToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -5125,7 +5151,7 @@
             // settingsToolStripMenuItem1
             // 
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
-            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem1.Text = "Settings";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
             // 
@@ -5394,8 +5420,8 @@
             this.tabPage8.PerformLayout();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
-            this.groupBox25.ResumeLayout(false);
-            this.groupBox25.PerformLayout();
+            this.grpGraphSettings.ResumeLayout(false);
+            this.grpGraphSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).EndInit();
@@ -5793,7 +5819,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker19;
         private System.Windows.Forms.DateTimePicker dateTimePicker18;
         private System.Windows.Forms.DateTimePicker dateTimePicker17;
-        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.GroupBox grpGraphSettings;
         private System.Windows.Forms.Label label158;
         private System.Windows.Forms.Label label159;
         private System.Windows.Forms.NumericUpDown numMaxGraph;
