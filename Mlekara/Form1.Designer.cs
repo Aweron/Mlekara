@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title16 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title17 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title18 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -421,7 +421,7 @@
             this.btnShowGraphic2 = new System.Windows.Forms.Button();
             this.lblGraph1 = new System.Windows.Forms.Label();
             this.btnShowGraphic1 = new System.Windows.Forms.Button();
-            this.grpGraphSettings = new System.Windows.Forms.GroupBox();
+            this.grpTimeSettings = new System.Windows.Forms.GroupBox();
             this.label158 = new System.Windows.Forms.Label();
             this.label159 = new System.Windows.Forms.Label();
             this.numMaxGraph = new System.Windows.Forms.NumericUpDown();
@@ -452,6 +452,12 @@
             this.btnTimerRestart = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.chkAutoRefresh = new System.Windows.Forms.CheckBox();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.cmbLiveGraphDevices = new System.Windows.Forms.ComboBox();
+            this.label150 = new System.Windows.Forms.Label();
+            this.grpTempSettings = new System.Windows.Forms.GroupBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -604,7 +610,7 @@
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.groupBox26.SuspendLayout();
-            this.grpGraphSettings.SuspendLayout();
+            this.grpTimeSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).BeginInit();
@@ -612,6 +618,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBoxConnection.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.grpTempSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabTemperature
@@ -4718,8 +4726,10 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage8.Controls.Add(this.grpTempSettings);
+            this.tabPage8.Controls.Add(this.groupBox25);
             this.tabPage8.Controls.Add(this.groupBox26);
-            this.tabPage8.Controls.Add(this.grpGraphSettings);
+            this.tabPage8.Controls.Add(this.grpTimeSettings);
             this.tabPage8.Controls.Add(this.btnPrint);
             this.tabPage8.Controls.Add(this.txtNapomena);
             this.tabPage8.Controls.Add(this.label146);
@@ -4740,7 +4750,7 @@
             this.groupBox26.Controls.Add(this.btnShowGraphic2);
             this.groupBox26.Controls.Add(this.lblGraph1);
             this.groupBox26.Controls.Add(this.btnShowGraphic1);
-            this.groupBox26.Location = new System.Drawing.Point(734, 249);
+            this.groupBox26.Location = new System.Drawing.Point(737, 249);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(128, 145);
             this.groupBox26.TabIndex = 26;
@@ -4804,26 +4814,22 @@
             this.btnShowGraphic1.UseVisualStyleBackColor = true;
             this.btnShowGraphic1.Click += new System.EventHandler(this.btnShowGraphic1_Click);
             // 
-            // grpGraphSettings
+            // grpTimeSettings
             // 
-            this.grpGraphSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpGraphSettings.BackColor = System.Drawing.SystemColors.Control;
-            this.grpGraphSettings.Controls.Add(this.label158);
-            this.grpGraphSettings.Controls.Add(this.label159);
-            this.grpGraphSettings.Controls.Add(this.numMaxGraph);
-            this.grpGraphSettings.Controls.Add(this.numMinGraph);
-            this.grpGraphSettings.Controls.Add(this.numStartHourGraph);
-            this.grpGraphSettings.Controls.Add(this.label149);
-            this.grpGraphSettings.Controls.Add(this.numHourCountGraph);
-            this.grpGraphSettings.Controls.Add(this.label147);
-            this.grpGraphSettings.Controls.Add(this.label148);
-            this.grpGraphSettings.Controls.Add(this.dateTimeGraph);
-            this.grpGraphSettings.Location = new System.Drawing.Point(734, 107);
-            this.grpGraphSettings.Name = "grpGraphSettings";
-            this.grpGraphSettings.Size = new System.Drawing.Size(128, 136);
-            this.grpGraphSettings.TabIndex = 25;
-            this.grpGraphSettings.TabStop = false;
-            this.grpGraphSettings.Text = "Opcije:";
+            this.grpTimeSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpTimeSettings.BackColor = System.Drawing.SystemColors.Control;
+            this.grpTimeSettings.Controls.Add(this.numStartHourGraph);
+            this.grpTimeSettings.Controls.Add(this.label149);
+            this.grpTimeSettings.Controls.Add(this.numHourCountGraph);
+            this.grpTimeSettings.Controls.Add(this.label147);
+            this.grpTimeSettings.Controls.Add(this.label148);
+            this.grpTimeSettings.Controls.Add(this.dateTimeGraph);
+            this.grpTimeSettings.Location = new System.Drawing.Point(734, 145);
+            this.grpTimeSettings.Name = "grpTimeSettings";
+            this.grpTimeSettings.Size = new System.Drawing.Size(128, 98);
+            this.grpTimeSettings.TabIndex = 25;
+            this.grpTimeSettings.TabStop = false;
+            this.grpTimeSettings.Text = "Datum i Vreme:";
             // 
             // label158
             // 
@@ -4869,7 +4875,7 @@
             // 
             // numStartHourGraph
             // 
-            this.numStartHourGraph.Location = new System.Drawing.Point(9, 110);
+            this.numStartHourGraph.Location = new System.Drawing.Point(9, 71);
             this.numStartHourGraph.Maximum = new decimal(new int[] {
             23,
             0,
@@ -4884,7 +4890,7 @@
             // 
             this.label149.AutoSize = true;
             this.label149.BackColor = System.Drawing.Color.Transparent;
-            this.label149.Location = new System.Drawing.Point(6, 55);
+            this.label149.Location = new System.Drawing.Point(6, 16);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(41, 13);
             this.label149.TabIndex = 19;
@@ -4892,7 +4898,7 @@
             // 
             // numHourCountGraph
             // 
-            this.numHourCountGraph.Location = new System.Drawing.Point(75, 110);
+            this.numHourCountGraph.Location = new System.Drawing.Point(75, 71);
             this.numHourCountGraph.Maximum = new decimal(new int[] {
             23,
             0,
@@ -4916,7 +4922,7 @@
             // 
             this.label147.AutoSize = true;
             this.label147.BackColor = System.Drawing.Color.Transparent;
-            this.label147.Location = new System.Drawing.Point(6, 94);
+            this.label147.Location = new System.Drawing.Point(6, 55);
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(63, 13);
             this.label147.TabIndex = 18;
@@ -4926,7 +4932,7 @@
             // 
             this.label148.AutoSize = true;
             this.label148.BackColor = System.Drawing.Color.Transparent;
-            this.label148.Location = new System.Drawing.Point(75, 94);
+            this.label148.Location = new System.Drawing.Point(75, 55);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(47, 13);
             this.label148.TabIndex = 17;
@@ -4936,7 +4942,7 @@
             // 
             this.dateTimeGraph.CustomFormat = "";
             this.dateTimeGraph.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeGraph.Location = new System.Drawing.Point(6, 71);
+            this.dateTimeGraph.Location = new System.Drawing.Point(6, 32);
             this.dateTimeGraph.Name = "dateTimeGraph";
             this.dateTimeGraph.Size = new System.Drawing.Size(116, 20);
             this.dateTimeGraph.TabIndex = 14;
@@ -4978,122 +4984,122 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea3.AxisY.LabelStyle.Format = "0°C";
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea1.AxisY.LabelStyle.Format = "0°C";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 6);
             this.chart1.Name = "chart1";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series19.IsVisibleInLegend = false;
-            series19.Legend = "Legend1";
-            series19.Name = "Timestamps";
-            series20.BorderWidth = 2;
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series20.Enabled = false;
-            series20.Legend = "Legend1";
-            series20.Name = "Probe1";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Enabled = false;
-            series21.Legend = "Legend1";
-            series21.Name = "Probe2";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series22.Enabled = false;
-            series22.Legend = "Legend1";
-            series22.Name = "Probe3";
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series23.Enabled = false;
-            series23.Legend = "Legend1";
-            series23.Name = "Probe4";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series24.Enabled = false;
-            series24.Legend = "Legend1";
-            series24.Name = "Probe5";
-            series25.ChartArea = "ChartArea1";
-            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series25.Enabled = false;
-            series25.Legend = "Legend1";
-            series25.Name = "Probe6";
-            series26.ChartArea = "ChartArea1";
-            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series26.Enabled = false;
-            series26.Legend = "Legend1";
-            series26.Name = "Probe7";
-            series27.ChartArea = "ChartArea1";
-            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series27.Enabled = false;
-            series27.Legend = "Legend1";
-            series27.Name = "Probe8";
-            this.chart1.Series.Add(series19);
-            this.chart1.Series.Add(series20);
-            this.chart1.Series.Add(series21);
-            this.chart1.Series.Add(series22);
-            this.chart1.Series.Add(series23);
-            this.chart1.Series.Add(series24);
-            this.chart1.Series.Add(series25);
-            this.chart1.Series.Add(series26);
-            this.chart1.Series.Add(series27);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Timestamps";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Enabled = false;
+            series2.Legend = "Legend1";
+            series2.Name = "Probe1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Enabled = false;
+            series3.Legend = "Legend1";
+            series3.Name = "Probe2";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Enabled = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Probe3";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Enabled = false;
+            series5.Legend = "Legend1";
+            series5.Name = "Probe4";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Enabled = false;
+            series6.Legend = "Legend1";
+            series6.Name = "Probe5";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Enabled = false;
+            series7.Legend = "Legend1";
+            series7.Name = "Probe6";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Enabled = false;
+            series8.Legend = "Legend1";
+            series8.Name = "Probe7";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Enabled = false;
+            series9.Legend = "Legend1";
+            series9.Name = "Probe8";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Series.Add(series6);
+            this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
             this.chart1.Size = new System.Drawing.Size(722, 390);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart";
-            title13.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title13.Name = "Naziv";
-            title13.Text = "Naziv firme";
-            title14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title14.Name = "Device";
-            title14.Position.Auto = false;
-            title14.Position.Height = 2.938644F;
-            title14.Position.Width = 94F;
-            title14.Position.X = 3F;
-            title14.Position.Y = 4F;
-            title14.Text = "Device: ";
-            title15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title15.Name = "Vreme";
-            title15.Position.Auto = false;
-            title15.Position.Height = 2.938644F;
-            title15.Position.Width = 60F;
-            title15.Position.X = 40F;
-            title15.Position.Y = 4F;
-            title15.Text = "Vreme: ";
-            title16.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title16.Name = "Datum";
-            title16.Position.Auto = false;
-            title16.Position.Height = 2.938644F;
-            title16.Position.Width = 94F;
-            title16.Position.X = 3F;
-            title16.Position.Y = 4F;
-            title16.Text = "Datum: ";
-            title17.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title17.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title17.Name = "Napomena";
-            title17.Text = "Napomena:";
-            title18.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title18.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title18.Name = "Proverio";
-            title18.Position.Auto = false;
-            title18.Position.Height = 2.954587F;
-            title18.Position.Width = 94F;
-            title18.Position.X = 3F;
-            title18.Position.Y = 93F;
-            title18.Text = "Proverio: _____________________";
-            this.chart1.Titles.Add(title13);
-            this.chart1.Titles.Add(title14);
-            this.chart1.Titles.Add(title15);
-            this.chart1.Titles.Add(title16);
-            this.chart1.Titles.Add(title17);
-            this.chart1.Titles.Add(title18);
+            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Naziv";
+            title1.Text = "Naziv firme";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Device";
+            title2.Position.Auto = false;
+            title2.Position.Height = 2.938644F;
+            title2.Position.Width = 94F;
+            title2.Position.X = 3F;
+            title2.Position.Y = 4F;
+            title2.Text = "Device: ";
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Vreme";
+            title3.Position.Auto = false;
+            title3.Position.Height = 2.938644F;
+            title3.Position.Width = 60F;
+            title3.Position.X = 40F;
+            title3.Position.Y = 4F;
+            title3.Text = "Vreme: ";
+            title4.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Datum";
+            title4.Position.Auto = false;
+            title4.Position.Height = 2.938644F;
+            title4.Position.Width = 94F;
+            title4.Position.X = 3F;
+            title4.Position.Y = 4F;
+            title4.Text = "Datum: ";
+            title5.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Napomena";
+            title5.Text = "Napomena:";
+            title6.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Proverio";
+            title6.Position.Auto = false;
+            title6.Position.Height = 2.954587F;
+            title6.Position.Width = 94F;
+            title6.Position.X = 3F;
+            title6.Position.Y = 93F;
+            title6.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title1);
+            this.chart1.Titles.Add(title2);
+            this.chart1.Titles.Add(title3);
+            this.chart1.Titles.Add(title4);
+            this.chart1.Titles.Add(title5);
+            this.chart1.Titles.Add(title6);
             // 
             // lblConnected
             // 
@@ -5224,6 +5230,72 @@
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // chkAutoRefresh
+            // 
+            this.chkAutoRefresh.AutoSize = true;
+            this.chkAutoRefresh.Location = new System.Drawing.Point(6, 46);
+            this.chkAutoRefresh.Name = "chkAutoRefresh";
+            this.chkAutoRefresh.Size = new System.Drawing.Size(59, 17);
+            this.chkAutoRefresh.TabIndex = 27;
+            this.chkAutoRefresh.Text = "On/Off";
+            this.chkAutoRefresh.UseVisualStyleBackColor = true;
+            this.chkAutoRefresh.CheckedChanged += new System.EventHandler(this.chkAutoRefresh_CheckedChanged);
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox25.Controls.Add(this.label150);
+            this.groupBox25.Controls.Add(this.cmbLiveGraphDevices);
+            this.groupBox25.Controls.Add(this.chkAutoRefresh);
+            this.groupBox25.Location = new System.Drawing.Point(734, 6);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(128, 69);
+            this.groupBox25.TabIndex = 27;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Trenutni prikaz";
+            // 
+            // cmbLiveGraphDevices
+            // 
+            this.cmbLiveGraphDevices.FormattingEnabled = true;
+            this.cmbLiveGraphDevices.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbLiveGraphDevices.Location = new System.Drawing.Point(51, 19);
+            this.cmbLiveGraphDevices.Name = "cmbLiveGraphDevices";
+            this.cmbLiveGraphDevices.Size = new System.Drawing.Size(35, 21);
+            this.cmbLiveGraphDevices.TabIndex = 28;
+            this.cmbLiveGraphDevices.Text = "1";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(6, 22);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(39, 13);
+            this.label150.TabIndex = 29;
+            this.label150.Text = "Modul:";
+            // 
+            // grpTempSettings
+            // 
+            this.grpTempSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpTempSettings.Controls.Add(this.label158);
+            this.grpTempSettings.Controls.Add(this.label159);
+            this.grpTempSettings.Controls.Add(this.numMinGraph);
+            this.grpTempSettings.Controls.Add(this.numMaxGraph);
+            this.grpTempSettings.Location = new System.Drawing.Point(734, 81);
+            this.grpTempSettings.Name = "grpTempSettings";
+            this.grpTempSettings.Size = new System.Drawing.Size(128, 58);
+            this.grpTempSettings.TabIndex = 30;
+            this.grpTempSettings.TabStop = false;
+            this.grpTempSettings.Text = "Temperature:";
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 5000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Form1
             // 
@@ -5420,8 +5492,8 @@
             this.tabPage8.PerformLayout();
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
-            this.grpGraphSettings.ResumeLayout(false);
-            this.grpGraphSettings.PerformLayout();
+            this.grpTimeSettings.ResumeLayout(false);
+            this.grpTimeSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStartHourGraph)).EndInit();
@@ -5431,6 +5503,10 @@
             this.menuStrip1.PerformLayout();
             this.groupBoxConnection.ResumeLayout(false);
             this.groupBoxConnection.PerformLayout();
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.grpTempSettings.ResumeLayout(false);
+            this.grpTempSettings.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5819,7 +5895,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker19;
         private System.Windows.Forms.DateTimePicker dateTimePicker18;
         private System.Windows.Forms.DateTimePicker dateTimePicker17;
-        private System.Windows.Forms.GroupBox grpGraphSettings;
+        private System.Windows.Forms.GroupBox grpTimeSettings;
         private System.Windows.Forms.Label label158;
         private System.Windows.Forms.Label label159;
         private System.Windows.Forms.NumericUpDown numMaxGraph;
@@ -5843,6 +5919,12 @@
         private System.Windows.Forms.Label lblGraph1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.CheckBox chkAutoRefresh;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.ComboBox cmbLiveGraphDevices;
+        private System.Windows.Forms.GroupBox grpTempSettings;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

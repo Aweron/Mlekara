@@ -19,45 +19,52 @@ namespace Mlekara
         {
             InitializeComponent();
 
-            chart1.Titles["Naziv"].Text = graphData.Company;
-            chart1.Titles["Senzor"].Text += graphData.Probe.Name;
-            chart1.Titles["Datum"].Text += graphData.Date;
-            chart1.Titles["Vreme"].Text += graphData.StartHour + ":00 - " + (graphData.StartHour + graphData.HourCount) + ":00";
-
-            List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(graphData.Probe.Id, graphData.Date, graphData.StartHour, graphData.HourCount);
-
-            // X axis range
-            int endHour = graphData.StartHour + graphData.HourCount;
-
-            DateTime min = Convert.ToDateTime(graphData.Date + " " + graphData.StartHour + ":00");
-            DateTime max = Convert.ToDateTime(graphData.Date + " " + (endHour - 1) + ":59");
-
-            chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
-            chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
-            
-            // Y axis range
-            chart1.ChartAreas[0].AxisY.Minimum = graphData.Probe.Min;
-            chart1.ChartAreas[0].AxisY.Maximum = graphData.Probe.Max;
-
-            chart1.Series["Timestamps"].XValueType = ChartValueType.Time;
-            chart1.Series["Timestamps"].Points.AddXY(min, graphData.Probe.Marker);
-            chart1.Series["Timestamps"].Points.AddXY(max, graphData.Probe.Marker);
-
-            // Marker line
-            chart1.Series["Marker"].XValueType = ChartValueType.DateTime;
-
-            chart1.Series["Marker"].Points.AddXY(min, graphData.Probe.Marker);
-            chart1.Series["Marker"].Points.AddXY(max, graphData.Probe.Marker);
-
-            // Measurements X axis value
-            chart1.Series["Temps"].XValueType = ChartValueType.DateTime;
-
-            foreach (MeasurementModel measurement in measurements)
+            try
             {
-                DateTime time = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
-                chart1.Series["Temps"].Points.AddXY(time, measurement.Value);
-            }
 
+                chart1.Titles["Naziv"].Text = graphData.Company;
+                chart1.Titles["Senzor"].Text += graphData.Probe.Name;
+                chart1.Titles["Datum"].Text += graphData.Date;
+                chart1.Titles["Vreme"].Text += graphData.StartHour + ":00 - " + (graphData.StartHour + graphData.HourCount) + ":00";
+
+                List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(graphData.Probe.Id, graphData.Date, graphData.StartHour, graphData.HourCount);
+
+                // X axis range
+                int endHour = graphData.StartHour + graphData.HourCount;
+
+                DateTime min = Convert.ToDateTime(graphData.Date + " " + graphData.StartHour + ":00");
+                DateTime max = Convert.ToDateTime(graphData.Date + " " + (endHour - 1) + ":59");
+
+                chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
+                chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
+
+                // Y axis range
+                chart1.ChartAreas[0].AxisY.Minimum = graphData.Probe.Min;
+                chart1.ChartAreas[0].AxisY.Maximum = graphData.Probe.Max;
+
+                chart1.Series["Timestamps"].XValueType = ChartValueType.Time;
+                chart1.Series["Timestamps"].Points.AddXY(min, graphData.Probe.Marker);
+                chart1.Series["Timestamps"].Points.AddXY(max, graphData.Probe.Marker);
+
+                // Marker line
+                chart1.Series["Marker"].XValueType = ChartValueType.DateTime;
+
+                chart1.Series["Marker"].Points.AddXY(min, graphData.Probe.Marker);
+                chart1.Series["Marker"].Points.AddXY(max, graphData.Probe.Marker);
+
+                // Measurements X axis value
+                chart1.Series["Temps"].XValueType = ChartValueType.DateTime;
+
+                foreach (MeasurementModel measurement in measurements)
+                {
+                    DateTime time = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
+                    chart1.Series["Temps"].Points.AddXY(time, measurement.Value);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtNapomena_TextChanged(object sender, EventArgs e)

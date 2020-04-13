@@ -160,5 +160,27 @@ namespace Mlekara
 
         #endregion
 
+        #region Defaults
+
+        public static DefaultsModel LoadDefaults()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = cnn.Query<DefaultsModel>("select * from Defaults", new DynamicParameters());
+                return output.First();
+            }
+        }
+
+        public static void SaveDefaults(int stackSize, int graphMin, int graphMax)
+        {
+            DefaultsModel defaults = new DefaultsModel(stackSize, graphMin, graphMax);
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert or replace into Defaults (Id, StackSize, GraphMin, GraphMax) values (@Id, @StackSize, @GraphMin, @GraphMax)", defaults);
+            }
+        }
+
+        #endregion
+
     }
 }

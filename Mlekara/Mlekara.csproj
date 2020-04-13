@@ -96,6 +96,7 @@
       <DependentUpon>Graph.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CompanyModel.cs" />
+    <Compile Include="Models\DefaultsModel.cs" />
     <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\GraphDataModel.cs" />
     <Compile Include="Models\PortSettingsModel.cs" />

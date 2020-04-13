@@ -13,11 +13,19 @@ namespace Mlekara
 {
     public partial class AdminSettings : Form
     {
+        private DefaultsModel defaults;
+
         public AdminSettings()
         {
             InitializeComponent();
 
             txtCompany.Text = SqliteDataAccess.LoadCompanyName();
+
+            defaults = SqliteDataAccess.LoadDefaults();
+
+            numGraphMin.Value = defaults.GraphMin;
+            numGraphMax.Value = defaults.GraphMax;
+            numStackSize.Value = defaults.StackSize;
         }
 
         #region Save Buttons
@@ -41,7 +49,9 @@ namespace Mlekara
             {
                 DeviceModel device = new DeviceModel(Convert.ToInt32(cmbDeviceId.Text), txtDeviceName.Text, chkDeviceActive.Checked);
                 SqliteDataAccess.SaveDevice(device);
-                MessageBox.Show("Device saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                List<DeviceModel> data = SqliteDataAccess.LoadDevices();
+                dataGridView1.DataSource = data;
             }
             catch (Exception err)
             {
@@ -53,10 +63,12 @@ namespace Mlekara
         {
             try
             {
-                ProbeModel probe = new ProbeModel(Convert.ToInt32(cmbProbeId.Text), Convert.ToInt32(cmbProbeDeviceId.Text), txtProbeName.Text, chkProbeActive.Checked,
+                ProbeModel probe = new ProbeModel(Convert.ToInt32(cmbProbeId.Text), Convert.ToInt32(txtProbeDeviceId.Text), txtProbeName.Text, chkProbeActive.Checked,
                 Convert.ToInt32(numMin.Value), Convert.ToInt32(numMax.Value), Convert.ToInt32(numMarker.Value));
                 SqliteDataAccess.SaveProbe(probe);
-                MessageBox.Show("Probe saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                List<ProbeModel> data = SqliteDataAccess.LoadProbes();
+                dataGridView1.DataSource = data;
             }
             catch (Exception err)
             {
@@ -64,6 +76,18 @@ namespace Mlekara
             }
         }
 
+        private void btnDefaults_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqliteDataAccess.SaveDefaults(Convert.ToInt32(numStackSize.Value), Convert.ToInt32(numGraphMin.Value), Convert.ToInt32(numGraphMax.Value));
+                MessageBox.Show("Defaults saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Show Buttons
@@ -121,7 +145,7 @@ namespace Mlekara
             try
             {
                 ProbeModel probe = SqliteDataAccess.LoadProbe(Convert.ToInt32(cmbProbeId.Text));
-                cmbProbeDeviceId.Text = probe.DeviceId.ToString();
+                txtProbeDeviceId.Text = probe.DeviceId.ToString();
                 chkProbeActive.Checked = probe.Active;
                 txtProbeName.Text = probe.Name;
                 numMin.Value = probe.Min;
@@ -138,5 +162,7 @@ namespace Mlekara
         {
             this.Close();
         }
+
+
     }
 }

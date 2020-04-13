@@ -20,11 +20,14 @@ namespace Mlekara
         public ICommStream CommStream { get; set; }
         public byte[] ReceivedData { get; set; }
 
+        private bool autoRefresh;
+
         private Stack<MeasurementModel>[] measurementStacks;
-        private int stackSize = 30;
+        private int stackSize;
 
         private List<DeviceModel> devices;
         private List<ProbeModel> probes;
+        private DefaultsModel defaults;
 
         // Arrays of Form Controls
         GroupBox[] groupBoxes;
@@ -43,6 +46,8 @@ namespace Mlekara
             InitializeComponent();
 
             ReceivedData = new byte[21];
+
+            autoRefresh = false;
 
             measurementStacks = new Stack<MeasurementModel>[24];
 
@@ -73,7 +78,7 @@ namespace Mlekara
 
                     serialPort1.Open();
                     CommStream = new SerialStream(serialPort1);
-                    CommStream.ReadTimeout = 500;
+                    CommStream.ReadTimeout = 900;
                 }
             }
             catch (Exception err)
@@ -84,12 +89,13 @@ namespace Mlekara
             ShowPortConnected(serialPort1.IsOpen); // If port is open, show port connected; else show port disconnected.
         }
 
-        #region Temperature and Port Connection UI
+        #region User Interface Drawing
 
         public void DisplayData()
         {
             devices = SqliteDataAccess.LoadDevices();
             probes = SqliteDataAccess.LoadProbes();
+            defaults = SqliteDataAccess.LoadDefaults();
 
             lblCompany.Text = SqliteDataAccess.LoadCompanyName();
 
@@ -118,6 +124,12 @@ namespace Mlekara
                 else
                     groupBoxes[i].Enabled = false;
             }
+
+            // Graph Defaults
+            numMinGraph.Value = defaults.GraphMin;
+            numMaxGraph.Value = defaults.GraphMax;
+            stackSize = defaults.StackSize;
+            timer2.Interval = stackSize * 1000;
         }
 
         public void ShowPortConnected(bool isConnected)
@@ -163,7 +175,7 @@ namespace Mlekara
                 {
                     serialPort1.Open();
                     CommStream = new SerialStream(serialPort1);
-                    CommStream.ReadTimeout = 500;
+                    CommStream.ReadTimeout = 900;
                     ShowPortConnected(true);
                 }
                 catch (Exception err)
@@ -248,8 +260,10 @@ namespace Mlekara
                     measurementStacks[j].Push(measurement);
 
                     // Check if stacks are full to approximate and save to DB
-                    if (measurementStacks[j].Count == stackSize)
+                    if (measurementStacks[j].Count >= stackSize)
+                    {
                         SaveApproximateTemp(j);
+                    }
                 }
             }
         }
@@ -276,6 +290,13 @@ namespace Mlekara
             measurementStacks[j].Clear();
         }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (autoRefresh)
+                //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
+                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay.Subtract(new TimeSpan(2, 0, 0)), 4);
+        }
+
         private void btnTimerRestart_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -286,20 +307,20 @@ namespace Mlekara
 
         #region Graph Tab
 
-        public void ShowGraph(int deviceNum)
+        public void ShowGraph(int deviceNum, DateTime date, int startHour, int hourCount)
         {
             chart1.Series.Clear();
 
             chart1.Titles["Naziv"].Text = lblCompany.Text;
             chart1.Titles["Device"].Text = "Device: " + tabTemperature.TabPages[deviceNum].Text;
-            chart1.Titles["Datum"].Text = "Datum: " + dateTimeGraph.Value.ToShortDateString();
-            chart1.Titles["Vreme"].Text = "Vreme: " + numStartHourGraph.Value + ":00 - " + (numStartHourGraph.Value + numHourCountGraph.Value) + ":00";
+            chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
+            chart1.Titles["Vreme"].Text = "Vreme: " + startHour + ":00 - " + (startHour + hourCount) + ":00";
 
             // X axis range
-            int endHour = Convert.ToInt32(numStartHourGraph.Value + numHourCountGraph.Value);
+            int endHour = Convert.ToInt32(startHour + hourCount);
 
-            DateTime min = Convert.ToDateTime(dateTimeGraph.Value.ToShortDateString() + " " + numStartHourGraph.Value + ":00");
-            DateTime max = Convert.ToDateTime(dateTimeGraph.Value.ToShortDateString() + " " + (endHour - 1) + ":59");
+            DateTime min = Convert.ToDateTime(date.ToShortDateString() + " " + startHour + ":00");
+            DateTime max = Convert.ToDateTime(date.ToShortDateString() + " " + (endHour - 1) + ":59");
 
             chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
             chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
@@ -323,9 +344,66 @@ namespace Mlekara
             // Measurements X axis value
             List<ProbeModel> deviceProbes = SqliteDataAccess.LoadProbes(deviceNum + 1);
 
-            string date = dateTimeGraph.Value.ToShortDateString();
-            int startHour = Convert.ToInt32(numStartHourGraph.Value);
-            int hourCount = Convert.ToInt32(numHourCountGraph.Value);
+            foreach (ProbeModel probeModel in deviceProbes)
+            {
+                if (probeModel.Active)
+                {
+                    chart1.Series.Add(probeModel.Id.ToString());
+                    chart1.Series[probeModel.Id.ToString()].ChartType = SeriesChartType.Line;
+                    chart1.Series[probeModel.Id.ToString()].Enabled = true;
+                    chart1.Series[probeModel.Id.ToString()].IsVisibleInLegend = true;
+
+                    chart1.Series[probeModel.Id.ToString()].XValueType = ChartValueType.DateTime;
+
+                    chart1.Series[probeModel.Id.ToString()].LegendText = probeModel.Name;
+
+                    List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probeModel.Id, date.ToShortDateString(), startHour, hourCount);
+
+                    foreach (MeasurementModel measurement in measurements)
+                    {
+                        DateTime time = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
+                        chart1.Series[probeModel.Id.ToString()].Points.AddXY(time, measurement.Value);
+                    }
+                }
+            }
+        }
+
+        public void ShowGraph(int deviceNum, DateTime date, TimeSpan _time, int hourCount)
+        {
+            chart1.Series.Clear();
+
+            chart1.Titles["Naziv"].Text = lblCompany.Text;
+            chart1.Titles["Device"].Text = "Device: " + tabTemperature.TabPages[deviceNum].Text;
+            chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
+            chart1.Titles["Vreme"].Text = "Vreme: " + _time.Hours + ":" + _time.Minutes + " - " + _time.Add(new TimeSpan(hourCount,0,0)).Minutes + ":" + _time.Minutes;
+
+            // X axis range
+            int endHour = Convert.ToInt32(_time.Hours + hourCount);
+
+            DateTime min = Convert.ToDateTime(date.ToShortDateString() + " " + _time);
+            DateTime max = Convert.ToDateTime(date.ToShortDateString() + " " + _time.Add(new TimeSpan(hourCount, 0, 0)));
+
+            chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
+            chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
+
+            // Y axis range
+            chart1.ChartAreas[0].AxisY.Minimum = Convert.ToDouble(numMinGraph.Value);
+            chart1.ChartAreas[0].AxisY.Maximum = Convert.ToDouble(numMaxGraph.Value);
+
+            chart1.Series.Add("Timestamps");
+            chart1.Series["Timestamps"].IsVisibleInLegend = false;
+            chart1.Series["Timestamps"].XValueType = ChartValueType.Time;
+            chart1.Series["Timestamps"].Points.AddXY(min, 0);
+            chart1.Series["Timestamps"].Points.AddXY(max, 0);
+
+            // Marker line
+            //chart1.Series["Marker"].XValueType = ChartValueType.DateTime;
+
+            //chart1.Series["Marker"].Points.AddXY(min, graphData.Probe.Marker);
+            //chart1.Series["Marker"].Points.AddXY(max, graphData.Probe.Marker);
+
+            // Measurements X axis value
+            List<ProbeModel> deviceProbes = SqliteDataAccess.LoadProbes(deviceNum + 1);
 
             foreach (ProbeModel probeModel in deviceProbes)
             {
@@ -340,7 +418,7 @@ namespace Mlekara
 
                     chart1.Series[probeModel.Id.ToString()].LegendText = probeModel.Name;
 
-                    List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probeModel.Id, date, startHour, hourCount);
+                    List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probeModel.Id, date.ToShortDateString(), _time.Hours, hourCount);
 
                     foreach (MeasurementModel measurement in measurements)
                     {
@@ -348,28 +426,22 @@ namespace Mlekara
                         chart1.Series[probeModel.Id.ToString()].Points.AddXY(time, measurement.Value);
                     }
                 }
-                else
-                {
-                    chart1.Series[probeModel.Id].Enabled = false;
-                    chart1.Series[probeModel.Id].IsVisibleInLegend = false;
-                }
             }
-
         }
 
         private void btnShowGraphic1_Click(object sender, EventArgs e)
         {
-            ShowGraph(0);
+            ShowGraph(0, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
         }
 
         private void btnShowGraphic2_Click(object sender, EventArgs e)
         {
-            ShowGraph(1);
+            ShowGraph(1, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
         }
 
         private void btnShowGraphic3_Click(object sender, EventArgs e)
         {
-            ShowGraph(2);
+            ShowGraph(2, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
         }
 
         private void txtNapomena_TextChanged(object sender, EventArgs e)
@@ -388,6 +460,31 @@ namespace Mlekara
                 printPreviewDialog1.ClientSize = new Size(1200, 800); // A4: 2480 pixels x 3508 pixels
                 printPreviewDialog1.ShowDialog();
             }
+        }
+
+        private void chkAutoRefresh_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chkAutoRefresh.Checked)
+            {
+                autoRefresh = true;
+                grpTimeSettings.Enabled = false;
+                grpTempSettings.Enabled = false;
+                foreach (Button button in btnShowGraphics)
+                    button.Enabled = false;
+
+                //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
+                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay.Subtract(new TimeSpan(2,0,0)), 4);
+            }
+            else
+            {
+                autoRefresh = false;
+                grpTimeSettings.Enabled = true;
+                grpTempSettings.Enabled = true;
+                for (int i = 0; i < devices.Count; i++)
+                    if (devices[i].Active)
+                        btnShowGraphics[i].Enabled = true;
+            }
+
         }
 
         #endregion
@@ -701,6 +798,7 @@ namespace Mlekara
         {
             CommStream?.Dispose();
         }
+
 
     }
 }

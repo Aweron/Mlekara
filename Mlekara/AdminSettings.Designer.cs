@@ -41,7 +41,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbProbeDeviceId = new System.Windows.Forms.ComboBox();
+            this.txtProbeDeviceId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbProbeId = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -64,6 +64,15 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numStackSize = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numGraphMax = new System.Windows.Forms.NumericUpDown();
+            this.numGraphMin = new System.Windows.Forms.NumericUpDown();
+            this.btnDefaults = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -75,6 +84,10 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGraphMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGraphMin)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCompany
@@ -203,7 +216,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cmbProbeDeviceId);
+            this.groupBox4.Controls.Add(this.txtProbeDeviceId);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.cmbProbeId);
             this.groupBox4.Controls.Add(this.label8);
@@ -224,17 +237,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Probe";
             // 
-            // cmbProbeDeviceId
+            // txtProbeDeviceId
             // 
-            this.cmbProbeDeviceId.FormattingEnabled = true;
-            this.cmbProbeDeviceId.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cmbProbeDeviceId.Location = new System.Drawing.Point(77, 32);
-            this.cmbProbeDeviceId.Name = "cmbProbeDeviceId";
-            this.cmbProbeDeviceId.Size = new System.Drawing.Size(35, 21);
-            this.cmbProbeDeviceId.TabIndex = 28;
+            this.txtProbeDeviceId.Location = new System.Drawing.Point(77, 32);
+            this.txtProbeDeviceId.Name = "txtProbeDeviceId";
+            this.txtProbeDeviceId.ReadOnly = true;
+            this.txtProbeDeviceId.Size = new System.Drawing.Size(35, 20);
+            this.txtProbeDeviceId.TabIndex = 30;
             // 
             // label3
             // 
@@ -380,7 +389,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(612, 425);
+            this.btnOK.Location = new System.Drawing.Point(612, 554);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 13;
@@ -398,7 +407,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(427, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(427, 448);
             this.dataGridView1.TabIndex = 14;
             // 
             // btnShowProbes
@@ -443,6 +452,7 @@
             this.cmbShowDeviceId.Name = "cmbShowDeviceId";
             this.cmbShowDeviceId.Size = new System.Drawing.Size(35, 21);
             this.cmbShowDeviceId.TabIndex = 27;
+            this.cmbShowDeviceId.Text = "1";
             // 
             // btnShowProbesByDevice
             // 
@@ -467,12 +477,13 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox8);
             this.groupBox6.Controls.Add(this.groupBox1);
             this.groupBox6.Controls.Add(this.groupBox2);
             this.groupBox6.Controls.Add(this.groupBox4);
             this.groupBox6.Location = new System.Drawing.Point(12, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(230, 407);
+            this.groupBox6.Size = new System.Drawing.Size(230, 536);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Edit Database";
@@ -487,16 +498,126 @@
             this.groupBox7.Controls.Add(this.dataGridView1);
             this.groupBox7.Location = new System.Drawing.Point(248, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(439, 407);
+            this.groupBox7.Size = new System.Drawing.Size(439, 536);
             this.groupBox7.TabIndex = 20;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Show Database";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.btnDefaults);
+            this.groupBox8.Controls.Add(this.numGraphMax);
+            this.groupBox8.Controls.Add(this.label13);
+            this.groupBox8.Controls.Add(this.numGraphMin);
+            this.groupBox8.Controls.Add(this.label12);
+            this.groupBox8.Controls.Add(this.label11);
+            this.groupBox8.Controls.Add(this.numStackSize);
+            this.groupBox8.Controls.Add(this.label10);
+            this.groupBox8.Location = new System.Drawing.Point(6, 407);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(218, 123);
+            this.groupBox8.TabIndex = 13;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Default Values";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Take measurements every";
+            // 
+            // numStackSize
+            // 
+            this.numStackSize.Location = new System.Drawing.Point(142, 63);
+            this.numStackSize.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numStackSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numStackSize.Name = "numStackSize";
+            this.numStackSize.Size = new System.Drawing.Size(35, 20);
+            this.numStackSize.TabIndex = 33;
+            this.numStackSize.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(183, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "secs";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Graph Min:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(85, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Graph Max:";
+            // 
+            // numGraphMax
+            // 
+            this.numGraphMax.Location = new System.Drawing.Point(88, 32);
+            this.numGraphMax.Name = "numGraphMax";
+            this.numGraphMax.Size = new System.Drawing.Size(35, 20);
+            this.numGraphMax.TabIndex = 32;
+            this.numGraphMax.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numGraphMin
+            // 
+            this.numGraphMin.Location = new System.Drawing.Point(6, 32);
+            this.numGraphMin.Name = "numGraphMin";
+            this.numGraphMin.Size = new System.Drawing.Size(35, 20);
+            this.numGraphMin.TabIndex = 31;
+            this.numGraphMin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // btnDefaults
+            // 
+            this.btnDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDefaults.Location = new System.Drawing.Point(137, 94);
+            this.btnDefaults.Name = "btnDefaults";
+            this.btnDefaults.Size = new System.Drawing.Size(75, 23);
+            this.btnDefaults.TabIndex = 31;
+            this.btnDefaults.Text = "Save";
+            this.btnDefaults.UseVisualStyleBackColor = true;
+            this.btnDefaults.Click += new System.EventHandler(this.btnDefaults_Click);
             // 
             // AdminSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 460);
+            this.ClientSize = new System.Drawing.Size(699, 589);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btnOK);
@@ -519,6 +640,11 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGraphMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGraphMin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,7 +676,6 @@
         private System.Windows.Forms.NumericUpDown numMax;
         private System.Windows.Forms.NumericUpDown numMin;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.ComboBox cmbProbeDeviceId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnShowProbes;
@@ -561,5 +686,15 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtProbeDeviceId;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown numStackSize;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnDefaults;
+        private System.Windows.Forms.NumericUpDown numGraphMax;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown numGraphMin;
+        private System.Windows.Forms.Label label12;
     }
 }
