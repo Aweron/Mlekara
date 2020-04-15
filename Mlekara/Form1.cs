@@ -12,6 +12,7 @@ using Mlekara.Models;
 using Code4Bugs.Utils.IO;
 using Code4Bugs.Utils.IO.Modbus;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing.Text;
 
 namespace Mlekara
 {
@@ -30,16 +31,19 @@ namespace Mlekara
         private DefaultsModel defaults;
 
         // Arrays of Form Controls
-        GroupBox[] groupBoxes;
-        TextBox[] tempDisplays;
-        NumericUpDown[] numMins;
-        NumericUpDown[] numMaxs;
-        NumericUpDown[] numMarkers;
-        DateTimePicker[] dateTimePickers;
-        NumericUpDown[] numStartHours;
-        NumericUpDown[] numHourCounts;
-        Label[] lblGraphs;
-        Button[] btnShowGraphics;
+        public GroupBox[] groupBoxes;
+        public TextBox[] tempDisplays;
+        public NumericUpDown[] numMins;
+        public NumericUpDown[] numMaxs;
+        public NumericUpDown[] numMarkers;
+        public DateTimePicker[] dateTimePickers;
+        public NumericUpDown[] numStartHours;
+        public NumericUpDown[] numHourCounts;
+        public Label[] lblGraphs;
+        public Button[] btnShowGraphics;
+
+        public Font font;
+        public FontFamily fontFamily;
 
         public Form1()
         {
@@ -61,6 +65,14 @@ namespace Mlekara
             numHourCounts = new NumericUpDown[] { numHourCount1, numHourCount2, numHourCount3, numHourCount4, numHourCount5, numHourCount6, numHourCount7, numHourCount8, numHourCount9, numHourCount10, numHourCount11, numHourCount12, numHourCount13, numHourCount14, numHourCount15, numHourCount16, numHourCount17, numHourCount18, numHourCount19, numHourCount20, numHourCount21, numHourCount22, numHourCount23, numHourCount24 };
             lblGraphs = new Label[] { lblGraph1, lblGraph2, lblGraph3 };
             btnShowGraphics = new Button[] { btnShowGraphic1, btnShowGraphic2, btnShowGraphic3 };
+
+            // Font
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@".\digital-7.ttf");
+            fontFamily = new FontFamily("digital-7", pfc);
+            font = new Font(fontFamily, 36);
+            for (int i = 0; i < tempDisplays.Length; i++)
+                tempDisplays[i].Font = font;
 
             DisplayData();
 
@@ -114,6 +126,8 @@ namespace Mlekara
                 numMins[i].Value = probes[i].Min;
                 numMaxs[i].Value = probes[i].Max;
                 numMarkers[i].Value = probes[i].Marker;
+
+                //tempDisplays[i].Font = font;
 
                 if (probes[i].Active)
                 {
@@ -375,7 +389,7 @@ namespace Mlekara
             chart1.Titles["Naziv"].Text = lblCompany.Text;
             chart1.Titles["Device"].Text = "Device: " + tabTemperature.TabPages[deviceNum].Text;
             chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
-            chart1.Titles["Vreme"].Text = "Vreme: " + _time.Hours + ":" + _time.Minutes + " - " + _time.Add(new TimeSpan(hourCount,0,0)).Minutes + ":" + _time.Minutes;
+            chart1.Titles["Vreme"].Text = "Vreme: " + _time.Hours + ":" + _time.Minutes + " - " + _time.Add(new TimeSpan(hourCount,0,0)).Hours + ":" + _time.Minutes;
 
             // X axis range
             int endHour = Convert.ToInt32(_time.Hours + hourCount);
@@ -798,7 +812,5 @@ namespace Mlekara
         {
             CommStream?.Dispose();
         }
-
-
     }
 }
