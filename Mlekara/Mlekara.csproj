@@ -120,6 +120,12 @@
     <Compile Include="Models\PortSettingsModel.cs" />
     <Compile Include="Models\ProbeModel.cs" />
     <Compile Include="Models\MeasurementModel.cs" />
+    <Compile Include="PasswordCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordCheck.Designer.cs">
+      <DependentUpon>PasswordCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="PortSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Graph.resx">
       <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordCheck.resx">
+      <DependentUpon>PasswordCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PortSettings.resx">
       <DependentUpon>PortSettings.cs</DependentUpon>

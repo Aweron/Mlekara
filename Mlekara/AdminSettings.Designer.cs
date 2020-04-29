@@ -63,16 +63,16 @@
             this.btnShowProbesByDevice = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numStackSize = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.numGraphMax = new System.Windows.Forms.NumericUpDown();
-            this.numGraphMin = new System.Windows.Forms.NumericUpDown();
             this.btnDefaults = new System.Windows.Forms.Button();
+            this.numGraphMax = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numGraphMin = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numStackSize = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -83,11 +83,11 @@
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGraphMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGraphMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).BeginInit();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCompany
@@ -488,21 +488,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Edit Database";
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.groupBox5);
-            this.groupBox7.Controls.Add(this.groupBox3);
-            this.groupBox7.Controls.Add(this.dataGridView1);
-            this.groupBox7.Location = new System.Drawing.Point(248, 12);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(439, 536);
-            this.groupBox7.TabIndex = 20;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Show Database";
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.btnDefaults);
@@ -520,14 +505,67 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Default Values";
             // 
-            // label10
+            // btnDefaults
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 65);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Take measurements every";
+            this.btnDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDefaults.Location = new System.Drawing.Point(137, 94);
+            this.btnDefaults.Name = "btnDefaults";
+            this.btnDefaults.Size = new System.Drawing.Size(75, 23);
+            this.btnDefaults.TabIndex = 31;
+            this.btnDefaults.Text = "Save";
+            this.btnDefaults.UseVisualStyleBackColor = true;
+            this.btnDefaults.Click += new System.EventHandler(this.btnDefaults_Click);
+            // 
+            // numGraphMax
+            // 
+            this.numGraphMax.Location = new System.Drawing.Point(88, 32);
+            this.numGraphMax.Name = "numGraphMax";
+            this.numGraphMax.Size = new System.Drawing.Size(35, 20);
+            this.numGraphMax.TabIndex = 32;
+            this.numGraphMax.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(85, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(62, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Graph Max:";
+            // 
+            // numGraphMin
+            // 
+            this.numGraphMin.Location = new System.Drawing.Point(6, 32);
+            this.numGraphMin.Name = "numGraphMin";
+            this.numGraphMin.Size = new System.Drawing.Size(35, 20);
+            this.numGraphMin.TabIndex = 31;
+            this.numGraphMin.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Graph Min:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(183, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "secs";
             // 
             // numStackSize
             // 
@@ -551,67 +589,29 @@
             0,
             0});
             // 
-            // label11
+            // label10
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(183, 65);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "secs";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Take measurements every";
             // 
-            // label12
+            // groupBox7
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Graph Min:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(85, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 13);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Graph Max:";
-            // 
-            // numGraphMax
-            // 
-            this.numGraphMax.Location = new System.Drawing.Point(88, 32);
-            this.numGraphMax.Name = "numGraphMax";
-            this.numGraphMax.Size = new System.Drawing.Size(35, 20);
-            this.numGraphMax.TabIndex = 32;
-            this.numGraphMax.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // numGraphMin
-            // 
-            this.numGraphMin.Location = new System.Drawing.Point(6, 32);
-            this.numGraphMin.Name = "numGraphMin";
-            this.numGraphMin.Size = new System.Drawing.Size(35, 20);
-            this.numGraphMin.TabIndex = 31;
-            this.numGraphMin.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // btnDefaults
-            // 
-            this.btnDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDefaults.Location = new System.Drawing.Point(137, 94);
-            this.btnDefaults.Name = "btnDefaults";
-            this.btnDefaults.Size = new System.Drawing.Size(75, 23);
-            this.btnDefaults.TabIndex = 31;
-            this.btnDefaults.Text = "Save";
-            this.btnDefaults.UseVisualStyleBackColor = true;
-            this.btnDefaults.Click += new System.EventHandler(this.btnDefaults_Click);
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.groupBox5);
+            this.groupBox7.Controls.Add(this.groupBox3);
+            this.groupBox7.Controls.Add(this.dataGridView1);
+            this.groupBox7.Location = new System.Drawing.Point(248, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(439, 536);
+            this.groupBox7.TabIndex = 20;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Show Database";
             // 
             // AdminSettings
             // 
@@ -639,12 +639,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGraphMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGraphMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStackSize)).EndInit();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -201,8 +201,12 @@ namespace Mlekara
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AdminSettings settings = new AdminSettings();
-            settings.ShowDialog();
+            PasswordCheck passwordCheck = new PasswordCheck();
+            if (passwordCheck.ShowDialog() == DialogResult.OK)
+            {
+                AdminSettings settings = new AdminSettings();
+                settings.ShowDialog();
+            }
 
             DisplayData();
         }
@@ -233,8 +237,11 @@ namespace Mlekara
                     timer1.Stop();
                     btnTimerRestart.Visible = true;
                     MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ShowPortConnected(serialPort1.IsOpen);
                 }
             }
+            else
+                ShowPortConnected(false);
         }
 
         private void ShowData(int slaveNo)
@@ -326,7 +333,7 @@ namespace Mlekara
             chart1.Series.Clear();
 
             chart1.Titles["Naziv"].Text = lblCompany.Text;
-            chart1.Titles["Device"].Text = "Device: " + tabTemperature.TabPages[deviceNum].Text;
+            chart1.Titles["Device"].Text = tabTemperature.TabPages[deviceNum].Text;
             chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
             chart1.Titles["Vreme"].Text = "Vreme: " + startHour + ":00 - " + (startHour + hourCount) + ":00";
 
@@ -366,6 +373,7 @@ namespace Mlekara
                     chart1.Series[probeModel.Id.ToString()].ChartType = SeriesChartType.Line;
                     chart1.Series[probeModel.Id.ToString()].Enabled = true;
                     chart1.Series[probeModel.Id.ToString()].IsVisibleInLegend = true;
+                    chart1.Series[probeModel.Id.ToString()].BorderWidth = 2;
 
                     chart1.Series[probeModel.Id.ToString()].XValueType = ChartValueType.DateTime;
 
@@ -481,6 +489,7 @@ namespace Mlekara
             if(chkAutoRefresh.Checked)
             {
                 autoRefresh = true;
+                cmbLiveGraphDevices.Enabled = false;
                 grpTimeSettings.Enabled = false;
                 grpTempSettings.Enabled = false;
                 foreach (Button button in btnShowGraphics)
@@ -492,6 +501,7 @@ namespace Mlekara
             else
             {
                 autoRefresh = false;
+                cmbLiveGraphDevices.Enabled = true;
                 grpTimeSettings.Enabled = true;
                 grpTempSettings.Enabled = true;
                 for (int i = 0; i < devices.Count; i++)
