@@ -56,12 +56,30 @@ namespace Mlekara
             }
         }
 
-        public static void SaveCompanyName(string name)
+        public static bool IsFirstStartup()
         {
-            CompanyModel company = new CompanyModel(1, name);
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("insert or replace into Company (Id, Name) values (@Id, @Name)", company);
+                var output = cnn.Query<CompanyModel>("select * from Company", new DynamicParameters());
+                return output.First().FirstStartup;
+            }
+        }
+
+        public static void SaveCompanyName(string name)
+        {
+            CompanyModel company = new CompanyModel(1, name, false);
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert or replace into Company (Id, Name, FirstStartup) values (@Id, @Name, @FirstStartup)", company);
+            }
+        }
+
+        public static void SaveFirstStartupFalse()
+        {
+            //CompanyModel company = new CompanyModel(1, name, false);
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("insert or replace into Company (Id, Name, FirstStartup) values (1, '', 0)");
             }
         }
 

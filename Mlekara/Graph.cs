@@ -23,7 +23,8 @@ namespace Mlekara
             {
 
                 chart1.Titles["Naziv"].Text = graphData.Company;
-                chart1.Titles["Senzor"].Text += graphData.Probe.Name;
+                chart1.Titles["Device"].Text = SqliteDataAccess.LoadDevice(graphData.Probe.DeviceId).Name;
+                chart1.Titles["Senzor"].Text = graphData.Probe.Name;
                 chart1.Titles["Datum"].Text += graphData.Date;
                 chart1.Titles["Vreme"].Text += graphData.StartHour + ":00 - " + (graphData.StartHour + graphData.HourCount) + ":00";
 
@@ -76,11 +77,13 @@ namespace Mlekara
         {
             printDialog1.Document = chart1.Printing.PrintDocument;
             printDialog1.Document.DefaultPageSettings.Landscape = true;
-            
+            printDialog1.Document.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+
+
             if (printDialog1.ShowDialog() == DialogResult.OK)
             {
                 printPreviewDialog1.Document = printDialog1.Document;
-                printPreviewDialog1.ClientSize = new Size(1200, 800); // A4: 2480 pixels x 3508 pixels
+                printPreviewDialog1.ClientSize = new Size(1130, 800); // A4: 2480 pixels x 3508 pixels
                 printPreviewDialog1.ShowDialog();
             }
             

@@ -13,6 +13,7 @@ using Code4Bugs.Utils.IO;
 using Code4Bugs.Utils.IO.Modbus;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing.Text;
+using System.Drawing.Printing;
 
 namespace Mlekara
 {
@@ -92,13 +93,32 @@ namespace Mlekara
                     CommStream = new SerialStream(serialPort1);
                     CommStream.ReadTimeout = 900;
                 }
+
             }
+            catch { }
+            /*
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            */
             ShowPortConnected(serialPort1.IsOpen); // If port is open, show port connected; else show port disconnected.
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (SqliteDataAccess.IsFirstStartup())
+            {
+                PasswordCheck passwordCheck = new PasswordCheck();
+                if (passwordCheck.ShowDialog() == DialogResult.OK)
+                {
+                    SqliteDataAccess.SaveFirstStartupFalse();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
         }
 
         #region User Interface Drawing
@@ -153,12 +173,29 @@ namespace Mlekara
                 lblConnected.Text = "Connected";
                 lblConnected.ForeColor = Color.Green;
                 onOffToolStripMenuItem.Checked = true;
+                btnRestartConnection.Visible = false;
             }
             else
             {
                 lblConnected.Text = "Disconnected";
                 lblConnected.ForeColor = Color.Red;
                 onOffToolStripMenuItem.Checked = false;
+                btnRestartConnection.Visible = true;
+            }
+        }
+
+        private void btnRestartConnection_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serialPort1.Open();
+                CommStream = new SerialStream(serialPort1);
+                CommStream.ReadTimeout = 900;
+                ShowPortConnected(true);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -169,11 +206,7 @@ namespace Mlekara
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PortSettings settings = new PortSettings(serialPort1);
-            if (DialogResult.OK == settings.ShowDialog())
-            {
-                if (serialPort1.IsOpen)
-                    ShowPortConnected(true);
-            }
+            settings.ShowDialog();
         }
 
         private void onOffToolStripMenuItem_Click(object sender, EventArgs e)
@@ -240,8 +273,8 @@ namespace Mlekara
                     ShowPortConnected(serialPort1.IsOpen);
                 }
             }
-            else
-                ShowPortConnected(false);
+            
+            ShowPortConnected(serialPort1.IsOpen);
         }
 
         private void ShowData(int slaveNo)
@@ -395,7 +428,7 @@ namespace Mlekara
             chart1.Series.Clear();
 
             chart1.Titles["Naziv"].Text = lblCompany.Text;
-            chart1.Titles["Device"].Text = "Device: " + tabTemperature.TabPages[deviceNum].Text;
+            chart1.Titles["Device"].Text = tabTemperature.TabPages[deviceNum].Text;
             chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
             chart1.Titles["Vreme"].Text = "Vreme: " + _time.Hours + ":" + _time.Minutes + " - " + _time.Add(new TimeSpan(hourCount,0,0)).Hours + ":" + _time.Minutes;
 
@@ -475,6 +508,7 @@ namespace Mlekara
         {
             printDialog1.Document = chart1.Printing.PrintDocument;
             printDialog1.Document.DefaultPageSettings.Landscape = true;
+            printDialog1.Document.DefaultPageSettings.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
 
             if (printDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -515,6 +549,15 @@ namespace Mlekara
 
         #region Graph Show Button Click Events
 
+        public bool CheckMinMaxTemps(int num)
+        {
+            int min = Convert.ToInt32(numMins[num - 1].Value);
+            int max = Convert.ToInt32(numMaxs[num - 1].Value);
+            if (min >= max)
+                return false;
+            else return true;
+        }
+
         public GraphDataModel AssembleGraphDataModel(int i)
         {
             ProbeModel probe = new ProbeModel
@@ -540,146 +583,266 @@ namespace Mlekara
 
         private void btnShow1_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(1));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(1))
+            {
+                graph = new Graph(AssembleGraphDataModel(1));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow2_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(2));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(2))
+            {
+                graph = new Graph(AssembleGraphDataModel(2));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow3_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(3));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(3))
+            {
+                graph = new Graph(AssembleGraphDataModel(3));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow4_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(4));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(4))
+            {
+                graph = new Graph(AssembleGraphDataModel(4));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow5_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(5));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(5))
+            {
+                graph = new Graph(AssembleGraphDataModel(5));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow6_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(6));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(6))
+            {
+                graph = new Graph(AssembleGraphDataModel(6));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow7_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(7));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(7))
+            {
+                graph = new Graph(AssembleGraphDataModel(7));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow8_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(8));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(8))
+            {
+                graph = new Graph(AssembleGraphDataModel(8));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow9_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(9));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(9))
+            {
+                graph = new Graph(AssembleGraphDataModel(9));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow10_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(10));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(10))
+            {
+                graph = new Graph(AssembleGraphDataModel(10));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow11_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(11));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(11))
+            {
+                graph = new Graph(AssembleGraphDataModel(11));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow12_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(12));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(12))
+            {
+                graph = new Graph(AssembleGraphDataModel(12));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow13_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(13));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(13))
+            {
+                graph = new Graph(AssembleGraphDataModel(13));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow14_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(14));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(14))
+            {
+                graph = new Graph(AssembleGraphDataModel(14));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow15_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(15));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(15))
+            {
+                graph = new Graph(AssembleGraphDataModel(15));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow16_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(16));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(16))
+            {
+                graph = new Graph(AssembleGraphDataModel(16));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow17_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(17));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(17))
+            {
+                graph = new Graph(AssembleGraphDataModel(17));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow18_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(18));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(18))
+            {
+                graph = new Graph(AssembleGraphDataModel(18));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow19_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(19));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(19))
+            {
+                graph = new Graph(AssembleGraphDataModel(19));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow20_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(20));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(20))
+            {
+                graph = new Graph(AssembleGraphDataModel(20));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow21_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(21));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(21))
+            {
+                graph = new Graph(AssembleGraphDataModel(21));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow22_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(22));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(22))
+            {
+                graph = new Graph(AssembleGraphDataModel(22));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow23_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(23));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(23))
+            {
+                graph = new Graph(AssembleGraphDataModel(23));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShow24_Click(object sender, EventArgs e)
         {
-            Graph graph = new Graph(AssembleGraphDataModel(24));
-            graph.ShowDialog();
+            Graph graph;
+            if (CheckMinMaxTemps(24))
+            {
+                graph = new Graph(AssembleGraphDataModel(24));
+                graph.ShowDialog();
+            }
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         #endregion

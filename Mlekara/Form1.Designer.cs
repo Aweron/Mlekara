@@ -458,6 +458,7 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnRestartConnection = new System.Windows.Forms.Button();
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -4849,9 +4850,9 @@
             this.groupBox26.Controls.Add(this.btnShowGraphic2);
             this.groupBox26.Controls.Add(this.lblGraph1);
             this.groupBox26.Controls.Add(this.btnShowGraphic1);
-            this.groupBox26.Location = new System.Drawing.Point(737, 249);
+            this.groupBox26.Location = new System.Drawing.Point(734, 249);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(128, 145);
+            this.groupBox26.Size = new System.Drawing.Size(131, 145);
             this.groupBox26.TabIndex = 26;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Modul:";
@@ -4867,7 +4868,7 @@
             // 
             // btnShowGraphic3
             // 
-            this.btnShowGraphic3.Location = new System.Drawing.Point(47, 116);
+            this.btnShowGraphic3.Location = new System.Drawing.Point(53, 116);
             this.btnShowGraphic3.Name = "btnShowGraphic3";
             this.btnShowGraphic3.Size = new System.Drawing.Size(75, 23);
             this.btnShowGraphic3.TabIndex = 24;
@@ -4886,7 +4887,7 @@
             // 
             // btnShowGraphic2
             // 
-            this.btnShowGraphic2.Location = new System.Drawing.Point(47, 74);
+            this.btnShowGraphic2.Location = new System.Drawing.Point(53, 74);
             this.btnShowGraphic2.Name = "btnShowGraphic2";
             this.btnShowGraphic2.Size = new System.Drawing.Size(75, 23);
             this.btnShowGraphic2.TabIndex = 22;
@@ -4905,7 +4906,7 @@
             // 
             // btnShowGraphic1
             // 
-            this.btnShowGraphic1.Location = new System.Drawing.Point(47, 32);
+            this.btnShowGraphic1.Location = new System.Drawing.Point(50, 32);
             this.btnShowGraphic1.Name = "btnShowGraphic1";
             this.btnShowGraphic1.Size = new System.Drawing.Size(75, 23);
             this.btnShowGraphic1.TabIndex = 20;
@@ -5047,7 +5048,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(6, 6);
+            this.chart1.Location = new System.Drawing.Point(9, 6);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
@@ -5103,7 +5104,7 @@
             this.chart1.Series.Add(series7);
             this.chart1.Series.Add(series8);
             this.chart1.Series.Add(series9);
-            this.chart1.Size = new System.Drawing.Size(722, 388);
+            this.chart1.Size = new System.Drawing.Size(719, 389);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart";
             title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -5264,6 +5265,7 @@
             // 
             // btnTimerRestart
             // 
+            this.btnTimerRestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTimerRestart.Location = new System.Drawing.Point(809, 47);
             this.btnTimerRestart.Name = "btnTimerRestart";
             this.btnTimerRestart.Size = new System.Drawing.Size(79, 23);
@@ -5293,11 +5295,23 @@
             this.timer2.Interval = 5000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // btnRestartConnection
+            // 
+            this.btnRestartConnection.Location = new System.Drawing.Point(218, 58);
+            this.btnRestartConnection.Name = "btnRestartConnection";
+            this.btnRestartConnection.Size = new System.Drawing.Size(107, 23);
+            this.btnRestartConnection.TabIndex = 9;
+            this.btnRestartConnection.Text = "Restart Connection";
+            this.btnRestartConnection.UseVisualStyleBackColor = true;
+            this.btnRestartConnection.Visible = false;
+            this.btnRestartConnection.Click += new System.EventHandler(this.btnRestartConnection_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 564);
+            this.Controls.Add(this.btnRestartConnection);
             this.Controls.Add(this.btnTimerRestart);
             this.Controls.Add(this.groupBoxConnection);
             this.Controls.Add(this.lblTime);
@@ -5310,6 +5324,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Temperature";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabTemperature.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -5921,6 +5936,7 @@
         private System.Windows.Forms.ComboBox cmbLiveGraphDevices;
         private System.Windows.Forms.GroupBox grpTempSettings;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button btnRestartConnection;
     }
 }
 

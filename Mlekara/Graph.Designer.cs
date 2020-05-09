@@ -74,7 +74,7 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(1034, 570);
+            this.chart1.Size = new System.Drawing.Size(903, 570);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,10 +83,10 @@
             title1.Text = "Naziv firme";
             title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
             title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
+            title2.Name = "Device";
             title2.Position.Auto = false;
             title2.Position.Height = 2.938644F;
-            title2.Position.Width = 94F;
+            title2.Position.Width = 75F;
             title2.Position.X = 25F;
             title2.Position.Y = 3F;
             title2.Text = "Device: ";
@@ -155,14 +155,14 @@
             this.txtNapomena.Location = new System.Drawing.Point(80, 578);
             this.txtNapomena.MaxLength = 95;
             this.txtNapomena.Name = "txtNapomena";
-            this.txtNapomena.Size = new System.Drawing.Size(861, 20);
+            this.txtNapomena.Size = new System.Drawing.Size(730, 20);
             this.txtNapomena.TabIndex = 4;
             this.txtNapomena.TextChanged += new System.EventHandler(this.txtNapomena_TextChanged);
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Location = new System.Drawing.Point(947, 576);
+            this.btnPrint.Location = new System.Drawing.Point(816, 576);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 5;
@@ -188,12 +188,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.ClientSize = new System.Drawing.Size(903, 611);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtNapomena);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.chart1);
-            this.MinimumSize = new System.Drawing.Size(750, 500);
+            this.MinimumSize = new System.Drawing.Size(919, 650);
             this.Name = "Graph";
             this.Text = "Graphic";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

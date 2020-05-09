@@ -10,15 +10,17 @@ namespace Mlekara.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool FirstStartup { get; set; }
 
         public CompanyModel()
         {
         }
 
-        public CompanyModel(int id, string name)
+        public CompanyModel(int id, string name, bool firstStartup)
         {
             Id = id;
             Name = name;
+            FirstStartup = firstStartup;
         }
     }
 }

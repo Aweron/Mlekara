@@ -39,6 +39,10 @@ namespace Mlekara
         {
             try
             {
+                if (port.IsOpen)
+                {
+                    port.Close();
+                }
                 port.PortName = cmbPort.Text;
                 port.BaudRate = Convert.ToInt32(cmbBaudRate.Text);
                 port.DataBits = Convert.ToInt32(cmbDataBits.Text);
