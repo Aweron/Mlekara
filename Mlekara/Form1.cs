@@ -348,7 +348,7 @@ namespace Mlekara
         {
             if (autoRefresh)
                 //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
-                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay.Subtract(new TimeSpan(2, 0, 0)), 4);
+                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay, 4);
         }
 
         private void btnTimerRestart_Click(object sender, EventArgs e)
@@ -427,16 +427,41 @@ namespace Mlekara
         {
             chart1.Series.Clear();
 
+            TimeSpan time;
+            if (_time.Hours >= 2)
+            {
+                time = _time.Subtract(new TimeSpan(2, 0, 0));
+                //_time.Add(new TimeSpan(2, 0, 0));
+            }
+            else if (_time.Hours >= 1)
+            {
+                time = _time.Subtract(new TimeSpan(1, 0, 0));
+                //_time.Add(new TimeSpan(1, 0, 0));
+            }
+            else
+            {
+                time = _time.Subtract(_time);
+            }
+
+            TimeSpan endTime;
+            if (time.Hours + hourCount < 24)
+                endTime = time.Add(new TimeSpan(hourCount, 0, 0));
+            else
+                endTime = new TimeSpan(23, 59, 59);
+
+
             chart1.Titles["Naziv"].Text = lblCompany.Text;
             chart1.Titles["Device"].Text = tabTemperature.TabPages[deviceNum].Text;
             chart1.Titles["Datum"].Text = "Datum: " + date.ToShortDateString(); //dateTimeGraph.Value.ToShortDateString();
-            chart1.Titles["Vreme"].Text = "Vreme: " + _time.Hours + ":" + _time.Minutes + " - " + _time.Add(new TimeSpan(hourCount,0,0)).Hours + ":" + _time.Minutes;
+            chart1.Titles["Vreme"].Text = "Vreme: " + time.ToString("hh':'mm") + " - " + endTime.ToString("hh':'mm");
+            //chart1.Titles["Vreme"].Text = "Vreme: " + time.Hours + ":" + time.Minutes + " - " + endTime.Hours + ":" + time.Minutes;
 
             // X axis range
-            int endHour = Convert.ToInt32(_time.Hours + hourCount);
+            int endHour = Convert.ToInt32(time.Hours + hourCount);
 
-            DateTime min = Convert.ToDateTime(date.ToShortDateString() + " " + _time);
-            DateTime max = Convert.ToDateTime(date.ToShortDateString() + " " + _time.Add(new TimeSpan(hourCount, 0, 0)));
+            DateTime min = Convert.ToDateTime(date.ToShortDateString() + " " + time);
+            DateTime max = Convert.ToDateTime(date.ToShortDateString() + " " + endTime);
+
 
             chart1.ChartAreas[0].AxisX.Minimum = min.ToOADate();
             chart1.ChartAreas[0].AxisX.Maximum = max.ToOADate();
@@ -473,12 +498,12 @@ namespace Mlekara
 
                     chart1.Series[probeModel.Id.ToString()].LegendText = probeModel.Name;
 
-                    List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probeModel.Id, date.ToShortDateString(), _time.Hours, hourCount);
+                    List<MeasurementModel> measurements = SqliteDataAccess.LoadMeasurements(probeModel.Id, date.ToShortDateString(), time.Hours, hourCount);
 
                     foreach (MeasurementModel measurement in measurements)
                     {
-                        DateTime time = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
-                        chart1.Series[probeModel.Id.ToString()].Points.AddXY(time, measurement.Value);
+                        DateTime MeasurementTime = Convert.ToDateTime(measurement.Date + " " + measurement.Hour + ":" + measurement.Minute + ":" + measurement.Second);
+                        chart1.Series[probeModel.Id.ToString()].Points.AddXY(MeasurementTime, measurement.Value);
                     }
                 }
             }
@@ -530,7 +555,7 @@ namespace Mlekara
                     button.Enabled = false;
 
                 //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
-                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay.Subtract(new TimeSpan(2,0,0)), 4);
+                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay, 4);
             }
             else
             {
