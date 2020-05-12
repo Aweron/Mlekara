@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using System.IO.Ports;
 using Mlekara.Models;
 using Code4Bugs.Utils.IO;
@@ -107,18 +108,50 @@ namespace Mlekara
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (SqliteDataAccess.IsFirstStartup())
+            if (!HasPermission())
             {
                 PasswordCheck passwordCheck = new PasswordCheck();
                 if (passwordCheck.ShowDialog() == DialogResult.OK)
                 {
-                    SqliteDataAccess.SaveFirstStartupFalse();
+                    WriteFilePermission();
                 }
                 else
                 {
                     Application.Exit();
                 }
             }
+        }
+
+        public bool HasPermission()
+        {
+            //FileStream fileStream;
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TempCheckerPermission.txt");
+
+            if (File.Exists(fileName))
+            {
+                FileStream fileStream = File.OpenRead(fileName);
+                using (StreamReader streamReader = new StreamReader(fileStream))
+                {
+                    string data = streamReader.ReadLine();
+                    fileStream.Close();
+
+                    if (data == "True")
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public void WriteFilePermission()
+        {
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "TempCheckerPermission.txt");
+
+            FileStream fileStream = File.Create(fileName);
+            using (StreamWriter streamWriter = new StreamWriter(fileStream))
+            {
+                streamWriter.WriteLine(true);
+            }
+
         }
 
         #region User Interface Drawing
@@ -248,35 +281,6 @@ namespace Mlekara
 
         #region Timer and Data Request
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            // System Time
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-
-            // Sending a Request for Data
-            if (serialPort1.IsOpen)
-            {
-                try
-                {
-                    for (int i = 0; i < devices.Count; i++)
-                        if (devices[i].Active)
-                        {
-                            ReceivedData = CommStream.RequestFunc3(i + 1, 0, 8);
-                            ShowData(i);
-                        }
-                }
-                catch (Exception err)
-                {
-                    timer1.Stop();
-                    btnTimerRestart.Visible = true;
-                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ShowPortConnected(serialPort1.IsOpen);
-                }
-            }
-            
-            ShowPortConnected(serialPort1.IsOpen);
-        }
-
         private void ShowData(int slaveNo)
         {
             byte[] data = ReceivedData;
@@ -344,11 +348,55 @@ namespace Mlekara
             measurementStacks[j].Clear();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // System Time
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+
+            // Sending a Request for Data
+            if (serialPort1.IsOpen)
+            {
+                try
+                {
+                    for (int i = 0; i < devices.Count; i++)
+                        if (devices[i].Active)
+                        {
+                            ReceivedData = CommStream.RequestFunc3(i + 1, 0, 8);
+                            ShowData(i);
+                        }
+                }
+                catch (Exception err)
+                {
+                    timer1.Stop();
+                    btnTimerRestart.Visible = true;
+                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ShowPortConnected(serialPort1.IsOpen);
+                }
+            }
+            
+            ShowPortConnected(serialPort1.IsOpen);
+        }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
+            // Live graph ticks
             if (autoRefresh)
-                //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
                 ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay, 4);
+            
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            // Date check (00:00)
+            if (DateTime.Now.Hour == 0 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
+                UpdateDates();
+        }
+
+        private void UpdateDates()
+        {
+            for (int i = 0; i < dateTimePickers.Length; i++)
+                dateTimePickers[i].Value = DateTime.Now;
+            dateTimeGraph.Value = DateTime.Now;
         }
 
         private void btnTimerRestart_Click(object sender, EventArgs e)
@@ -431,12 +479,11 @@ namespace Mlekara
             if (_time.Hours >= 2)
             {
                 time = _time.Subtract(new TimeSpan(2, 0, 0));
-                //_time.Add(new TimeSpan(2, 0, 0));
             }
             else if (_time.Hours >= 1)
             {
                 time = _time.Subtract(new TimeSpan(1, 0, 0));
-                //_time.Add(new TimeSpan(1, 0, 0));
+
             }
             else
             {
@@ -509,19 +556,34 @@ namespace Mlekara
             }
         }
 
+        public bool CheckMinMaxTempsGraph()
+        {
+            int min = Convert.ToInt32(numMinGraph.Value);
+            int max = Convert.ToInt32(numMaxGraph.Value);
+            if (min >= max)
+                return false;
+            else return true;
+        }
+
         private void btnShowGraphic1_Click(object sender, EventArgs e)
         {
-            ShowGraph(0, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            if (CheckMinMaxTempsGraph())
+                ShowGraph(0, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShowGraphic2_Click(object sender, EventArgs e)
         {
-            ShowGraph(1, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            if (CheckMinMaxTempsGraph())
+                ShowGraph(1, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnShowGraphic3_Click(object sender, EventArgs e)
         {
-            ShowGraph(2, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            if (CheckMinMaxTempsGraph())
+                ShowGraph(2, dateTimeGraph.Value, Convert.ToInt32(numStartHourGraph.Value), Convert.ToInt32(numHourCountGraph.Value));
+            else MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void txtNapomena_TextChanged(object sender, EventArgs e)
@@ -547,15 +609,22 @@ namespace Mlekara
         {
             if(chkAutoRefresh.Checked)
             {
-                autoRefresh = true;
-                cmbLiveGraphDevices.Enabled = false;
-                grpTimeSettings.Enabled = false;
-                grpTempSettings.Enabled = false;
-                foreach (Button button in btnShowGraphics)
-                    button.Enabled = false;
+                if (CheckMinMaxTempsGraph())
+                {
+                    autoRefresh = true;
+                    cmbLiveGraphDevices.Enabled = false;
+                    grpTimeSettings.Enabled = false;
+                    grpTempSettings.Enabled = false;
+                    foreach (Button button in btnShowGraphics)
+                        button.Enabled = false;
 
-                //ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.Hour - 2, 4);
-                ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay, 4);
+                    ShowGraph(Convert.ToInt32(cmbLiveGraphDevices.Text) - 1, DateTime.Now.Date, DateTime.Now.TimeOfDay, 4);
+                }
+                else
+                {
+                    chkAutoRefresh.Checked = false;
+                    MessageBox.Show("Vrednost min mora biti manja od max.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
