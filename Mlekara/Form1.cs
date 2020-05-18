@@ -1079,5 +1079,15 @@ namespace Mlekara
         {
             CommStream?.Dispose();
         }
+
+        private void kontaktToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ESTHETIC LABS DOO" + Environment.NewLine +
+                                       "NIŠ" + Environment.NewLine +
+                                        "www.elabs.rs" + Environment.NewLine +
+                                        "e-mail: office@elabs.rs" + Environment.NewLine +
+                                        "mob: +381 64 453 26 26" + Environment.NewLine +
+                                        "tel: +381 18 4200 020", "Kontakt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

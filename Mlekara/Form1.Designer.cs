@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series61 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series62 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series63 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title37 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title38 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title39 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title40 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title41 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title42 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series127 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series128 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series129 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series130 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series131 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series132 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series133 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series134 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series135 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title85 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title86 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title87 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title88 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title89 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title90 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -460,6 +460,9 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnRestartConnection = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kontaktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -622,6 +625,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBoxConnection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabTemperature
@@ -5043,121 +5047,121 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea7.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea7.AxisY.LabelStyle.Format = "0°C";
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea15.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea15.AxisY.LabelStyle.Format = "0°C";
+            chartArea15.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chart1.Legends.Add(legend15);
             this.chart1.Location = new System.Drawing.Point(9, 6);
             this.chart1.Name = "chart1";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series55.IsVisibleInLegend = false;
-            series55.Legend = "Legend1";
-            series55.Name = "Timestamps";
-            series56.ChartArea = "ChartArea1";
-            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series56.Enabled = false;
-            series56.Legend = "Legend1";
-            series56.Name = "Probe1";
-            series57.ChartArea = "ChartArea1";
-            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series57.Enabled = false;
-            series57.Legend = "Legend1";
-            series57.Name = "Probe2";
-            series58.ChartArea = "ChartArea1";
-            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series58.Enabled = false;
-            series58.Legend = "Legend1";
-            series58.Name = "Probe3";
-            series59.ChartArea = "ChartArea1";
-            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series59.Enabled = false;
-            series59.Legend = "Legend1";
-            series59.Name = "Probe4";
-            series60.ChartArea = "ChartArea1";
-            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series60.Enabled = false;
-            series60.Legend = "Legend1";
-            series60.Name = "Probe5";
-            series61.ChartArea = "ChartArea1";
-            series61.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series61.Enabled = false;
-            series61.Legend = "Legend1";
-            series61.Name = "Probe6";
-            series62.ChartArea = "ChartArea1";
-            series62.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series62.Enabled = false;
-            series62.Legend = "Legend1";
-            series62.Name = "Probe7";
-            series63.ChartArea = "ChartArea1";
-            series63.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series63.Enabled = false;
-            series63.Legend = "Legend1";
-            series63.Name = "Probe8";
-            this.chart1.Series.Add(series55);
-            this.chart1.Series.Add(series56);
-            this.chart1.Series.Add(series57);
-            this.chart1.Series.Add(series58);
-            this.chart1.Series.Add(series59);
-            this.chart1.Series.Add(series60);
-            this.chart1.Series.Add(series61);
-            this.chart1.Series.Add(series62);
-            this.chart1.Series.Add(series63);
+            series127.ChartArea = "ChartArea1";
+            series127.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series127.IsVisibleInLegend = false;
+            series127.Legend = "Legend1";
+            series127.Name = "Timestamps";
+            series128.ChartArea = "ChartArea1";
+            series128.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series128.Enabled = false;
+            series128.Legend = "Legend1";
+            series128.Name = "Probe1";
+            series129.ChartArea = "ChartArea1";
+            series129.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series129.Enabled = false;
+            series129.Legend = "Legend1";
+            series129.Name = "Probe2";
+            series130.ChartArea = "ChartArea1";
+            series130.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series130.Enabled = false;
+            series130.Legend = "Legend1";
+            series130.Name = "Probe3";
+            series131.ChartArea = "ChartArea1";
+            series131.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series131.Enabled = false;
+            series131.Legend = "Legend1";
+            series131.Name = "Probe4";
+            series132.ChartArea = "ChartArea1";
+            series132.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series132.Enabled = false;
+            series132.Legend = "Legend1";
+            series132.Name = "Probe5";
+            series133.ChartArea = "ChartArea1";
+            series133.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series133.Enabled = false;
+            series133.Legend = "Legend1";
+            series133.Name = "Probe6";
+            series134.ChartArea = "ChartArea1";
+            series134.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series134.Enabled = false;
+            series134.Legend = "Legend1";
+            series134.Name = "Probe7";
+            series135.ChartArea = "ChartArea1";
+            series135.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series135.Enabled = false;
+            series135.Legend = "Legend1";
+            series135.Name = "Probe8";
+            this.chart1.Series.Add(series127);
+            this.chart1.Series.Add(series128);
+            this.chart1.Series.Add(series129);
+            this.chart1.Series.Add(series130);
+            this.chart1.Series.Add(series131);
+            this.chart1.Series.Add(series132);
+            this.chart1.Series.Add(series133);
+            this.chart1.Series.Add(series134);
+            this.chart1.Series.Add(series135);
             this.chart1.Size = new System.Drawing.Size(719, 389);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart";
-            title37.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title37.Name = "Naziv";
-            title37.Text = "Naziv firme";
-            title38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title38.Name = "Device";
-            title38.Position.Auto = false;
-            title38.Position.Height = 2.938644F;
-            title38.Position.Width = 94F;
-            title38.Position.X = 3F;
-            title38.Position.Y = 4F;
-            title38.Text = "Device: ";
-            title39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title39.Name = "Vreme";
-            title39.Position.Auto = false;
-            title39.Position.Height = 2.938644F;
-            title39.Position.Width = 60F;
-            title39.Position.X = 40F;
-            title39.Position.Y = 4F;
-            title39.Text = "Vreme: ";
-            title40.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title40.Name = "Datum";
-            title40.Position.Auto = false;
-            title40.Position.Height = 2.938644F;
-            title40.Position.Width = 94F;
-            title40.Position.X = 3F;
-            title40.Position.Y = 4F;
-            title40.Text = "Datum: ";
-            title41.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title41.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title41.Name = "Napomena";
-            title41.Text = "Napomena:";
-            title42.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title42.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title42.Name = "Proverio";
-            title42.Position.Auto = false;
-            title42.Position.Height = 2.954587F;
-            title42.Position.Width = 94F;
-            title42.Position.X = 3F;
-            title42.Position.Y = 93F;
-            title42.Text = "Proverio: _____________________";
-            this.chart1.Titles.Add(title37);
-            this.chart1.Titles.Add(title38);
-            this.chart1.Titles.Add(title39);
-            this.chart1.Titles.Add(title40);
-            this.chart1.Titles.Add(title41);
-            this.chart1.Titles.Add(title42);
+            title85.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title85.Name = "Naziv";
+            title85.Text = "Naziv firme";
+            title86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title86.Name = "Device";
+            title86.Position.Auto = false;
+            title86.Position.Height = 2.938644F;
+            title86.Position.Width = 94F;
+            title86.Position.X = 3F;
+            title86.Position.Y = 4F;
+            title86.Text = "Device: ";
+            title87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title87.Name = "Vreme";
+            title87.Position.Auto = false;
+            title87.Position.Height = 2.938644F;
+            title87.Position.Width = 60F;
+            title87.Position.X = 40F;
+            title87.Position.Y = 4F;
+            title87.Text = "Vreme: ";
+            title88.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title88.Name = "Datum";
+            title88.Position.Auto = false;
+            title88.Position.Height = 2.938644F;
+            title88.Position.Width = 94F;
+            title88.Position.X = 3F;
+            title88.Position.Y = 4F;
+            title88.Text = "Datum: ";
+            title89.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title89.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title89.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title89.Name = "Napomena";
+            title89.Text = "Napomena:";
+            title90.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title90.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title90.Name = "Proverio";
+            title90.Position.Auto = false;
+            title90.Position.Height = 2.954587F;
+            title90.Position.Width = 94F;
+            title90.Position.X = 3F;
+            title90.Position.Y = 93F;
+            title90.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title85);
+            this.chart1.Titles.Add(title86);
+            this.chart1.Titles.Add(title87);
+            this.chart1.Titles.Add(title88);
+            this.chart1.Titles.Add(title89);
+            this.chart1.Titles.Add(title90);
             // 
             // lblConnected
             // 
@@ -5174,7 +5178,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connectionToolStripMenuItem,
-            this.adminToolStripMenuItem});
+            this.adminToolStripMenuItem,
+            this.kontaktToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(900, 24);
@@ -5313,11 +5318,37 @@
             this.timer3.Interval = 1000;
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Mlekara.Properties.Resources.elabs_logo_1;
+            this.pictureBox1.Location = new System.Drawing.Point(372, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // kontaktToolStripMenuItem
+            // 
+            this.kontaktToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kontaktToolStripMenuItem1});
+            this.kontaktToolStripMenuItem.Name = "kontaktToolStripMenuItem";
+            this.kontaktToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.kontaktToolStripMenuItem.Text = "Kontakt";
+            // 
+            // kontaktToolStripMenuItem1
+            // 
+            this.kontaktToolStripMenuItem1.Name = "kontaktToolStripMenuItem1";
+            this.kontaktToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.kontaktToolStripMenuItem1.Text = "Informacije";
+            this.kontaktToolStripMenuItem1.Click += new System.EventHandler(this.kontaktToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 564);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRestartConnection);
             this.Controls.Add(this.btnTimerRestart);
             this.Controls.Add(this.groupBoxConnection);
@@ -5329,7 +5360,7 @@
             this.MinimumSize = new System.Drawing.Size(916, 603);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Temperature";
+            this.Text = "KONTROLA TEMPERATURE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabTemperature.ResumeLayout(false);
@@ -5525,6 +5556,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBoxConnection.ResumeLayout(false);
             this.groupBoxConnection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5945,6 +5977,9 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button btnRestartConnection;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.ToolStripMenuItem kontaktToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem kontaktToolStripMenuItem1;
     }
 }
 
