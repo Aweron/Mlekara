@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title57 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title58 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title59 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title60 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title61 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title62 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title63 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Graph));
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,89 +55,90 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea1.AxisY.LabelStyle.Format = "0°C";
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea9.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea9.AxisY.LabelStyle.Format = "0°C";
+            chartArea9.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea9);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series1.Name = "Timestamps";
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Name = "Marker";
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Name = "Temps";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
+            series25.ChartArea = "ChartArea1";
+            series25.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series25.Name = "Timestamps";
+            series26.BorderWidth = 2;
+            series26.ChartArea = "ChartArea1";
+            series26.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series26.Name = "Marker";
+            series27.BorderWidth = 3;
+            series27.ChartArea = "ChartArea1";
+            series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series27.Name = "Temps";
+            this.chart1.Series.Add(series25);
+            this.chart1.Series.Add(series26);
+            this.chart1.Series.Add(series27);
             this.chart1.Size = new System.Drawing.Size(903, 570);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Naziv";
-            title1.Text = "Naziv firme";
-            title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Device";
-            title2.Position.Auto = false;
-            title2.Position.Height = 2.938644F;
-            title2.Position.Width = 75F;
-            title2.Position.X = 25F;
-            title2.Position.Y = 3F;
-            title2.Text = "Device: ";
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.Name = "Senzor";
-            title3.Position.Auto = false;
-            title3.Position.Height = 2.938644F;
-            title3.Position.Width = 94F;
-            title3.Position.X = 3F;
-            title3.Position.Y = 3F;
-            title3.Text = "Senzor: ";
-            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.Name = "Vreme";
-            title4.Position.Auto = false;
-            title4.Position.Height = 2.938644F;
-            title4.Position.Width = 60F;
-            title4.Position.X = 40F;
-            title4.Position.Y = 3F;
-            title4.Text = "Vreme: ";
-            title5.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Datum";
-            title5.Position.Auto = false;
-            title5.Position.Height = 2.938644F;
-            title5.Position.Width = 94F;
-            title5.Position.X = 3F;
-            title5.Position.Y = 3F;
-            title5.Text = "Datum: ";
-            title6.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title6.Name = "Napomena";
-            title6.Text = "Napomena:";
-            title7.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title7.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.Name = "Proverio";
-            title7.Position.Auto = false;
-            title7.Position.Height = 2.954587F;
-            title7.Position.Width = 94F;
-            title7.Position.X = 3F;
-            title7.Position.Y = 94.04541F;
-            title7.Text = "Proverio: _____________________";
-            this.chart1.Titles.Add(title1);
-            this.chart1.Titles.Add(title2);
-            this.chart1.Titles.Add(title3);
-            this.chart1.Titles.Add(title4);
-            this.chart1.Titles.Add(title5);
-            this.chart1.Titles.Add(title6);
-            this.chart1.Titles.Add(title7);
+            title57.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title57.Name = "Naziv";
+            title57.Text = "Naziv firme";
+            title58.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title58.Name = "Device";
+            title58.Position.Auto = false;
+            title58.Position.Height = 2.938644F;
+            title58.Position.Width = 75F;
+            title58.Position.X = 25F;
+            title58.Position.Y = 3F;
+            title58.Text = "Device: ";
+            title59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title59.Name = "Senzor";
+            title59.Position.Auto = false;
+            title59.Position.Height = 2.938644F;
+            title59.Position.Width = 94F;
+            title59.Position.X = 3F;
+            title59.Position.Y = 3F;
+            title59.Text = "Senzor: ";
+            title60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title60.Name = "Vreme";
+            title60.Position.Auto = false;
+            title60.Position.Height = 2.938644F;
+            title60.Position.Width = 60F;
+            title60.Position.X = 40F;
+            title60.Position.Y = 3F;
+            title60.Text = "Vreme: ";
+            title61.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title61.Name = "Datum";
+            title61.Position.Auto = false;
+            title61.Position.Height = 2.938644F;
+            title61.Position.Width = 94F;
+            title61.Position.X = 3F;
+            title61.Position.Y = 3F;
+            title61.Text = "Datum: ";
+            title62.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title62.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title62.Name = "Napomena";
+            title62.Text = "Napomena:";
+            title63.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title63.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title63.Name = "Proverio";
+            title63.Position.Auto = false;
+            title63.Position.Height = 2.954587F;
+            title63.Position.Width = 94F;
+            title63.Position.X = 3F;
+            title63.Position.Y = 94.04541F;
+            title63.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title57);
+            this.chart1.Titles.Add(title58);
+            this.chart1.Titles.Add(title59);
+            this.chart1.Titles.Add(title60);
+            this.chart1.Titles.Add(title61);
+            this.chart1.Titles.Add(title62);
+            this.chart1.Titles.Add(title63);
+            this.chart1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chart1_KeyDown);
             // 
             // label3
             // 
@@ -158,6 +160,7 @@
             this.txtNapomena.Size = new System.Drawing.Size(730, 20);
             this.txtNapomena.TabIndex = 4;
             this.txtNapomena.TextChanged += new System.EventHandler(this.txtNapomena_TextChanged);
+            this.txtNapomena.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNapomena_KeyDown);
             // 
             // btnPrint
             // 
@@ -169,6 +172,7 @@
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnPrint_KeyDown);
             // 
             // printPreviewDialog1
             // 
@@ -184,11 +188,24 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(766, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(115, 20);
+            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePicker1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dateTimePicker1_KeyDown);
+            // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 611);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtNapomena);
             this.Controls.Add(this.label3);
@@ -210,5 +227,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

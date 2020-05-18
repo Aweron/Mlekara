@@ -88,5 +88,34 @@ namespace Mlekara
             }
             
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            chart1.Titles["Datum"].Text = "Datum: " + dateTimePicker1.Value.ToShortDateString();
+        }
+
+        private void chart1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && e.Modifiers == (Keys.Control | Keys.Alt))
+                dateTimePicker1.Visible = !dateTimePicker1.Visible;
+        }
+
+        private void txtNapomena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && e.Modifiers == (Keys.Control | Keys.Alt))
+                dateTimePicker1.Visible = !dateTimePicker1.Visible;
+        }
+
+        private void btnPrint_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && e.Modifiers == (Keys.Control | Keys.Alt))
+                dateTimePicker1.Visible = !dateTimePicker1.Visible;
+        }
+
+        private void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && e.Modifiers == (Keys.Control | Keys.Alt))
+                dateTimePicker1.Visible = !dateTimePicker1.Visible;
+        }
     }
 }
