@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series127 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series128 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series129 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series130 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series131 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series132 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series133 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series134 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series135 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title85 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title86 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title87 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title88 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title89 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.Title title90 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title19 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title20 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title21 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title22 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title23 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Title title24 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabTemperature = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -412,6 +412,7 @@
             this.numMax17 = new System.Windows.Forms.NumericUpDown();
             this.numMin17 = new System.Windows.Forms.NumericUpDown();
             this.tabMain = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.grpTempSettings = new System.Windows.Forms.GroupBox();
@@ -448,6 +449,8 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kontaktToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCompany = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
@@ -461,8 +464,6 @@
             this.btnRestartConnection = new System.Windows.Forms.Button();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kontaktToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kontaktToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabTemperature.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -753,6 +754,7 @@
             this.textBox5.ForeColor = System.Drawing.Color.Lime;
             this.textBox5.Location = new System.Drawing.Point(6, 19);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(192, 55);
             this.textBox5.TabIndex = 0;
             this.textBox5.Text = "00.0";
@@ -920,6 +922,7 @@
             this.textBox4.ForeColor = System.Drawing.Color.Lime;
             this.textBox4.Location = new System.Drawing.Point(6, 19);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(192, 55);
             this.textBox4.TabIndex = 0;
             this.textBox4.Text = "00.0";
@@ -1087,6 +1090,7 @@
             this.textBox6.ForeColor = System.Drawing.Color.Lime;
             this.textBox6.Location = new System.Drawing.Point(6, 19);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(192, 55);
             this.textBox6.TabIndex = 0;
             this.textBox6.Text = "00.0";
@@ -1254,6 +1258,7 @@
             this.textBox3.ForeColor = System.Drawing.Color.Lime;
             this.textBox3.Location = new System.Drawing.Point(6, 19);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(192, 55);
             this.textBox3.TabIndex = 0;
             this.textBox3.Text = "00.0";
@@ -1421,6 +1426,7 @@
             this.textBox7.ForeColor = System.Drawing.Color.Lime;
             this.textBox7.Location = new System.Drawing.Point(6, 19);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(192, 55);
             this.textBox7.TabIndex = 0;
             this.textBox7.Text = "00.0";
@@ -1588,6 +1594,7 @@
             this.textBox2.ForeColor = System.Drawing.Color.Lime;
             this.textBox2.Location = new System.Drawing.Point(6, 19);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(192, 55);
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "00.0";
@@ -1755,6 +1762,7 @@
             this.textBox8.ForeColor = System.Drawing.Color.Lime;
             this.textBox8.Location = new System.Drawing.Point(6, 19);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(192, 55);
             this.textBox8.TabIndex = 0;
             this.textBox8.Text = "00.0";
@@ -1910,6 +1918,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.Lime;
             this.textBox1.Location = new System.Drawing.Point(6, 19);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(192, 55);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "00.0";
@@ -1990,6 +1999,11 @@
             // numMin1
             // 
             this.numMin1.Location = new System.Drawing.Point(6, 93);
+            this.numMin1.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            -2147483648});
             this.numMin1.Name = "numMin1";
             this.numMin1.Size = new System.Drawing.Size(38, 20);
             this.numMin1.TabIndex = 1;
@@ -2107,6 +2121,7 @@
             this.textBox16.ForeColor = System.Drawing.Color.Lime;
             this.textBox16.Location = new System.Drawing.Point(6, 19);
             this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(192, 55);
             this.textBox16.TabIndex = 23;
             this.textBox16.Text = "00.0";
@@ -2274,6 +2289,7 @@
             this.textBox15.ForeColor = System.Drawing.Color.Lime;
             this.textBox15.Location = new System.Drawing.Point(6, 19);
             this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(192, 55);
             this.textBox15.TabIndex = 23;
             this.textBox15.Text = "00.0";
@@ -2441,6 +2457,7 @@
             this.textBox14.ForeColor = System.Drawing.Color.Lime;
             this.textBox14.Location = new System.Drawing.Point(6, 19);
             this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(192, 55);
             this.textBox14.TabIndex = 23;
             this.textBox14.Text = "00.0";
@@ -2608,6 +2625,7 @@
             this.textBox13.ForeColor = System.Drawing.Color.Lime;
             this.textBox13.Location = new System.Drawing.Point(6, 19);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(192, 55);
             this.textBox13.TabIndex = 23;
             this.textBox13.Text = "00.0";
@@ -2775,6 +2793,7 @@
             this.textBox12.ForeColor = System.Drawing.Color.Lime;
             this.textBox12.Location = new System.Drawing.Point(6, 19);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(192, 55);
             this.textBox12.TabIndex = 23;
             this.textBox12.Text = "00.0";
@@ -2942,6 +2961,7 @@
             this.textBox11.ForeColor = System.Drawing.Color.Lime;
             this.textBox11.Location = new System.Drawing.Point(6, 19);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(192, 55);
             this.textBox11.TabIndex = 23;
             this.textBox11.Text = "00.0";
@@ -3109,6 +3129,7 @@
             this.textBox10.ForeColor = System.Drawing.Color.Lime;
             this.textBox10.Location = new System.Drawing.Point(6, 19);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(192, 55);
             this.textBox10.TabIndex = 0;
             this.textBox10.Text = "00.0";
@@ -3276,6 +3297,7 @@
             this.textBox9.ForeColor = System.Drawing.Color.Lime;
             this.textBox9.Location = new System.Drawing.Point(6, 19);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(192, 55);
             this.textBox9.TabIndex = 0;
             this.textBox9.Text = "00.0";
@@ -3461,6 +3483,7 @@
             this.textBox24.ForeColor = System.Drawing.Color.Lime;
             this.textBox24.Location = new System.Drawing.Point(6, 19);
             this.textBox24.Name = "textBox24";
+            this.textBox24.ReadOnly = true;
             this.textBox24.Size = new System.Drawing.Size(192, 55);
             this.textBox24.TabIndex = 23;
             this.textBox24.Text = "00.0";
@@ -3628,6 +3651,7 @@
             this.textBox23.ForeColor = System.Drawing.Color.Lime;
             this.textBox23.Location = new System.Drawing.Point(6, 19);
             this.textBox23.Name = "textBox23";
+            this.textBox23.ReadOnly = true;
             this.textBox23.Size = new System.Drawing.Size(192, 55);
             this.textBox23.TabIndex = 23;
             this.textBox23.Text = "00.0";
@@ -3795,6 +3819,7 @@
             this.textBox22.ForeColor = System.Drawing.Color.Lime;
             this.textBox22.Location = new System.Drawing.Point(6, 19);
             this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
             this.textBox22.Size = new System.Drawing.Size(192, 55);
             this.textBox22.TabIndex = 23;
             this.textBox22.Text = "00.0";
@@ -3962,6 +3987,7 @@
             this.textBox21.ForeColor = System.Drawing.Color.Lime;
             this.textBox21.Location = new System.Drawing.Point(6, 19);
             this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
             this.textBox21.Size = new System.Drawing.Size(192, 55);
             this.textBox21.TabIndex = 23;
             this.textBox21.Text = "00.0";
@@ -4129,6 +4155,7 @@
             this.textBox20.ForeColor = System.Drawing.Color.Lime;
             this.textBox20.Location = new System.Drawing.Point(6, 19);
             this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
             this.textBox20.Size = new System.Drawing.Size(192, 55);
             this.textBox20.TabIndex = 23;
             this.textBox20.Text = "00.0";
@@ -4296,6 +4323,7 @@
             this.textBox19.ForeColor = System.Drawing.Color.Lime;
             this.textBox19.Location = new System.Drawing.Point(6, 19);
             this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
             this.textBox19.Size = new System.Drawing.Size(192, 55);
             this.textBox19.TabIndex = 23;
             this.textBox19.Text = "00.0";
@@ -4463,6 +4491,7 @@
             this.textBox18.ForeColor = System.Drawing.Color.Lime;
             this.textBox18.Location = new System.Drawing.Point(6, 19);
             this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(192, 55);
             this.textBox18.TabIndex = 23;
             this.textBox18.Text = "00.0";
@@ -4630,6 +4659,7 @@
             this.textBox17.ForeColor = System.Drawing.Color.Lime;
             this.textBox17.Location = new System.Drawing.Point(6, 19);
             this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
             this.textBox17.Size = new System.Drawing.Size(192, 55);
             this.textBox17.TabIndex = 23;
             this.textBox17.Text = "00.0";
@@ -4707,6 +4737,7 @@
             this.tabMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabMain.Controls.Add(this.tabPage4);
             this.tabMain.Controls.Add(this.tabPage7);
             this.tabMain.Controls.Add(this.tabPage8);
             this.tabMain.Location = new System.Drawing.Point(12, 98);
@@ -4714,6 +4745,17 @@
             this.tabMain.SelectedIndex = 0;
             this.tabMain.Size = new System.Drawing.Size(876, 454);
             this.tabMain.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(868, 428);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Sve temperature";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
@@ -5047,121 +5089,121 @@
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea15.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
-            chartArea15.AxisY.LabelStyle.Format = "0°C";
-            chartArea15.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chart1.Legends.Add(legend15);
+            chartArea4.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea4.AxisY.LabelStyle.Format = "0°C";
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(9, 6);
             this.chart1.Name = "chart1";
-            series127.ChartArea = "ChartArea1";
-            series127.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            series127.IsVisibleInLegend = false;
-            series127.Legend = "Legend1";
-            series127.Name = "Timestamps";
-            series128.ChartArea = "ChartArea1";
-            series128.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series128.Enabled = false;
-            series128.Legend = "Legend1";
-            series128.Name = "Probe1";
-            series129.ChartArea = "ChartArea1";
-            series129.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series129.Enabled = false;
-            series129.Legend = "Legend1";
-            series129.Name = "Probe2";
-            series130.ChartArea = "ChartArea1";
-            series130.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series130.Enabled = false;
-            series130.Legend = "Legend1";
-            series130.Name = "Probe3";
-            series131.ChartArea = "ChartArea1";
-            series131.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series131.Enabled = false;
-            series131.Legend = "Legend1";
-            series131.Name = "Probe4";
-            series132.ChartArea = "ChartArea1";
-            series132.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series132.Enabled = false;
-            series132.Legend = "Legend1";
-            series132.Name = "Probe5";
-            series133.ChartArea = "ChartArea1";
-            series133.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series133.Enabled = false;
-            series133.Legend = "Legend1";
-            series133.Name = "Probe6";
-            series134.ChartArea = "ChartArea1";
-            series134.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series134.Enabled = false;
-            series134.Legend = "Legend1";
-            series134.Name = "Probe7";
-            series135.ChartArea = "ChartArea1";
-            series135.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series135.Enabled = false;
-            series135.Legend = "Legend1";
-            series135.Name = "Probe8";
-            this.chart1.Series.Add(series127);
-            this.chart1.Series.Add(series128);
-            this.chart1.Series.Add(series129);
-            this.chart1.Series.Add(series130);
-            this.chart1.Series.Add(series131);
-            this.chart1.Series.Add(series132);
-            this.chart1.Series.Add(series133);
-            this.chart1.Series.Add(series134);
-            this.chart1.Series.Add(series135);
+            series28.ChartArea = "ChartArea1";
+            series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            series28.IsVisibleInLegend = false;
+            series28.Legend = "Legend1";
+            series28.Name = "Timestamps";
+            series29.ChartArea = "ChartArea1";
+            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series29.Enabled = false;
+            series29.Legend = "Legend1";
+            series29.Name = "Probe1";
+            series30.ChartArea = "ChartArea1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series30.Enabled = false;
+            series30.Legend = "Legend1";
+            series30.Name = "Probe2";
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series31.Enabled = false;
+            series31.Legend = "Legend1";
+            series31.Name = "Probe3";
+            series32.ChartArea = "ChartArea1";
+            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series32.Enabled = false;
+            series32.Legend = "Legend1";
+            series32.Name = "Probe4";
+            series33.ChartArea = "ChartArea1";
+            series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series33.Enabled = false;
+            series33.Legend = "Legend1";
+            series33.Name = "Probe5";
+            series34.ChartArea = "ChartArea1";
+            series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series34.Enabled = false;
+            series34.Legend = "Legend1";
+            series34.Name = "Probe6";
+            series35.ChartArea = "ChartArea1";
+            series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series35.Enabled = false;
+            series35.Legend = "Legend1";
+            series35.Name = "Probe7";
+            series36.ChartArea = "ChartArea1";
+            series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series36.Enabled = false;
+            series36.Legend = "Legend1";
+            series36.Name = "Probe8";
+            this.chart1.Series.Add(series28);
+            this.chart1.Series.Add(series29);
+            this.chart1.Series.Add(series30);
+            this.chart1.Series.Add(series31);
+            this.chart1.Series.Add(series32);
+            this.chart1.Series.Add(series33);
+            this.chart1.Series.Add(series34);
+            this.chart1.Series.Add(series35);
+            this.chart1.Series.Add(series36);
             this.chart1.Size = new System.Drawing.Size(719, 389);
             this.chart1.TabIndex = 21;
             this.chart1.Text = "chart";
-            title85.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title85.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title85.Name = "Naziv";
-            title85.Text = "Naziv firme";
-            title86.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title86.Name = "Device";
-            title86.Position.Auto = false;
-            title86.Position.Height = 2.938644F;
-            title86.Position.Width = 94F;
-            title86.Position.X = 3F;
-            title86.Position.Y = 4F;
-            title86.Text = "Device: ";
-            title87.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title87.Name = "Vreme";
-            title87.Position.Auto = false;
-            title87.Position.Height = 2.938644F;
-            title87.Position.Width = 60F;
-            title87.Position.X = 40F;
-            title87.Position.Y = 4F;
-            title87.Text = "Vreme: ";
-            title88.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title88.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title88.Name = "Datum";
-            title88.Position.Auto = false;
-            title88.Position.Height = 2.938644F;
-            title88.Position.Width = 94F;
-            title88.Position.X = 3F;
-            title88.Position.Y = 4F;
-            title88.Text = "Datum: ";
-            title89.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
-            title89.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title89.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title89.Name = "Napomena";
-            title89.Text = "Napomena:";
-            title90.Alignment = System.Drawing.ContentAlignment.MiddleRight;
-            title90.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            title90.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title90.Name = "Proverio";
-            title90.Position.Auto = false;
-            title90.Position.Height = 2.954587F;
-            title90.Position.Width = 94F;
-            title90.Position.X = 3F;
-            title90.Position.Y = 93F;
-            title90.Text = "Proverio: _____________________";
-            this.chart1.Titles.Add(title85);
-            this.chart1.Titles.Add(title86);
-            this.chart1.Titles.Add(title87);
-            this.chart1.Titles.Add(title88);
-            this.chart1.Titles.Add(title89);
-            this.chart1.Titles.Add(title90);
+            title19.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title19.Name = "Naziv";
+            title19.Text = "Naziv firme";
+            title20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title20.Name = "Device";
+            title20.Position.Auto = false;
+            title20.Position.Height = 2.938644F;
+            title20.Position.Width = 94F;
+            title20.Position.X = 3F;
+            title20.Position.Y = 4F;
+            title20.Text = "Device: ";
+            title21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title21.Name = "Vreme";
+            title21.Position.Auto = false;
+            title21.Position.Height = 2.938644F;
+            title21.Position.Width = 60F;
+            title21.Position.X = 40F;
+            title21.Position.Y = 4F;
+            title21.Text = "Vreme: ";
+            title22.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title22.Name = "Datum";
+            title22.Position.Auto = false;
+            title22.Position.Height = 2.938644F;
+            title22.Position.Width = 94F;
+            title22.Position.X = 3F;
+            title22.Position.Y = 4F;
+            title22.Text = "Datum: ";
+            title23.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            title23.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title23.Name = "Napomena";
+            title23.Text = "Napomena:";
+            title24.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            title24.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            title24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title24.Name = "Proverio";
+            title24.Position.Auto = false;
+            title24.Position.Height = 2.954587F;
+            title24.Position.Width = 94F;
+            title24.Position.X = 3F;
+            title24.Position.Y = 93F;
+            title24.Text = "Proverio: _____________________";
+            this.chart1.Titles.Add(title19);
+            this.chart1.Titles.Add(title20);
+            this.chart1.Titles.Add(title21);
+            this.chart1.Titles.Add(title22);
+            this.chart1.Titles.Add(title23);
+            this.chart1.Titles.Add(title24);
             // 
             // lblConnected
             // 
@@ -5223,6 +5265,21 @@
             this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.settingsToolStripMenuItem1.Text = "Settings";
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem1_Click);
+            // 
+            // kontaktToolStripMenuItem
+            // 
+            this.kontaktToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kontaktToolStripMenuItem1});
+            this.kontaktToolStripMenuItem.Name = "kontaktToolStripMenuItem";
+            this.kontaktToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.kontaktToolStripMenuItem.Text = "Kontakt";
+            // 
+            // kontaktToolStripMenuItem1
+            // 
+            this.kontaktToolStripMenuItem1.Name = "kontaktToolStripMenuItem1";
+            this.kontaktToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.kontaktToolStripMenuItem1.Text = "Informacije";
+            this.kontaktToolStripMenuItem1.Click += new System.EventHandler(this.kontaktToolStripMenuItem1_Click);
             // 
             // lblCompany
             // 
@@ -5328,21 +5385,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // kontaktToolStripMenuItem
-            // 
-            this.kontaktToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kontaktToolStripMenuItem1});
-            this.kontaktToolStripMenuItem.Name = "kontaktToolStripMenuItem";
-            this.kontaktToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.kontaktToolStripMenuItem.Text = "Kontakt";
-            // 
-            // kontaktToolStripMenuItem1
-            // 
-            this.kontaktToolStripMenuItem1.Name = "kontaktToolStripMenuItem1";
-            this.kontaktToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.kontaktToolStripMenuItem1.Text = "Informacije";
-            this.kontaktToolStripMenuItem1.Click += new System.EventHandler(this.kontaktToolStripMenuItem1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5363,6 +5405,8 @@
             this.Text = "KONTROLA TEMPERATURE";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tabTemperature.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -5980,6 +6024,7 @@
         private System.Windows.Forms.ToolStripMenuItem kontaktToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem kontaktToolStripMenuItem1;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
 

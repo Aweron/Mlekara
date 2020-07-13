@@ -32,6 +32,9 @@ namespace Mlekara
         private List<ProbeModel> probes;
         private DefaultsModel defaults;
 
+        private List<GroupBox> grpAll;
+        private List<TextBox> txtAll;
+
         // Arrays of Form Controls
         public GroupBox[] groupBoxes;
         public TextBox[] tempDisplays;
@@ -56,6 +59,9 @@ namespace Mlekara
             autoRefresh = false;
 
             measurementStacks = new Stack<MeasurementModel>[24];
+
+            grpAll = new List<GroupBox>();
+            txtAll = new List<TextBox>();
 
             groupBoxes = new GroupBox[] { groupBox1, groupBox2, groupBox3, groupBox4, groupBox5, groupBox6, groupBox7, groupBox8, groupBox9, groupBox10, groupBox11, groupBox12, groupBox13, groupBox14, groupBox15, groupBox16, groupBox17, groupBox18, groupBox19, groupBox20, groupBox21, groupBox22, groupBox23, groupBox24 };
             tempDisplays = new TextBox[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12, textBox13, textBox14, textBox15, textBox16, textBox17, textBox18, textBox19, textBox20, textBox21, textBox22, textBox23, textBox24 };
@@ -164,6 +170,8 @@ namespace Mlekara
 
             lblCompany.Text = SqliteDataAccess.LoadCompanyName();
 
+            ArrangeTempDisplays();
+
             // Device Settings
             for (int i = 0; i < devices.Count; i++)
             {
@@ -229,6 +237,84 @@ namespace Mlekara
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public GroupBox CreateTempDisplay(int probeID, string probeName)
+        {
+            GroupBox groupBox = new GroupBox();
+
+            groupBox.Name = "grpAll" + probeID;
+
+            groupBox.Text = probeName;
+            groupBox.Size = new Size(204, 80);
+
+            TextBox text = new TextBox();
+            text.Parent = groupBox;
+
+            text.Name = "txtAll" + probeID;
+
+            text.BackColor = Color.Black;
+            text.Font = font;
+            text.ForeColor = Color.Lime;
+            text.Text = "00.0";
+            text.TextAlign = HorizontalAlignment.Center;
+            text.ReadOnly = true;
+            text.Location = new Point(6, 19);
+            text.Size = new Size(192, 55);
+
+            Label c = new Label();
+            c.Parent = groupBox;
+
+            c.BackColor = Color.Black;
+            c.Font = new Font("Verdana", 22);
+            c.ForeColor = Color.Lime;
+            c.Text = "°C";
+            c.AutoSize = true;
+            c.Location = new Point(141, 33);
+            c.Size = new Size(51, 35);
+            c.BringToFront();
+
+            return groupBox;
+        }
+
+        public void ArrangeTempDisplays()
+        {
+            foreach (GroupBox grp in grpAll)
+            {
+                tabPage4.Controls.Remove(grp);
+                grp.Dispose();
+            }
+
+            grpAll.Clear();
+
+            int col = 0;
+            int row = 0;
+
+            int x;
+            int y;
+
+            foreach (ProbeModel probe in probes)
+            {
+                if (probe.Active)
+                {
+                    x = 6 + 210 * col;
+                    y = 6 + 86 * row;
+
+                    GroupBox groupBox = CreateTempDisplay(probe.Id, probe.Name);
+
+                    groupBox.Parent = tabPage4;
+                    groupBox.Location = new Point(x, y);
+
+                    grpAll.Add(groupBox);
+
+                    if (x + 420 > tabPage4.Width) // Blaze it
+                    {
+                        row++;
+                        col = 0;
+                    }
+                    else col++;
+                }
             }
         }
 
@@ -316,6 +402,8 @@ namespace Mlekara
                 {
                     tempDisplays[j].Text = text;
                     measurementStacks[j].Push(measurement);
+
+                    // TODO: Change txtAll displays
 
                     // Check if stacks are full to approximate and save to DB
                     if (measurementStacks[j].Count >= stackSize)
@@ -1088,6 +1176,20 @@ namespace Mlekara
                                         "e-mail: office@elabs.rs" + Environment.NewLine +
                                         "mob: +381 64 453 26 26" + Environment.NewLine +
                                         "tel: +381 18 4200 020", "Kontakt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized || WindowState == FormWindowState.Normal)
+            {
+                ArrangeTempDisplays();
+            }
+
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            ArrangeTempDisplays();
         }
     }
 }
