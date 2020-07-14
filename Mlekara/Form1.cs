@@ -249,19 +249,21 @@ namespace Mlekara
             groupBox.Text = probeName;
             groupBox.Size = new Size(204, 80);
 
-            TextBox text = new TextBox();
-            text.Parent = groupBox;
+            TextBox textDisplay = new TextBox();
+            textDisplay.Parent = groupBox;
 
-            text.Name = "txtAll" + probeID;
+            textDisplay.Name = "txtAll" + probeID;
 
-            text.BackColor = Color.Black;
-            text.Font = font;
-            text.ForeColor = Color.Lime;
-            text.Text = "00.0";
-            text.TextAlign = HorizontalAlignment.Center;
-            text.ReadOnly = true;
-            text.Location = new Point(6, 19);
-            text.Size = new Size(192, 55);
+            textDisplay.BackColor = Color.Black;
+            textDisplay.Font = font;
+            textDisplay.ForeColor = Color.Lime;
+            textDisplay.Text = "00.0";
+            textDisplay.TextAlign = HorizontalAlignment.Center;
+            textDisplay.ReadOnly = true;
+            textDisplay.Location = new Point(6, 19);
+            textDisplay.Size = new Size(192, 55);
+
+            txtAll.Add(textDisplay);
 
             Label c = new Label();
             c.Parent = groupBox;
@@ -287,6 +289,7 @@ namespace Mlekara
             }
 
             grpAll.Clear();
+            txtAll.Clear();
 
             int col = 0;
             int row = 0;
@@ -373,8 +376,8 @@ namespace Mlekara
 
             double higherValue;
             double lowerValue;
-            double value;
-            string text;
+            double value; // Temp as double
+            string text; // Temp to be displayed in string format
 
             for (int i = 3; i < 19; i += 2) 
             {
@@ -403,7 +406,8 @@ namespace Mlekara
                     tempDisplays[j].Text = text;
                     measurementStacks[j].Push(measurement);
 
-                    // TODO: Change txtAll displays
+                    TextBox textBox = txtAll.Find(x => x.Name == "txtAll" + j);
+                    textBox.Text = text;
 
                     // Check if stacks are full to approximate and save to DB
                     if (measurementStacks[j].Count >= stackSize)
