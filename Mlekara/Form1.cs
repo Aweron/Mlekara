@@ -1184,15 +1184,6 @@ namespace Mlekara
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Maximized || WindowState == FormWindowState.Normal)
-            {
-                ArrangeTempDisplays();
-            }
-
-        }
-
-        private void Form1_ResizeEnd(object sender, EventArgs e)
-        {
             ArrangeTempDisplays();
         }
     }
