@@ -406,7 +406,7 @@ namespace Mlekara
                     tempDisplays[j].Text = text;
                     measurementStacks[j].Push(measurement);
 
-                    TextBox textBox = txtAll.Find(x => x.Name == "txtAll" + j);
+                    TextBox textBox = txtAll.Find(x => x.Name == "txtAll" + (j + 1));
                     textBox.Text = text;
 
                     // Check if stacks are full to approximate and save to DB
